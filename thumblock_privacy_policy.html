@@ -13,256 +13,831 @@
       --muted: #6e675f;
       --line: #ddd5c9;
       --accent: #7d8981;
+      --link: #355e4c;
     }
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
     main {
-      max-width: 860px;
+      max-width: 980px;
       margin: 0 auto;
-      padding: 32px 20px 64px;
+      padding: 32px 20px 72px;
     }
-    h1, h2, h3 { line-height: 1.3; margin: 0 0 12px; }
-    h1 { font-size: 32px; }
+    h1, h2, h3 { line-height: 1.35; margin: 0 0 12px; }
+    h1 { font-size: 34px; }
     h2 {
-      margin-top: 32px;
-      font-size: 22px;
+      margin-top: 36px;
+      font-size: 24px;
       border-top: 1px solid var(--line);
       padding-top: 24px;
     }
-    p { margin: 0 0 14px; }
-    ul { margin: 0 0 14px 20px; padding: 0; }
-    li { margin: 0 0 8px; }
-    .lead, .meta {
-      color: var(--muted);
+    h3 {
+      margin-top: 18px;
+      font-size: 18px;
     }
-    .card {
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 16px 20px; padding: 0; }
+    li { margin: 0 0 8px; }
+    a { color: var(--link); }
+    .lead, .meta, .lang-note { color: var(--muted); }
+    .hero {
       background: var(--card);
       border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 18px 18px 4px;
-      margin: 20px 0 0;
+      border-radius: 18px;
+      padding: 20px 20px 8px;
+      margin-top: 18px;
     }
-    a { color: #355e4c; }
-    strong { color: var(--text); }
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0 8px;
+      padding: 0;
+      list-style: none;
+    }
+    .toc a {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--text);
+      background: #fdfaf5;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 14px;
+    }
+    .lang-section {
+      background: rgba(251, 248, 242, 0.78);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px 20px 10px;
+      margin-top: 28px;
+    }
+    .lang-section > .lang-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
   </style>
 </head>
 <body>
   <main>
-    <h1>Privacy Policy</h1>
-    <p class="lead">
-      This Privacy Policy applies to the <strong>ThumbLock</strong> mobile application
-      (the “Application”), provided by <strong>SungHoon Lee</strong> (the “Service Provider”).
-    </p>
-    <p class="meta"><strong>Effective date:</strong> 2026-04-14</p>
-
-    <div class="card">
-      <p>
-        ThumbLock is a short-form content blocking and protection app. In order to provide its core
-        blocking features, the Application may access or process certain device, app, browser, and
-        network-related information. Most of this processing happens <strong>locally on your device</strong>.
-      </p>
+    <h1>ThumbLock Privacy Policy</h1>
+    <p class="lead">This page contains the Privacy Policy for <strong>ThumbLock</strong> in multiple supported languages.</p>
+    <p class="meta">Effective date: 2026-04-14</p>
+    <div class="hero">
+      <p>Language order on this page: <strong>English</strong>, <strong>한국어</strong>, then the remaining supported app languages in broadly-used order.</p>
+      <p class="lang-note">If the wording of any translated section appears inconsistent, the intended meaning should match the English section.</p>
     </div>
-
-    <h2>1. Information the Application Accesses, Collects, or Processes</h2>
-
-    <h3>A. Information processed locally on your device</h3>
-    <ul>
-      <li>
-        <strong>Accessibility-related information:</strong> when you enable accessibility-based blocking,
-        the Application may inspect on-screen app information that is necessary to detect and block
-        short-form content, including supported browser address bar text, URL host/path information,
-        and app/package context.
-      </li>
-      <li>
-        <strong>Usage and foreground app information:</strong> the Application may use usage access and
-        app state information to determine which app is currently active for blocking and protection features.
-      </li>
-      <li>
-        <strong>Installed app information:</strong> the Application may check whether supported blocked apps
-        are installed on your device in order to organize the blocked-app list and related controls.
-      </li>
-      <li>
-        <strong>VPN/DNS blocking data:</strong> if you enable VPN-based blocking, the Application may inspect
-        DNS request domain names on-device in order to determine whether a blocked host should be denied.
-      </li>
-      <li>
-        <strong>Local settings and protection data:</strong> the Application stores settings and protection-related
-        data locally on your device, such as schedules, blocked-app selections, language preference,
-        custom block message, PIN lock status, hashed PIN, and protection session history.
-      </li>
-      <li>
-        <strong>Session history:</strong> the Application may locally store timestamps and event records
-        such as protection enabled/disabled events, forced stops, revoked permissions, and related
-        protection session timing information.
-      </li>
+    <ul class="toc">
+      <li><a href="#en">English</a></li>
+      <li><a href="#ko">한국어</a></li>
+      <li><a href="#hi">हिन्दी</a></li>
+      <li><a href="#es">Español</a></li>
+      <li><a href="#fr">Français</a></li>
+      <li><a href="#id">Bahasa Indonesia</a></li>
+      <li><a href="#de">Deutsch</a></li>
+      <li><a href="#ja">日本語</a></li>
+      <li><a href="#th">ไทย</a></li>
     </ul>
 
-    <h3>B. Information you may provide</h3>
-    <ul>
-      <li>
-        <strong>Custom block message:</strong> if you enter your own block message, that text is stored locally
-        on your device unless you change or remove it.
-      </li>
-      <li>
-        <strong>PIN/passcode:</strong> if you enable PIN mode, the Application stores a <strong>hashed</strong> PIN
-        locally on your device. The plain-text PIN is not intentionally stored by the Service Provider.
-      </li>
-      <li>
-        <strong>Contact information:</strong> if you email the Service Provider for support, the Service Provider
-        may receive your email address and any information you include in your message.
-      </li>
-    </ul>
+    <section id="en" class="lang-section" lang="en">
+      <span class="lang-label">English</span>
+      <h2>Privacy Policy</h2>
+      <p>This Privacy Policy applies to the <strong>ThumbLock</strong> mobile application (the “Application”), provided by <strong>SungHoon Lee</strong> (the “Service Provider”).</p>
+      <p><strong>Effective date:</strong> 2026-04-14</p>
+      <p>ThumbLock is a short-form content blocking and protection app. In order to provide its core blocking features, the Application may access or process certain device, app, browser, and network-related information. Most of this processing happens <strong>locally on your device</strong>.</p>
+      <h3>1. Information the Application Accesses, Collects, or Processes</h3>
+      <h3>A. Information processed locally on your device</h3>
+      <ul>
+        <li><strong>Accessibility-related information:</strong> when you enable accessibility-based blocking, the Application may inspect on-screen app information that is necessary to detect and block short-form content, including supported browser address bar text, URL host/path information, and app/package context.</li>
+        <li><strong>Usage and foreground app information:</strong> the Application may use usage access and app state information to determine which app is currently active for blocking and protection features.</li>
+        <li><strong>Installed app information:</strong> the Application may check whether supported blocked apps are installed on your device in order to organize the blocked-app list and related controls.</li>
+        <li><strong>VPN/DNS blocking data:</strong> if you enable VPN-based blocking, the Application may inspect DNS request domain names on-device in order to determine whether a blocked host should be denied.</li>
+        <li><strong>Local settings and protection data:</strong> the Application stores settings and protection-related data locally on your device, such as schedules, blocked-app selections, language preference, custom block message, PIN lock status, hashed PIN, and protection session history.</li>
+        <li><strong>Session history:</strong> the Application may locally store timestamps and event records such as protection enabled/disabled events, forced stops, revoked permissions, and related protection session timing information.</li>
+      </ul>
+      <h3>B. Information you may provide</h3>
+      <ul>
+        <li><strong>Custom block message:</strong> if you enter your own block message, that text is stored locally on your device unless you change or remove it.</li>
+        <li><strong>PIN/passcode:</strong> if you enable PIN mode, the Application stores a <strong>hashed</strong> PIN locally on your device. The plain-text PIN is not intentionally stored by the Service Provider.</li>
+        <li><strong>Contact information:</strong> if you email the Service Provider for support, the Service Provider may receive your email address and any information you include in your message.</li>
+      </ul>
+      <h3>C. Information the Service Provider does not intentionally collect directly through the app</h3>
+      <ul>
+        <li>Your name, postal address, or phone number</li>
+        <li>Precise location data</li>
+        <li>Photos, microphone recordings, or camera recordings</li>
+        <li>Account registration data, because the Application does not require an account to use its core features</li>
+      </ul>
+      <h3>2. How the Information Is Used</h3>
+      <p>The Application uses the above information to provide and improve its core features, including:</p>
+      <ul>
+        <li>detecting and blocking short-form content or supported apps/sites;</li>
+        <li>displaying protection records and activity history inside the app;</li>
+        <li>enforcing schedules, PIN protection, and user-selected blocking rules;</li>
+        <li>showing your custom block message and related UI state;</li>
+        <li>loading and updating rule definitions used by the Application; and</li>
+        <li>showing advertisements through AdMob.</li>
+      </ul>
+      <h3>3. Data Shared with or Transmitted to Third Parties</h3>
+      <p>The Service Provider does not sell your personal or sensitive user data. However, the Application uses third-party services and network infrastructure as described below.</p>
+      <h3>A. Google AdMob</h3>
+      <p>The Application displays ads using Google AdMob. AdMob and its partners may process data such as device information, identifiers, IP address, advertising data, diagnostics, and app interaction data in accordance with Google’s policies.</p>
+      <p>AdMob privacy information: <a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer">https://support.google.com/admob/answer/6128543</a></p>
+      <h3>B. Remote rule updates from GitHub</h3>
+      <p>The Application may download rule files from a GitHub-hosted URL in order to update blocking rules. This may cause network requests to GitHub or its infrastructure. Standard network metadata, such as your IP address and request headers, may be processed by those providers as part of normal web requests.</p>
+      <p>GitHub privacy statement: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a></p>
+      <h3>C. DNS forwarding for VPN-based blocking</h3>
+      <p>If VPN-based blocking is enabled, allowed DNS queries may be forwarded to an upstream DNS resolver so that websites and services can continue to function. This means requested domain names may be transmitted to that upstream DNS provider as part of normal DNS resolution.</p>
+      <p>The current upstream DNS provider used by the Application is Cloudflare 1.1.1.1.</p>
+      <p>Cloudflare privacy information: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">https://www.cloudflare.com/privacypolicy/</a></p>
+      <h3>4. Legal Basis, Disclosure, and Sensitive Access</h3>
+      <p>Because ThumbLock uses sensitive platform capabilities such as accessibility, usage access, package visibility, and VPN-based network handling to provide security and blocking functionality, the Service Provider intends this Privacy Policy to be read together with any in-app disclosures shown before or during use of those features.</p>
+      <p>The Application’s access to sensitive information is intended to be limited to features reasonably expected by the user, such as blocking supported apps, blocking supported browser content, displaying protection history, and enforcing schedules or PIN lock.</p>
+      <h3>5. Data Retention and Deletion</h3>
+      <ul>
+        <li><strong>On-device data:</strong> schedules, local session history, blocked-app settings, language, custom block message, and PIN-related settings are generally retained on your device until you remove them, clear the app’s data, uninstall the Application, or overwrite them with new values.</li>
+        <li><strong>Support emails:</strong> if you contact the Service Provider by email, the Service Provider may retain that correspondence for support, legal, or record-keeping purposes.</li>
+        <li><strong>Third-party services:</strong> data processed by AdMob, GitHub infrastructure, Cloudflare, or other third parties is governed by their own retention practices and privacy policies.</li>
+      </ul>
+      <h3>6. Your Choices</h3>
+      <ul>
+        <li>You may stop using the Application at any time by uninstalling it.</li>
+        <li>You may delete most locally stored settings by clearing the app’s data in Android system settings.</li>
+        <li>You may disable optional permissions or features, but some core blocking features may no longer work.</li>
+        <li>You may remove or change your custom block message, schedules, and PIN settings within the app.</li>
+      </ul>
+      <h3>7. Security</h3>
+      <p>The Service Provider uses reasonable safeguards designed to protect information processed by the Application. However, no method of storage, transmission, or processing is completely secure, and the Service Provider cannot guarantee absolute security.</p>
+      <h3>8. Children’s Privacy</h3>
+      <p>The Application does not knowingly collect personal information directly from children through account registration or similar forms because the Application does not require account creation for its core use. If the Service Provider becomes aware that a child has directly provided personal information to the Service Provider, the Service Provider will take reasonable steps to delete that information.</p>
+      <p>If you are a parent or guardian and believe that a child has provided personal information directly to the Service Provider, please contact the Service Provider at the email address below.</p>
+      <h3>9. International Processing</h3>
+      <p>Depending on the third-party services used, information may be processed on servers located outside your country or region. Third-party providers handle such processing under their own privacy terms.</p>
+      <h3>10. Changes to This Privacy Policy</h3>
+      <p>This Privacy Policy may be updated from time to time. The Service Provider will update this page when changes are made. Your continued use of the Application after changes become effective means you accept the revised Privacy Policy, to the extent permitted by applicable law.</p>
+      <h3>11. Contact</h3>
+      <p>If you have questions about this Privacy Policy or the Application’s privacy practices, please contact:</p>
+      <p><strong>SungHoon Lee</strong><br />Email: <a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a></p>
+    </section>
 
-    <h3>C. Information the Service Provider does not intentionally collect directly through the app</h3>
-    <ul>
-      <li>Your name, postal address, or phone number</li>
-      <li>Precise location data</li>
-      <li>Photos, microphone recordings, or camera recordings</li>
-      <li>Account registration data, because the Application does not require an account to use its core features</li>
-    </ul>
+    <section id="ko" class="lang-section" lang="ko">
+      <span class="lang-label">한국어</span>
+      <h2>개인정보처리방침</h2>
+      <p>본 개인정보처리방침은 <strong>ThumbLock</strong> 모바일 애플리케이션(이하 “애플리케이션”)에 적용되며, 본 애플리케이션은 <strong>SungHoon Lee</strong>(이하 “서비스 제공자”)가 제공합니다.</p>
+      <p><strong>시행일:</strong> 2026-04-14</p>
+      <p>ThumbLock은 숏폼 콘텐츠 차단 및 보호 기능을 제공하는 앱입니다. 핵심 차단 기능을 제공하기 위해, 애플리케이션은 기기, 앱, 브라우저 및 네트워크 관련 정보의 일부에 접근하거나 이를 처리할 수 있습니다. 이러한 처리의 대부분은 <strong>사용자의 기기 내부에서 로컬로 수행</strong>됩니다.</p>
+      <h3>1. 애플리케이션이 접근, 수집 또는 처리하는 정보</h3>
+      <h3>A. 기기 내에서 로컬로 처리되는 정보</h3>
+      <ul>
+        <li><strong>접근성 관련 정보:</strong> 접근성 기반 차단 기능을 활성화하면, 애플리케이션은 숏폼 콘텐츠를 탐지하고 차단하기 위해 필요한 화면상의 앱 정보를 확인할 수 있습니다. 여기에는 지원되는 브라우저 주소창 텍스트, URL의 호스트/경로 정보, 앱 또는 패키지 정보가 포함될 수 있습니다.</li>
+        <li><strong>사용 정보 접근(Usage Access) 및 포그라운드 앱 정보:</strong> 애플리케이션은 차단 및 보호 기능을 위해 현재 어떤 앱이 활성 상태인지 판단하기 위해 사용 정보 접근(Usage Access) 및 앱 상태 정보를 사용할 수 있습니다.</li>
+        <li><strong>설치된 앱 정보:</strong> 애플리케이션은 차단 가능한 지원 앱이 기기에 설치되어 있는지 확인하여, 차단 앱 목록과 관련 제어 UI를 구성할 수 있습니다.</li>
+        <li><strong>VPN/DNS 차단 데이터:</strong> VPN 기반 차단이 활성화된 경우, 애플리케이션은 어떤 도메인을 차단해야 하는지 판단하기 위해 기기 내에서 DNS 요청 도메인명을 검사할 수 있습니다.</li>
+        <li><strong>로컬 설정 및 보호 데이터:</strong> 애플리케이션은 스케줄, 차단 앱 선택 상태, 언어 설정, 사용자 지정 차단 문구, PIN 잠금 상태, 해시된 PIN, 보호 세션 기록과 같은 설정 및 보호 관련 데이터를 기기에 로컬로 저장합니다.</li>
+        <li><strong>세션 기록:</strong> 애플리케이션은 보호 기능 켜기/끄기, 강제 종료, 권한 해제, 관련 보호 세션 시간 정보와 같은 타임스탬프 및 이벤트 기록을 기기에 로컬로 저장할 수 있습니다.</li>
+      </ul>
+      <h3>B. 사용자가 직접 제공할 수 있는 정보</h3>
+      <ul>
+        <li><strong>사용자 지정 차단 문구:</strong> 사용자가 차단 문구를 직접 입력한 경우, 해당 문구는 사용자가 변경하거나 삭제할 때까지 기기에 로컬로 저장됩니다.</li>
+        <li><strong>PIN/비밀번호:</strong> 사용자가 PIN 모드를 활성화한 경우, 애플리케이션은 <strong>해시 처리된</strong> PIN을 기기에 로컬로 저장합니다. 평문 PIN은 서비스 제공자에 의해 의도적으로 저장되지 않습니다.</li>
+        <li><strong>연락 정보:</strong> 사용자가 지원을 위해 서비스 제공자에게 이메일을 보내는 경우, 서비스 제공자는 사용자의 이메일 주소 및 사용자가 메시지에 포함한 정보를 수신할 수 있습니다.</li>
+      </ul>
+      <h3>C. 서비스 제공자가 앱을 통해 의도적으로 직접 수집하지 않는 정보</h3>
+      <ul>
+        <li>이름, 우편 주소 또는 전화번호</li>
+        <li>정밀 위치 정보</li>
+        <li>사진, 마이크 녹음 또는 카메라 녹화물</li>
+        <li>핵심 기능 이용을 위한 계정 등록 정보</li>
+      </ul>
+      <h3>2. 정보의 이용 목적</h3>
+      <p>애플리케이션은 위 정보를 다음과 같은 핵심 기능 제공 및 개선을 위해 사용합니다.</p>
+      <ul>
+        <li>숏폼 콘텐츠 또는 지원 대상 앱/사이트를 탐지하고 차단하기 위한 목적</li>
+        <li>앱 내부에서 보호 기록 및 활동 이력을 표시하기 위한 목적</li>
+        <li>스케줄, PIN 보호, 사용자 선택 차단 규칙을 적용하기 위한 목적</li>
+        <li>사용자 지정 차단 문구와 관련 UI 상태를 표시하기 위한 목적</li>
+        <li>애플리케이션에서 사용하는 차단 규칙을 불러오고 업데이트하기 위한 목적</li>
+        <li>AdMob을 통한 광고 표시 목적</li>
+      </ul>
+      <h3>3. 제3자와 공유되거나 제3자에게 전송되는 데이터</h3>
+      <p>서비스 제공자는 사용자의 개인 정보 또는 민감 정보를 판매하지 않습니다. 다만, 애플리케이션은 아래와 같은 제3자 서비스 및 네트워크 인프라를 사용합니다.</p>
+      <h3>A. Google AdMob</h3>
+      <p>애플리케이션은 Google AdMob을 통해 광고를 표시합니다. AdMob 및 그 파트너는 Google 정책에 따라 기기 정보, 식별자, IP 주소, 광고 관련 데이터, 진단 정보 및 앱 상호작용 데이터 등을 처리할 수 있습니다.</p>
+      <p>AdMob 개인정보 관련 정보: <a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer">https://support.google.com/admob/answer/6128543</a></p>
+      <h3>B. GitHub를 통한 원격 규칙 업데이트</h3>
+      <p>애플리케이션은 차단 규칙을 업데이트하기 위해 GitHub에 호스팅된 규칙 파일을 다운로드할 수 있습니다. 이 과정에서 GitHub 또는 관련 인프라로 네트워크 요청이 전송될 수 있으며, 일반적인 웹 요청 처리 과정에서 IP 주소 및 요청 헤더와 같은 표준 네트워크 메타데이터가 해당 제공자에 의해 처리될 수 있습니다.</p>
+      <p>GitHub 개인정보처리방침: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a></p>
+      <h3>C. VPN 기반 차단 시 DNS 전달</h3>
+      <p>VPN 기반 차단 기능이 활성화된 경우, 차단 대상이 아닌 웹사이트 및 서비스가 정상적으로 동작할 수 있도록 허용된 DNS 질의가 상위 DNS 리졸버로 전달될 수 있습니다. 이 경우 요청된 도메인명이 일반적인 DNS 처리 과정의 일부로 해당 DNS 제공자에게 전송될 수 있습니다.</p>
+      <p>현재 애플리케이션이 사용하는 상위 DNS 제공자는 Cloudflare 1.1.1.1입니다.</p>
+      <p>Cloudflare 개인정보 관련 정보: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">https://www.cloudflare.com/privacypolicy/</a></p>
+      <h3>4. 민감 정보 접근 및 고지</h3>
+      <p>ThumbLock은 보안 및 차단 기능 제공을 위해 접근성, 사용량 접근, 설치 앱 조회, VPN 기반 네트워크 처리와 같은 민감한 플랫폼 기능을 사용합니다. 서비스 제공자는 본 개인정보처리방침이 이러한 기능 사용 전 또는 사용 중 앱 내에서 제공되는 별도의 고지와 함께 해석되기를 의도합니다.</p>
+      <p>애플리케이션의 민감 정보 접근은 사용자가 합리적으로 예상할 수 있는 기능, 예를 들어 지원 앱 차단, 지원 브라우저 콘텐츠 차단, 보호 이력 표시, 스케줄 또는 PIN 잠금 적용을 위한 범위로 제한하는 것을 목표로 합니다.</p>
+      <h3>5. 보관 및 삭제</h3>
+      <ul>
+        <li><strong>기기 내 데이터:</strong> 스케줄, 로컬 세션 기록, 차단 앱 설정, 언어 설정, 사용자 지정 차단 문구, PIN 관련 설정은 사용자가 직접 삭제하거나, 앱 데이터를 초기화하거나, 애플리케이션을 삭제하거나, 새 값으로 덮어쓰기 전까지 일반적으로 기기에 보관됩니다.</li>
+        <li><strong>지원 이메일:</strong> 사용자가 이메일로 문의한 경우, 서비스 제공자는 지원, 법적 대응 또는 기록 보관 목적을 위해 해당 연락 내용을 보관할 수 있습니다.</li>
+        <li><strong>제3자 서비스:</strong> AdMob, GitHub 인프라, Cloudflare 또는 기타 제3자가 처리하는 데이터는 각자의 보관 관행 및 개인정보처리방침에 따릅니다.</li>
+      </ul>
+      <h3>6. 사용자의 선택권</h3>
+      <ul>
+        <li>사용자는 언제든지 애플리케이션을 삭제하여 사용을 중단할 수 있습니다.</li>
+        <li>사용자는 Android 시스템 설정에서 앱 데이터를 삭제하여 대부분의 로컬 저장 설정을 제거할 수 있습니다.</li>
+        <li>사용자는 선택적 권한 또는 기능을 비활성화할 수 있지만, 일부 핵심 차단 기능은 더 이상 정상적으로 동작하지 않을 수 있습니다.</li>
+        <li>사용자는 앱 내에서 사용자 지정 차단 문구, 스케줄 및 PIN 설정을 변경하거나 제거할 수 있습니다.</li>
+      </ul>
+      <h3>7. 보안</h3>
+      <p>서비스 제공자는 애플리케이션이 처리하는 정보를 보호하기 위해 합리적인 보호 조치를 적용합니다. 다만 저장, 전송 또는 처리 방식 중 어느 것도 완전히 안전하다고 보장될 수는 없으며, 서비스 제공자는 절대적인 보안을 보장할 수 없습니다.</p>
+      <h3>8. 아동의 개인정보</h3>
+      <p>애플리케이션은 핵심 기능 사용을 위해 계정 생성을 요구하지 않으므로, 계정 등록 등과 같은 방식으로 아동으로부터 직접 개인정보를 고의로 수집하지 않습니다. 서비스 제공자가 아동이 서비스 제공자에게 직접 개인정보를 제공했다는 사실을 알게 되는 경우, 해당 정보를 삭제하기 위해 합리적인 조치를 취합니다.</p>
+      <p>사용자가 부모 또는 법정대리인이며, 아동이 서비스 제공자에게 직접 개인정보를 제공했다고 판단되는 경우 아래 연락처로 문의해 주시기 바랍니다.</p>
+      <h3>9. 국제적 처리</h3>
+      <p>사용되는 제3자 서비스에 따라 정보는 사용자의 국가 또는 지역 외부에 위치한 서버에서 처리될 수 있습니다. 그러한 처리는 각 제3자 제공자의 개인정보처리방침에 따라 이루어집니다.</p>
+      <h3>10. 개인정보처리방침의 변경</h3>
+      <p>본 개인정보처리방침은 수시로 변경될 수 있습니다. 변경이 이루어지는 경우 서비스 제공자는 본 페이지를 업데이트합니다. 관련 법령이 허용하는 범위 내에서, 변경 후에도 애플리케이션을 계속 사용하는 경우 개정된 개인정보처리방침에 동의한 것으로 간주될 수 있습니다.</p>
+      <h3>11. 문의</h3>
+      <p>본 개인정보처리방침 또는 애플리케이션의 개인정보 처리 관행에 대한 문의는 아래로 연락해 주시기 바랍니다.</p>
+      <p><strong>SungHoon Lee</strong><br />이메일: <a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a></p>
+    </section>
 
-    <h2>2. How the Information Is Used</h2>
-    <p>The Application uses the above information to provide and improve its core features, including:</p>
-    <ul>
-      <li>detecting and blocking short-form content or supported apps/sites;</li>
-      <li>displaying protection records and activity history inside the app;</li>
-      <li>enforcing schedules, PIN protection, and user-selected blocking rules;</li>
-      <li>showing your custom block message and related UI state;</li>
-      <li>loading and updating rule definitions used by the Application; and</li>
-      <li>showing advertisements through AdMob.</li>
-    </ul>
+    <section id="hi" class="lang-section" lang="hi">
+      <span class="lang-label">हिन्दी</span>
+      <h2>गोपनीयता नीति</h2>
+      <p>यह गोपनीयता नीति <strong>ThumbLock</strong> मोबाइल एप्लिकेशन (“एप्लिकेशन”) पर लागू होती है, जिसे <strong>SungHoon Lee</strong> (“सेवा प्रदाता”) द्वारा प्रदान किया जाता है।</p>
+      <p><strong>प्रभावी तिथि:</strong> 2026-04-14</p>
+      <p>ThumbLock एक शॉर्ट-फॉर्म कंटेंट ब्लॉकिंग और प्रोटेक्शन ऐप है। अपनी मुख्य ब्लॉकिंग सुविधाएँ प्रदान करने के लिए, एप्लिकेशन कुछ डिवाइस, ऐप, ब्राउज़र और नेटवर्क-संबंधित जानकारी तक पहुँच सकता है या उनका प्रसंस्करण कर सकता है। इस प्रसंस्करण का अधिकांश भाग <strong>आपके डिवाइस पर स्थानीय रूप से</strong> होता है।</p>
+      <h3>1. एप्लिकेशन किन जानकारियों तक पहुँचता है, एकत्र करता है या उनका प्रसंस्करण करता है</h3>
+      <h3>A. आपके डिवाइस पर स्थानीय रूप से संसाधित जानकारी</h3>
+      <ul>
+        <li><strong>एक्सेसिबिलिटी (Accessibility) से संबंधित जानकारी:</strong> जब आप accessibility-आधारित ब्लॉकिंग सक्षम करते हैं, तो एप्लिकेशन शॉर्ट-फॉर्म कंटेंट का पता लगाने और उसे ब्लॉक करने के लिए आवश्यक ऑन-स्क्रीन ऐप जानकारी का निरीक्षण कर सकता है, जिसमें समर्थित ब्राउज़र एड्रेस बार टेक्स्ट, URL host/path जानकारी और app/package context शामिल हो सकते हैं।</li>
+        <li><strong>Usage और foreground app जानकारी:</strong> एप्लिकेशन यह निर्धारित करने के लिए usage access और app state जानकारी का उपयोग कर सकता है कि ब्लॉकिंग और सुरक्षा सुविधाओं के लिए वर्तमान में कौन-सा ऐप सक्रिय है।</li>
+        <li><strong>इंस्टॉल किए गए ऐप (Installed app) की जानकारी:</strong> एप्लिकेशन यह जाँच सकता है कि समर्थित blocked apps आपके डिवाइस पर इंस्टॉल हैं या नहीं, ताकि blocked-app सूची और संबंधित controls को व्यवस्थित किया जा सके।</li>
+        <li><strong>VPN/DNS ब्लॉकिंग डेटा:</strong> यदि आप VPN-आधारित ब्लॉकिंग सक्षम करते हैं, तो एप्लिकेशन यह निर्धारित करने के लिए डिवाइस पर DNS request domain names का निरीक्षण कर सकता है कि किस blocked host को अस्वीकार किया जाना चाहिए।</li>
+        <li><strong>स्थानीय settings और protection data:</strong> एप्लिकेशन schedules, blocked-app selections, language preference, custom block message, PIN lock status, hashed PIN और protection session history जैसी जानकारी आपके डिवाइस पर स्थानीय रूप से संग्रहित करता है।</li>
+        <li><strong>Session history:</strong> एप्लिकेशन protection enabled/disabled events, forced stops, revoked permissions और संबंधित protection session timing information जैसे timestamp और event records स्थानीय रूप से संग्रहित कर सकता है।</li>
+      </ul>
+      <h3>B. वह जानकारी जो आप प्रदान कर सकते हैं</h3>
+      <ul>
+        <li><strong>Custom block message:</strong> यदि आप अपना block message दर्ज करते हैं, तो वह टेक्स्ट तब तक आपके डिवाइस पर स्थानीय रूप से संग्रहित रहता है जब तक आप उसे बदल या हटा नहीं देते।</li>
+        <li><strong>PIN/passcode:</strong> यदि आप PIN mode सक्षम करते हैं, तो एप्लिकेशन आपके डिवाइस पर <strong>hashed</strong> PIN स्थानीय रूप से संग्रहित करता है। Plain-text PIN को सेवा प्रदाता द्वारा जानबूझकर संग्रहित नहीं किया जाता।</li>
+        <li><strong>संपर्क जानकारी:</strong> यदि आप सहायता के लिए सेवा प्रदाता को ईमेल करते हैं, तो सेवा प्रदाता आपका ईमेल पता और आपके संदेश में शामिल जानकारी प्राप्त कर सकता है।</li>
+      </ul>
+      <h3>C. वह जानकारी जिसे सेवा प्रदाता ऐप के माध्यम से सीधे जानबूझकर एकत्र नहीं करता</h3>
+      <ul>
+        <li>आपका नाम, डाक पता या फोन नंबर</li>
+        <li>सटीक location data</li>
+        <li>Photos, microphone recordings या camera recordings</li>
+        <li>Account registration data, क्योंकि एप्लिकेशन की मुख्य सुविधाओं के लिए account की आवश्यकता नहीं है</li>
+      </ul>
+      <h3>2. जानकारी का उपयोग कैसे किया जाता है</h3>
+      <p>एप्लिकेशन उपरोक्त जानकारी का उपयोग अपनी मुख्य सुविधाएँ प्रदान करने और उन्हें बेहतर बनाने के लिए करता है, जिनमें शामिल हैं:</p>
+      <ul>
+        <li>शॉर्ट-फॉर्म कंटेंट या समर्थित ऐप/साइट्स का पता लगाना और उन्हें ब्लॉक करना;</li>
+        <li>ऐप के भीतर protection records और activity history दिखाना;</li>
+        <li>schedules, PIN protection और user-selected blocking rules लागू करना;</li>
+        <li>आपका custom block message और संबंधित UI state दिखाना;</li>
+        <li>एप्लिकेशन द्वारा उपयोग की जाने वाली rules definitions को load और update करना; और</li>
+        <li>AdMob के माध्यम से विज्ञापन दिखाना।</li>
+      </ul>
+      <h3>3. तृतीय पक्षों के साथ साझा या प्रेषित डेटा</h3>
+      <p>सेवा प्रदाता आपकी personal या sensitive user data को बेचता नहीं है। हालांकि, एप्लिकेशन नीचे वर्णित third-party services और network infrastructure का उपयोग करता है।</p>
+      <h3>A. Google AdMob</h3>
+      <p>एप्लिकेशन Google AdMob का उपयोग करके विज्ञापन दिखाता है। AdMob और उसके partners, Google की policies के अनुसार device information, identifiers, IP address, advertising data, diagnostics और app interaction data जैसी जानकारी का प्रसंस्करण कर सकते हैं।</p>
+      <p>AdMob privacy information: <a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer">https://support.google.com/admob/answer/6128543</a></p>
+      <h3>B. GitHub से remote rule updates</h3>
+      <p>एप्लिकेशन blocking rules को update करने के लिए GitHub-hosted URL से rule files डाउनलोड कर सकता है। इससे GitHub या उसके infrastructure को network requests भेजी जा सकती हैं। सामान्य web requests के हिस्से के रूप में standard network metadata, जैसे IP address और request headers, उन providers द्वारा संसाधित किए जा सकते हैं।</p>
+      <p>GitHub privacy statement: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a></p>
+      <h3>C. VPN-आधारित ब्लॉकिंग के लिए DNS forwarding</h3>
+      <p>यदि VPN-आधारित ब्लॉकिंग सक्षम है, तो अनुमत DNS queries को upstream DNS resolver तक अग्रेषित किया जा सकता है ताकि websites और services काम करती रहें। इसका अर्थ है कि सामान्य DNS resolution प्रक्रिया के हिस्से के रूप में अनुरोधित domain names उस upstream DNS provider को प्रेषित हो सकते हैं।</p>
+      <p>एप्लिकेशन द्वारा वर्तमान में उपयोग किया जाने वाला upstream DNS provider Cloudflare 1.1.1.1 है।</p>
+      <p>Cloudflare privacy information: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">https://www.cloudflare.com/privacypolicy/</a></p>
+      <h3>4. कानूनी आधार, disclosure और sensitive access</h3>
+      <p>क्योंकि ThumbLock security और blocking functionality प्रदान करने के लिए accessibility, usage access, package visibility और VPN-आधारित network handling जैसी sensitive platform capabilities का उपयोग करता है, सेवा प्रदाता चाहता है कि इस Privacy Policy को उन in-app disclosures के साथ पढ़ा जाए जो इन सुविधाओं के उपयोग से पहले या दौरान दिखाए जा सकते हैं।</p>
+      <p>एप्लिकेशन की sensitive information तक पहुँच को उन सुविधाओं तक सीमित रखने का उद्देश्य है जिन्हें उपयोगकर्ता उचित रूप से अपेक्षित कर सकता है, जैसे supported apps को block करना, supported browser content को block करना, protection history दिखाना और schedules या PIN lock लागू करना।</p>
+      <h3>5. Data retention और deletion</h3>
+      <ul>
+        <li><strong>On-device data:</strong> schedules, local session history, blocked-app settings, language, custom block message और PIN-related settings सामान्यतः आपके डिवाइस पर तब तक रखे जाते हैं जब तक आप उन्हें हटाते नहीं, app data clear नहीं करते, एप्लिकेशन uninstall नहीं करते या उन्हें नए values से overwrite नहीं करते।</li>
+        <li><strong>Support emails:</strong> यदि आप सेवा प्रदाता से ईमेल द्वारा संपर्क करते हैं, तो सेवा प्रदाता support, legal या record-keeping purposes के लिए उस correspondence को retain कर सकता है।</li>
+        <li><strong>Third-party services:</strong> AdMob, GitHub infrastructure, Cloudflare या अन्य third parties द्वारा संसाधित डेटा उनकी अपनी retention practices और privacy policies द्वारा नियंत्रित होता है।</li>
+      </ul>
+      <h3>6. आपके विकल्प</h3>
+      <ul>
+        <li>आप किसी भी समय एप्लिकेशन uninstall करके उसका उपयोग बंद कर सकते हैं।</li>
+        <li>आप Android system settings में app data clear करके अधिकांश locally stored settings हटा सकते हैं।</li>
+        <li>आप optional permissions या features disable कर सकते हैं, लेकिन कुछ core blocking features तब काम नहीं कर सकते।</li>
+        <li>आप ऐप के भीतर अपने custom block message, schedules और PIN settings को बदल या हटा सकते हैं।</li>
+      </ul>
+      <h3>7. सुरक्षा</h3>
+      <p>सेवा प्रदाता एप्लिकेशन द्वारा संसाधित जानकारी की सुरक्षा के लिए उचित safeguards का उपयोग करता है। हालांकि, storage, transmission या processing का कोई भी तरीका पूर्णतः सुरक्षित नहीं है, और सेवा प्रदाता absolute security की गारंटी नहीं दे सकता।</p>
+      <h3>8. बच्चों की गोपनीयता</h3>
+      <p>एप्लिकेशन अपनी core use के लिए account creation की आवश्यकता नहीं रखता, इसलिए यह account registration जैसे तरीकों से बच्चों से सीधे personal information जानबूझकर एकत्र नहीं करता। यदि सेवा प्रदाता को पता चलता है कि किसी बच्चे ने सीधे सेवा प्रदाता को personal information प्रदान की है, तो सेवा प्रदाता उस जानकारी को हटाने के लिए उचित कदम उठाएगा।</p>
+      <p>यदि आप माता-पिता या अभिभावक हैं और आपको लगता है कि किसी बच्चे ने सीधे सेवा प्रदाता को personal information दी है, तो कृपया नीचे दिए गए ईमेल पते पर संपर्क करें।</p>
+      <h3>9. अंतरराष्ट्रीय प्रसंस्करण</h3>
+      <p>उपयोग की जाने वाली third-party services के आधार पर, जानकारी आपके देश या क्षेत्र के बाहर स्थित servers पर संसाधित की जा सकती है। ऐसे प्रसंस्करण को वे third-party providers अपनी privacy terms के अनुसार संभालते हैं।</p>
+      <h3>10. इस Privacy Policy में परिवर्तन</h3>
+      <p>यह Privacy Policy समय-समय पर अपडेट की जा सकती है। जब परिवर्तन किए जाएँगे, सेवा प्रदाता इस पृष्ठ को अपडेट करेगा। लागू कानून द्वारा अनुमत सीमा तक, परिवर्तन प्रभावी होने के बाद एप्लिकेशन का आपका निरंतर उपयोग संशोधित Privacy Policy की आपकी स्वीकृति माना जा सकता है।</p>
+      <h3>11. संपर्क</h3>
+      <p>यदि आपके पास इस Privacy Policy या एप्लिकेशन की privacy practices के बारे में प्रश्न हैं, तो कृपया संपर्क करें:</p>
+      <p><strong>SungHoon Lee</strong><br />Email: <a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a></p>
+    </section>
 
-    <h2>3. Data Shared with or Transmitted to Third Parties</h2>
-    <p>
-      The Service Provider does not sell your personal or sensitive user data. However, the Application
-      uses third-party services and network infrastructure as described below.
-    </p>
+    <section id="es" class="lang-section" lang="es">
+      <span class="lang-label">Español</span>
+      <h2>Política de Privacidad</h2>
+      <p>Esta Política de Privacidad se aplica a la aplicación móvil <strong>ThumbLock</strong> (la “Aplicación”), proporcionada por <strong>SungHoon Lee</strong> (el “Proveedor del Servicio”).</p>
+      <p><strong>Fecha de entrada en vigor:</strong> 2026-04-14</p>
+      <p>ThumbLock es una aplicación de bloqueo y protección contra contenido de formato corto. Para ofrecer sus funciones principales de bloqueo, la Aplicación puede acceder o procesar cierta información relacionada con el dispositivo, las aplicaciones, el navegador y la red. La mayor parte de este procesamiento se realiza <strong>localmente en su dispositivo</strong>.</p>
+      <h3>1. Información a la que la Aplicación accede, recopila o procesa</h3>
+      <h3>A. Información procesada localmente en su dispositivo</h3>
+      <ul>
+        <li><strong>Información relacionada con accesibilidad:</strong> cuando habilita el bloqueo basado en accesibilidad, la Aplicación puede inspeccionar información en pantalla necesaria para detectar y bloquear contenido de formato corto, incluido el texto de la barra de direcciones de navegadores compatibles, información de host/ruta de URL y el contexto de la aplicación o del paquete.</li>
+        <li><strong>Información de uso y de aplicación en primer plano:</strong> la Aplicación puede utilizar el acceso de uso y el estado de las aplicaciones para determinar qué aplicación está activa actualmente para las funciones de bloqueo y protección.</li>
+        <li><strong>Información sobre aplicaciones instaladas:</strong> la Aplicación puede comprobar si las aplicaciones compatibles para bloqueo están instaladas en su dispositivo para organizar la lista de aplicaciones bloqueadas y los controles relacionados.</li>
+        <li><strong>Datos de bloqueo VPN/DNS:</strong> si habilita el bloqueo basado en VPN, la Aplicación puede inspeccionar localmente los nombres de dominio de solicitudes DNS para determinar si un host bloqueado debe ser rechazado.</li>
+        <li><strong>Configuraciones locales y datos de protección:</strong> la Aplicación almacena localmente en su dispositivo datos de configuración y protección, como horarios, selecciones de aplicaciones bloqueadas, preferencia de idioma, mensaje de bloqueo personalizado, estado del PIN, PIN con hash e historial de sesiones de protección.</li>
+        <li><strong>Historial de sesiones:</strong> la Aplicación puede almacenar localmente marcas de tiempo y registros de eventos, como activación/desactivación de la protección, cierres forzados, revocación de permisos e información de tiempo relacionada con las sesiones de protección.</li>
+      </ul>
+      <h3>B. Información que usted puede proporcionar</h3>
+      <ul>
+        <li><strong>Mensaje de bloqueo personalizado:</strong> si introduce su propio mensaje de bloqueo, ese texto se almacena localmente en su dispositivo hasta que lo cambie o lo elimine.</li>
+        <li><strong>PIN/contraseña:</strong> si habilita el modo PIN, la Aplicación almacena un PIN <strong>con hash</strong> localmente en su dispositivo. El Proveedor del Servicio no almacena intencionadamente el PIN en texto plano.</li>
+        <li><strong>Información de contacto:</strong> si envía un correo electrónico al Proveedor del Servicio para obtener asistencia, el Proveedor del Servicio puede recibir su dirección de correo electrónico y cualquier información que incluya en su mensaje.</li>
+      </ul>
+      <h3>C. Información que el Proveedor del Servicio no recopila intencionadamente de forma directa a través de la app</h3>
+      <ul>
+        <li>Su nombre, dirección postal o número de teléfono</li>
+        <li>Datos de ubicación precisa</li>
+        <li>Fotos, grabaciones del micrófono o grabaciones de la cámara</li>
+        <li>Datos de registro de cuenta, ya que la Aplicación no requiere una cuenta para usar sus funciones principales</li>
+      </ul>
+      <h3>2. Cómo se utiliza la información</h3>
+      <p>La Aplicación utiliza la información anterior para ofrecer y mejorar sus funciones principales, incluidas las siguientes:</p>
+      <ul>
+        <li>detectar y bloquear contenido de formato corto o aplicaciones/sitios compatibles;</li>
+        <li>mostrar registros de protección e historial de actividad dentro de la aplicación;</li>
+        <li>aplicar horarios, protección con PIN y reglas de bloqueo seleccionadas por el usuario;</li>
+        <li>mostrar su mensaje de bloqueo personalizado y el estado de interfaz relacionado;</li>
+        <li>cargar y actualizar definiciones de reglas utilizadas por la Aplicación; y</li>
+        <li>mostrar anuncios a través de AdMob.</li>
+      </ul>
+      <h3>3. Datos compartidos con terceros o transmitidos a terceros</h3>
+      <p>El Proveedor del Servicio no vende sus datos personales o sensibles. Sin embargo, la Aplicación utiliza servicios de terceros e infraestructura de red como se describe a continuación.</p>
+      <h3>A. Google AdMob</h3>
+      <p>La Aplicación muestra anuncios mediante Google AdMob. AdMob y sus socios pueden procesar datos como información del dispositivo, identificadores, dirección IP, datos publicitarios, diagnósticos y datos de interacción con la aplicación de acuerdo con las políticas de Google.</p>
+      <p>Información de privacidad de AdMob: <a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer">https://support.google.com/admob/answer/6128543</a></p>
+      <h3>B. Actualizaciones remotas de reglas desde GitHub</h3>
+      <p>La Aplicación puede descargar archivos de reglas desde una URL alojada en GitHub para actualizar las reglas de bloqueo. Esto puede generar solicitudes de red a GitHub o a su infraestructura. Metadatos de red estándar, como su dirección IP y encabezados de solicitud, pueden ser procesados por esos proveedores como parte normal de las solicitudes web.</p>
+      <p>Declaración de privacidad de GitHub: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a></p>
+      <h3>C. Reenvío DNS para bloqueo basado en VPN</h3>
+      <p>Si el bloqueo basado en VPN está habilitado, las consultas DNS permitidas pueden reenviarse a un servidor de resolución DNS ascendente para que los sitios web y servicios continúen funcionando. Esto significa que los nombres de dominio solicitados pueden transmitirse a ese proveedor DNS como parte normal de la resolución DNS.</p>
+      <p>El servidor de resolución DNS ascendente que utiliza actualmente la Aplicación es Cloudflare 1.1.1.1.</p>
+      <p>Información de privacidad de Cloudflare: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">https://www.cloudflare.com/privacypolicy/</a></p>
+      <h3>4. Base legal, divulgación y acceso sensible</h3>
+      <p>Dado que ThumbLock utiliza capacidades sensibles de la plataforma como accesibilidad, acceso de uso, visibilidad de paquetes y manejo de red basado en VPN para proporcionar funciones de seguridad y bloqueo, el Proveedor del Servicio pretende que esta Política de Privacidad se lea junto con cualquier divulgación dentro de la aplicación mostrada antes o durante el uso de dichas funciones.</p>
+      <p>El acceso de la Aplicación a información sensible está destinado a limitarse a funciones razonablemente esperadas por el usuario, como bloquear aplicaciones compatibles, bloquear contenido compatible del navegador, mostrar historial de protección y aplicar horarios o bloqueo por PIN.</p>
+      <h3>5. Conservación y eliminación de datos</h3>
+      <ul>
+        <li><strong>Datos en el dispositivo:</strong> los horarios, el historial local de sesiones, la configuración de aplicaciones bloqueadas, el idioma, el mensaje de bloqueo personalizado y la configuración relacionada con el PIN generalmente se conservan en su dispositivo hasta que usted los elimine, borre los datos de la aplicación, desinstale la Aplicación o los sobrescriba con nuevos valores.</li>
+        <li><strong>Correos de soporte:</strong> si se comunica por correo electrónico con el Proveedor del Servicio, este puede conservar esa correspondencia con fines de soporte, legales o de archivo.</li>
+        <li><strong>Servicios de terceros:</strong> los datos procesados por AdMob, la infraestructura de GitHub, Cloudflare u otros terceros se rigen por sus propias prácticas de conservación y políticas de privacidad.</li>
+      </ul>
+      <h3>6. Sus opciones</h3>
+      <ul>
+        <li>Puede dejar de usar la Aplicación en cualquier momento desinstalándola.</li>
+        <li>Puede eliminar la mayoría de los ajustes almacenados localmente borrando los datos de la aplicación en la configuración del sistema Android.</li>
+        <li>Puede deshabilitar permisos o funciones opcionales, aunque algunas funciones principales de bloqueo podrían dejar de funcionar.</li>
+        <li>Puede eliminar o cambiar su mensaje de bloqueo personalizado, horarios y configuración de PIN dentro de la aplicación.</li>
+      </ul>
+      <h3>7. Seguridad</h3>
+      <p>El Proveedor del Servicio utiliza medidas razonables destinadas a proteger la información procesada por la Aplicación. Sin embargo, ningún método de almacenamiento, transmisión o procesamiento es completamente seguro, y el Proveedor del Servicio no puede garantizar una seguridad absoluta.</p>
+      <h3>8. Privacidad de menores</h3>
+      <p>La Aplicación no recopila de forma consciente información personal directamente de menores mediante registro de cuenta u otros formularios similares, ya que la Aplicación no requiere la creación de una cuenta para su uso principal. Si el Proveedor del Servicio llega a saber que un menor ha proporcionado información personal directamente al Proveedor del Servicio, tomará medidas razonables para eliminar esa información.</p>
+      <p>Si usted es padre, madre o tutor y cree que un menor ha proporcionado información personal directamente al Proveedor del Servicio, póngase en contacto mediante la dirección de correo electrónico indicada abajo.</p>
+      <h3>9. Tratamiento internacional</h3>
+      <p>Dependiendo de los servicios de terceros utilizados, la información puede procesarse en servidores situados fuera de su país o región. Dicho tratamiento es gestionado por esos proveedores de terceros conforme a sus propios términos de privacidad.</p>
+      <h3>10. Cambios en esta Política de Privacidad</h3>
+      <p>Esta Política de Privacidad puede actualizarse periódicamente. El Proveedor del Servicio actualizará esta página cuando se realicen cambios. En la medida permitida por la legislación aplicable, el uso continuado de la Aplicación después de que los cambios entren en vigor puede considerarse como su aceptación de la Política de Privacidad revisada.</p>
+      <h3>11. Contacto</h3>
+      <p>Si tiene preguntas sobre esta Política de Privacidad o sobre las prácticas de privacidad de la Aplicación, puede contactar con:</p>
+      <p><strong>SungHoon Lee</strong><br />Correo electrónico: <a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a></p>
+    </section>
 
-    <h3>A. Google AdMob</h3>
-    <p>
-      The Application displays ads using Google AdMob. AdMob and its partners may process data such as
-      device information, identifiers, IP address, advertising data, diagnostics, and app interaction data
-      in accordance with Google’s policies.
-    </p>
-    <p>
-      AdMob privacy information:
-      <a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer">
-        https://support.google.com/admob/answer/6128543
-      </a>
-    </p>
+    <section id="fr" class="lang-section" lang="fr">
+      <span class="lang-label">Français</span>
+      <h2>Politique de confidentialité</h2>
+      <p>La présente Politique de confidentialité s’applique à l’application mobile <strong>ThumbLock</strong> (l’« Application »), fournie par <strong>SungHoon Lee</strong> (le « Fournisseur de services »).</p>
+      <p><strong>Date d’entrée en vigueur :</strong> 2026-04-14</p>
+      <p>ThumbLock est une application de blocage et de protection contre les contenus courts. Afin de fournir ses fonctionnalités principales de blocage, l’Application peut accéder à certaines informations liées à l’appareil, aux applications, au navigateur et au réseau, ou les traiter. La majeure partie de ce traitement est effectuée <strong>localement sur votre appareil</strong>.</p>
+      <h3>1. Informations auxquelles l’Application accède, qu’elle collecte ou qu’elle traite</h3>
+      <h3>A. Informations traitées localement sur votre appareil</h3>
+      <ul>
+        <li><strong>Informations liées à l’accessibilité :</strong> lorsque vous activez le blocage fondé sur l’accessibilité, l’Application peut examiner les informations affichées à l’écran nécessaires pour détecter et bloquer les contenus courts, y compris le texte de la barre d’adresse des navigateurs pris en charge, les informations d’hôte/chemin des URL et le contexte de l’application ou du package.</li>
+        <li><strong>Informations d’usage et d’application au premier plan :</strong> l’Application peut utiliser l’accès aux statistiques d’usage et les informations d’état des applications pour déterminer quelle application est actuellement active dans le cadre des fonctions de blocage et de protection.</li>
+        <li><strong>Informations sur les applications installées :</strong> l’Application peut vérifier si les applications prises en charge à bloquer sont installées sur votre appareil afin d’organiser la liste des applications bloquées et les contrôles associés.</li>
+        <li><strong>Données de blocage VPN/DNS :</strong> si vous activez le blocage fondé sur VPN, l’Application peut inspecter sur l’appareil les noms de domaine des requêtes DNS afin de déterminer si un hôte bloqué doit être refusé.</li>
+        <li><strong>Paramètres locaux et données de protection :</strong> l’Application stocke localement sur votre appareil des données de configuration et de protection, telles que les horaires, les sélections d’applications bloquées, la préférence de langue, le message de blocage personnalisé, le code PIN haché, l’état du verrouillage par PIN et l’historique des sessions de protection.</li>
+        <li><strong>Historique des sessions :</strong> l’Application peut stocker localement des horodatages et des journaux d’événements, tels que les activations/désactivations de la protection, les arrêts forcés, les révocations d’autorisations et les informations de durée liées aux sessions de protection.</li>
+      </ul>
+      <h3>B. Informations que vous pouvez fournir</h3>
+      <ul>
+        <li><strong>Message de blocage personnalisé :</strong> si vous saisissez votre propre message de blocage, ce texte est stocké localement sur votre appareil jusqu’à ce que vous le modifiiez ou le supprimiez.</li>
+        <li><strong>PIN / mot de passe :</strong> si vous activez le mode PIN, l’Application stocke localement sur votre appareil un <strong>code PIN haché</strong>. Le PIN en clair n’est pas intentionnellement stocké par le Fournisseur de services.</li>
+        <li><strong>Coordonnées :</strong> si vous envoyez un e-mail au Fournisseur de services pour obtenir de l’assistance, celui-ci peut recevoir votre adresse e-mail ainsi que toute information que vous incluez dans votre message.</li>
+      </ul>
+      <h3>C. Informations que le Fournisseur de services ne collecte pas intentionnellement directement via l’application</h3>
+      <ul>
+        <li>Votre nom, votre adresse postale ou votre numéro de téléphone</li>
+        <li>Des données de localisation précise</li>
+        <li>Des photos, des enregistrements du microphone ou des enregistrements de la caméra</li>
+        <li>Des données d’inscription à un compte, car l’Application n’exige pas la création d’un compte pour utiliser ses fonctionnalités principales</li>
+      </ul>
+      <h3>2. Utilisation des informations</h3>
+      <p>L’Application utilise les informations ci-dessus pour fournir et améliorer ses fonctionnalités principales, notamment :</p>
+      <ul>
+        <li>détecter et bloquer des contenus courts ou des applications/sites pris en charge ;</li>
+        <li>afficher dans l’application les enregistrements de protection et l’historique d’activité ;</li>
+        <li>appliquer les horaires, la protection par PIN et les règles de blocage choisies par l’utilisateur ;</li>
+        <li>afficher votre message de blocage personnalisé et l’état d’interface associé ;</li>
+        <li>charger et mettre à jour les définitions de règles utilisées par l’Application ; et</li>
+        <li>afficher des annonces via AdMob.</li>
+      </ul>
+      <h3>3. Données partagées avec des tiers ou transmises à des tiers</h3>
+      <p>Le Fournisseur de services ne vend pas vos données personnelles ou sensibles. Toutefois, l’Application utilise des services tiers et une infrastructure réseau comme indiqué ci-dessous.</p>
+      <h3>A. Google AdMob</h3>
+      <p>L’Application affiche des publicités à l’aide de Google AdMob. AdMob et ses partenaires peuvent traiter des données telles que des informations sur l’appareil, des identifiants, l’adresse IP, des données publicitaires, des diagnostics et des données d’interaction avec l’application, conformément aux politiques de Google.</p>
+      <p>Informations de confidentialité AdMob : <a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer">https://support.google.com/admob/answer/6128543</a></p>
+      <h3>B. Mises à jour distantes des règles depuis GitHub</h3>
+      <p>L’Application peut télécharger des fichiers de règles depuis une URL hébergée sur GitHub afin de mettre à jour les règles de blocage. Cela peut entraîner des requêtes réseau vers GitHub ou son infrastructure. Des métadonnées réseau standard, telles que votre adresse IP et les en-têtes de requête, peuvent être traitées par ces fournisseurs dans le cadre normal des requêtes web.</p>
+      <p>Déclaration de confidentialité GitHub : <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a></p>
+      <h3>C. Transmission DNS pour le blocage fondé sur VPN</h3>
+      <p>Si le blocage fondé sur VPN est activé, les requêtes DNS autorisées peuvent être transmises à un résolveur DNS amont afin que les sites web et services puissent continuer à fonctionner. Cela signifie que les noms de domaine demandés peuvent être transmis à ce fournisseur DNS dans le cadre normal de la résolution DNS.</p>
+      <p>Le fournisseur DNS amont actuellement utilisé par l’Application est Cloudflare 1.1.1.1.</p>
+      <p>Informations de confidentialité Cloudflare : <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">https://www.cloudflare.com/privacypolicy/</a></p>
+      <h3>4. Base juridique, information et accès sensible</h3>
+      <p>Étant donné que ThumbLock utilise des capacités sensibles de la plateforme telles que l’accessibilité, l’accès aux données d’utilisation, la visibilité des packages et la gestion réseau fondée sur VPN pour fournir des fonctionnalités de sécurité et de blocage, le Fournisseur de services entend que la présente Politique de confidentialité soit lue conjointement avec toute information intégrée à l’application affichée avant ou pendant l’utilisation de ces fonctionnalités.</p>
+      <p>L’accès de l’Application à des informations sensibles est destiné à être limité aux fonctionnalités raisonnablement attendues par l’utilisateur, telles que le blocage d’applications prises en charge, le blocage de contenus de navigateur pris en charge, l’affichage de l’historique de protection et l’application d’horaires ou du verrouillage par PIN.</p>
+      <h3>5. Conservation et suppression des données</h3>
+      <ul>
+        <li><strong>Données sur l’appareil :</strong> les horaires, l’historique local des sessions, les paramètres d’applications bloquées, la langue, le message de blocage personnalisé et les paramètres liés au PIN sont généralement conservés sur votre appareil jusqu’à ce que vous les supprimiez, effaciez les données de l’application, désinstalliez l’Application ou les remplaciez par de nouvelles valeurs.</li>
+        <li><strong>E-mails d’assistance :</strong> si vous contactez le Fournisseur de services par e-mail, celui-ci peut conserver cette correspondance à des fins d’assistance, de conformité juridique ou d’archivage.</li>
+        <li><strong>Services tiers :</strong> les données traitées par AdMob, l’infrastructure GitHub, Cloudflare ou d’autres tiers sont régies par leurs propres pratiques de conservation et politiques de confidentialité.</li>
+      </ul>
+      <h3>6. Vos choix</h3>
+      <ul>
+        <li>Vous pouvez cesser d’utiliser l’Application à tout moment en la désinstallant.</li>
+        <li>Vous pouvez supprimer la plupart des paramètres stockés localement en effaçant les données de l’application dans les paramètres système Android.</li>
+        <li>Vous pouvez désactiver des autorisations ou fonctionnalités facultatives, mais certaines fonctionnalités principales de blocage peuvent alors ne plus fonctionner.</li>
+        <li>Vous pouvez supprimer ou modifier votre message de blocage personnalisé, vos horaires et vos paramètres PIN dans l’application.</li>
+      </ul>
+      <h3>7. Sécurité</h3>
+      <p>Le Fournisseur de services met en œuvre des mesures raisonnables destinées à protéger les informations traitées par l’Application. Toutefois, aucun mode de stockage, de transmission ou de traitement n’est totalement sûr, et le Fournisseur de services ne peut garantir une sécurité absolue.</p>
+      <h3>8. Confidentialité des enfants</h3>
+      <p>L’Application ne collecte pas sciemment d’informations personnelles directement auprès des enfants par le biais d’une création de compte ou de formulaires similaires, car l’Application n’exige pas la création d’un compte pour son utilisation principale. Si le Fournisseur de services apprend qu’un enfant a fourni directement des informations personnelles au Fournisseur de services, celui-ci prendra des mesures raisonnables pour supprimer ces informations.</p>
+      <p>Si vous êtes parent ou tuteur et pensez qu’un enfant a fourni directement des informations personnelles au Fournisseur de services, veuillez contacter le Fournisseur de services à l’adresse électronique ci-dessous.</p>
+      <h3>9. Traitement international</h3>
+      <p>Selon les services tiers utilisés, des informations peuvent être traitées sur des serveurs situés en dehors de votre pays ou de votre région. Ce traitement est géré par ces fournisseurs tiers conformément à leurs propres conditions de confidentialité.</p>
+      <h3>10. Modifications de la présente Politique de confidentialité</h3>
+      <p>La présente Politique de confidentialité peut être mise à jour périodiquement. Le Fournisseur de services mettra cette page à jour en cas de modification. Dans la mesure permise par le droit applicable, votre utilisation continue de l’Application après l’entrée en vigueur des modifications peut valoir acceptation de la Politique de confidentialité révisée.</p>
+      <h3>11. Contact</h3>
+      <p>Si vous avez des questions sur la présente Politique de confidentialité ou sur les pratiques de confidentialité de l’Application, vous pouvez contacter :</p>
+      <p><strong>SungHoon Lee</strong><br />E-mail : <a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a></p>
+    </section>
 
-    <h3>B. Remote rule updates from GitHub</h3>
-    <p>
-      The Application may download rule files from a GitHub-hosted URL in order to update blocking rules.
-      This may cause network requests to GitHub or its infrastructure. Standard network metadata, such as
-      your IP address and request headers, may be processed by those providers as part of normal web requests.
-    </p>
-    <p>
-      GitHub privacy statement:
-      <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">
-        https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement
-      </a>
-    </p>
+    <section id="id" class="lang-section" lang="id">
+      <span class="lang-label">Bahasa Indonesia</span>
+      <h2>Kebijakan Privasi</h2>
+      <p>Kebijakan Privasi ini berlaku untuk aplikasi seluler <strong>ThumbLock</strong> (“Aplikasi”), yang disediakan oleh <strong>SungHoon Lee</strong> (“Penyedia Layanan”).</p>
+      <p><strong>Tanggal berlaku:</strong> 2026-04-14</p>
+      <p>ThumbLock adalah aplikasi pemblokiran dan perlindungan terhadap konten berdurasi pendek (short-form). Untuk menyediakan fitur pemblokiran utamanya, Aplikasi dapat mengakses atau memproses informasi tertentu yang berkaitan dengan perangkat, aplikasi, browser, dan jaringan. Sebagian besar pemrosesan ini dilakukan <strong>secara lokal di perangkat Anda</strong>.</p>
+      <h3>1. Informasi yang Diakses, Dikumpulkan, atau Diproses oleh Aplikasi</h3>
+      <h3>A. Informasi yang diproses secara lokal di perangkat Anda</h3>
+      <ul>
+        <li><strong>Informasi terkait aksesibilitas:</strong> ketika Anda mengaktifkan pemblokiran berbasis aksesibilitas, Aplikasi dapat memeriksa informasi aplikasi di layar yang diperlukan untuk mendeteksi dan memblokir konten berdurasi pendek (short-form), termasuk teks bilah alamat browser yang didukung, informasi host/path URL, serta konteks aplikasi/paket.</li>
+        <li><strong>Informasi penggunaan dan aplikasi latar depan:</strong> Aplikasi dapat menggunakan akses penggunaan dan informasi status aplikasi untuk menentukan aplikasi mana yang sedang aktif untuk fitur pemblokiran dan perlindungan.</li>
+        <li><strong>Informasi aplikasi yang terpasang:</strong> Aplikasi dapat memeriksa apakah aplikasi yang didukung untuk diblokir terpasang di perangkat Anda untuk menyusun daftar aplikasi yang diblokir dan kontrol terkait.</li>
+        <li><strong>Data pemblokiran VPN/DNS:</strong> jika Anda mengaktifkan pemblokiran berbasis VPN, Aplikasi dapat memeriksa nama domain dari permintaan DNS di perangkat untuk menentukan apakah host yang diblokir harus ditolak.</li>
+        <li><strong>Pengaturan lokal dan data perlindungan:</strong> Aplikasi menyimpan secara lokal di perangkat Anda data pengaturan dan perlindungan seperti jadwal, pilihan aplikasi yang diblokir, preferensi bahasa, pesan blokir kustom, status PIN lock, PIN yang di-hash, dan riwayat sesi perlindungan.</li>
+        <li><strong>Riwayat sesi:</strong> Aplikasi dapat menyimpan secara lokal stempel waktu dan catatan peristiwa seperti perlindungan diaktifkan/dinonaktifkan, penghentian paksa, pencabutan izin, dan informasi waktu sesi perlindungan terkait.</li>
+      </ul>
+      <h3>B. Informasi yang dapat Anda berikan</h3>
+      <ul>
+        <li><strong>Pesan blokir kustom:</strong> jika Anda memasukkan pesan blokir Anda sendiri, teks tersebut disimpan secara lokal di perangkat Anda sampai Anda mengubah atau menghapusnya.</li>
+        <li><strong>PIN/kata sandi:</strong> jika Anda mengaktifkan mode PIN, Aplikasi menyimpan PIN yang <strong>di-hash</strong> secara lokal di perangkat Anda. PIN dalam bentuk teks biasa tidak sengaja disimpan oleh Penyedia Layanan.</li>
+        <li><strong>Informasi kontak:</strong> jika Anda mengirim email kepada Penyedia Layanan untuk dukungan, Penyedia Layanan dapat menerima alamat email Anda dan informasi apa pun yang Anda sertakan dalam pesan tersebut.</li>
+      </ul>
+      <h3>C. Informasi yang tidak secara sengaja dikumpulkan langsung oleh Penyedia Layanan melalui aplikasi</h3>
+      <ul>
+        <li>Nama, alamat surat, atau nomor telepon Anda</li>
+        <li>Data lokasi presisi</li>
+        <li>Foto, rekaman mikrofon, atau rekaman kamera</li>
+        <li>Data pendaftaran akun, karena Aplikasi tidak memerlukan akun untuk menggunakan fitur intinya</li>
+      </ul>
+      <h3>2. Cara Informasi Digunakan</h3>
+      <p>Aplikasi menggunakan informasi di atas untuk menyediakan dan meningkatkan fitur intinya, termasuk:</p>
+      <ul>
+        <li>mendeteksi dan memblokir konten berdurasi pendek (short-form) atau aplikasi/situs yang didukung;</li>
+        <li>menampilkan catatan perlindungan dan riwayat aktivitas di dalam aplikasi;</li>
+        <li>menerapkan jadwal, perlindungan PIN, dan aturan pemblokiran yang dipilih pengguna;</li>
+        <li>menampilkan pesan blokir kustom Anda dan status UI terkait;</li>
+        <li>memuat dan memperbarui definisi aturan yang digunakan oleh Aplikasi; dan</li>
+        <li>menampilkan iklan melalui AdMob.</li>
+      </ul>
+      <h3>3. Data yang Dibagikan dengan atau Dikirimkan kepada Pihak Ketiga</h3>
+      <p>Penyedia Layanan tidak menjual data pribadi atau data sensitif Anda. Namun, Aplikasi menggunakan layanan pihak ketiga dan infrastruktur jaringan sebagaimana dijelaskan di bawah ini.</p>
+      <h3>A. Google AdMob</h3>
+      <p>Aplikasi menampilkan iklan menggunakan Google AdMob. AdMob dan mitranya dapat memproses data seperti informasi perangkat, pengenal, alamat IP, data periklanan, data diagnostik, dan data interaksi aplikasi sesuai dengan kebijakan Google.</p>
+      <p>Informasi privasi AdMob: <a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer">https://support.google.com/admob/answer/6128543</a></p>
+      <h3>B. Pembaruan aturan jarak jauh dari GitHub</h3>
+      <p>Aplikasi dapat mengunduh file aturan dari URL yang di-host di GitHub untuk memperbarui aturan pemblokiran. Hal ini dapat menyebabkan permintaan jaringan ke GitHub atau infrastrukturnya. Metadata jaringan standar, seperti alamat IP dan header permintaan Anda, dapat diproses oleh penyedia tersebut sebagai bagian normal dari permintaan web.</p>
+      <p>Pernyataan privasi GitHub: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a></p>
+      <h3>C. Penerusan DNS untuk pemblokiran berbasis VPN</h3>
+      <p>Jika pemblokiran berbasis VPN diaktifkan, kueri DNS yang diizinkan dapat diteruskan ke resolver DNS upstream agar situs web dan layanan tetap berfungsi. Ini berarti nama domain yang diminta dapat dikirimkan ke penyedia DNS upstream tersebut sebagai bagian dari resolusi DNS normal.</p>
+      <p>Penyedia DNS upstream yang saat ini digunakan oleh Aplikasi adalah Cloudflare 1.1.1.1.</p>
+      <p>Informasi privasi Cloudflare: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">https://www.cloudflare.com/privacypolicy/</a></p>
+      <h3>4. Dasar Hukum, Pengungkapan, dan Akses Sensitif</h3>
+      <p>Karena ThumbLock menggunakan kemampuan platform yang sensitif seperti aksesibilitas, akses penggunaan, visibilitas paket, dan penanganan jaringan berbasis VPN untuk menyediakan fungsi keamanan dan pemblokiran, Penyedia Layanan bermaksud agar Kebijakan Privasi ini dibaca bersama pengungkapan dalam aplikasi yang ditampilkan sebelum atau selama penggunaan fitur tersebut.</p>
+      <p>Akses Aplikasi terhadap informasi sensitif dimaksudkan untuk dibatasi pada fitur yang secara wajar diharapkan oleh pengguna, seperti memblokir aplikasi yang didukung, memblokir konten browser yang didukung, menampilkan riwayat perlindungan, dan menerapkan jadwal atau kunci PIN.</p>
+      <h3>5. Penyimpanan dan Penghapusan Data</h3>
+      <ul>
+        <li><strong>Data di perangkat:</strong> jadwal, riwayat sesi lokal, pengaturan aplikasi yang diblokir, bahasa, pesan blokir kustom, dan pengaturan terkait PIN umumnya disimpan di perangkat Anda sampai Anda menghapusnya, membersihkan data aplikasi, mencopot Aplikasi, atau menimpanya dengan nilai baru.</li>
+        <li><strong>Email dukungan:</strong> jika Anda menghubungi Penyedia Layanan melalui email, Penyedia Layanan dapat menyimpan korespondensi tersebut untuk tujuan dukungan, hukum, atau pencatatan.</li>
+        <li><strong>Layanan pihak ketiga:</strong> data yang diproses oleh AdMob, infrastruktur GitHub, Cloudflare, atau pihak ketiga lainnya diatur oleh praktik retensi dan kebijakan privasi mereka sendiri.</li>
+      </ul>
+      <h3>6. Pilihan Anda</h3>
+      <ul>
+        <li>Anda dapat berhenti menggunakan Aplikasi kapan saja dengan mencopotnya.</li>
+        <li>Anda dapat menghapus sebagian besar pengaturan yang disimpan secara lokal dengan membersihkan data aplikasi di pengaturan sistem Android.</li>
+        <li>Anda dapat menonaktifkan izin atau fitur opsional, tetapi beberapa fitur inti pemblokiran mungkin tidak lagi berfungsi.</li>
+        <li>Anda dapat menghapus atau mengubah pesan blokir kustom, jadwal, dan pengaturan PIN Anda di dalam aplikasi.</li>
+      </ul>
+      <h3>7. Keamanan</h3>
+      <p>Penyedia Layanan menggunakan perlindungan yang wajar untuk melindungi informasi yang diproses oleh Aplikasi. Namun, tidak ada metode penyimpanan, transmisi, atau pemrosesan yang sepenuhnya aman, dan Penyedia Layanan tidak dapat menjamin keamanan mutlak.</p>
+      <h3>8. Privasi Anak</h3>
+      <p>Aplikasi tidak dengan sengaja mengumpulkan informasi pribadi secara langsung dari anak-anak melalui pendaftaran akun atau formulir serupa, karena Aplikasi tidak memerlukan pembuatan akun untuk penggunaan intinya. Jika Penyedia Layanan mengetahui bahwa seorang anak telah memberikan informasi pribadi secara langsung kepada Penyedia Layanan, Penyedia Layanan akan mengambil langkah yang wajar untuk menghapus informasi tersebut.</p>
+      <p>Jika Anda adalah orang tua atau wali dan yakin bahwa seorang anak telah memberikan informasi pribadi secara langsung kepada Penyedia Layanan, silakan hubungi Penyedia Layanan melalui alamat email di bawah ini.</p>
+      <h3>9. Pemrosesan Internasional</h3>
+      <p>Tergantung pada layanan pihak ketiga yang digunakan, informasi dapat diproses pada server yang berada di luar negara atau wilayah Anda. Pemrosesan tersebut ditangani oleh penyedia pihak ketiga sesuai dengan ketentuan privasi mereka sendiri.</p>
+      <h3>10. Perubahan pada Kebijakan Privasi ini</h3>
+      <p>Kebijakan Privasi ini dapat diperbarui dari waktu ke waktu. Penyedia Layanan akan memperbarui halaman ini ketika ada perubahan. Sejauh diizinkan oleh hukum yang berlaku, penggunaan Aplikasi yang berkelanjutan setelah perubahan berlaku dapat dianggap sebagai penerimaan Anda atas Kebijakan Privasi yang telah direvisi.</p>
+      <h3>11. Kontak</h3>
+      <p>Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini atau praktik privasi Aplikasi, silakan hubungi:</p>
+      <p><strong>SungHoon Lee</strong><br />Email: <a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a></p>
+    </section>
 
-    <h3>C. DNS forwarding for VPN-based blocking</h3>
-    <p>
-      If VPN-based blocking is enabled, allowed DNS queries may be forwarded to an upstream DNS resolver
-      so that websites and services can continue to function. This means requested domain names may be
-      transmitted to that upstream DNS provider as part of normal DNS resolution.
-    </p>
-    <p>
-      The current upstream DNS provider used by the Application is Cloudflare 1.1.1.1.
-    </p>
-    <p>
-      Cloudflare privacy information:
-      <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">
-        https://www.cloudflare.com/privacypolicy/
-      </a>
-    </p>
+    <section id="de" class="lang-section" lang="de">
+      <span class="lang-label">Deutsch</span>
+      <h2>Datenschutzerklärung</h2>
+      <p>Diese Datenschutzerklärung gilt für die mobile Anwendung <strong>ThumbLock</strong> (die „Anwendung“), die von <strong>SungHoon Lee</strong> (dem „Diensteanbieter“) bereitgestellt wird.</p>
+      <p><strong>Gültig ab:</strong> 2026-04-14</p>
+      <p>ThumbLock ist eine App zum Blockieren und Schützen vor Short-Form-Inhalten. Um ihre Kernfunktionen bereitzustellen, kann die Anwendung auf bestimmte geräte-, app-, browser- und netzwerkbezogene Informationen zugreifen oder diese verarbeiten. Der Großteil dieser Verarbeitung erfolgt <strong>lokal auf Ihrem Gerät</strong>.</p>
+      <h3>1. Informationen, auf die die Anwendung zugreift, die sie erhebt oder verarbeitet</h3>
+      <h3>A. Informationen, die lokal auf Ihrem Gerät verarbeitet werden</h3>
+      <ul>
+        <li><strong>Barrierefreiheitsbezogene Informationen:</strong> Wenn Sie die auf Barrierefreiheit basierende Sperre aktivieren, kann die Anwendung Bildschirm-Informationen prüfen, die erforderlich sind, um Short-Form-Inhalte zu erkennen und zu blockieren, einschließlich Texten in der Adressleiste unterstützter Browser, URL-Host-/Pfad-Informationen sowie des App-/Paketkontexts.</li>
+        <li><strong>Nutzungs- und Vordergrund-App-Informationen:</strong> Die Anwendung kann Nutzungsdatenzugriff und App-Statusinformationen verwenden, um festzustellen, welche App für Sperr- und Schutzfunktionen aktuell aktiv ist.</li>
+        <li><strong>Informationen über installierte Apps:</strong> Die Anwendung kann prüfen, ob unterstützte zu blockierende Apps auf Ihrem Gerät installiert sind, um die Liste blockierter Apps und die zugehörigen Steuerelemente zu organisieren.</li>
+        <li><strong>VPN-/DNS-Sperrdaten:</strong> Wenn Sie die VPN-basierte Sperre aktivieren, kann die Anwendung DNS-Anfragedomänennamen auf dem Gerät prüfen, um festzustellen, ob ein blockierter Host abgewiesen werden soll.</li>
+        <li><strong>Lokale Einstellungen und Schutzdaten:</strong> Die Anwendung speichert Schutz- und Einstellungsdaten lokal auf Ihrem Gerät, z. B. Zeitpläne, Auswahlen blockierter Apps, Spracheinstellungen, benutzerdefinierte Sperrnachrichten, PIN-Sperrstatus, gehashte PIN und den Verlauf von Schutzsitzungen.</li>
+        <li><strong>Sitzungsverlauf:</strong> Die Anwendung kann Zeitstempel und Ereignisprotokolle lokal speichern, etwa Aktivierung/Deaktivierung des Schutzes, erzwungene Beendigungen, widerrufene Berechtigungen und zugehörige Sitzungszeitinformationen.</li>
+      </ul>
+      <h3>B. Informationen, die Sie bereitstellen können</h3>
+      <ul>
+        <li><strong>Benutzerdefinierte Sperrnachricht:</strong> Wenn Sie eine eigene Sperrnachricht eingeben, wird dieser Text lokal auf Ihrem Gerät gespeichert, bis Sie ihn ändern oder löschen.</li>
+        <li><strong>PIN / Passcode:</strong> Wenn Sie den PIN-Modus aktivieren, speichert die Anwendung eine <strong>gehashte</strong> PIN lokal auf Ihrem Gerät. Die PIN im Klartext wird vom Diensteanbieter nicht absichtlich gespeichert.</li>
+        <li><strong>Kontaktinformationen:</strong> Wenn Sie dem Diensteanbieter zur Unterstützung eine E-Mail senden, kann der Diensteanbieter Ihre E-Mail-Adresse und alle von Ihnen in der Nachricht enthaltenen Informationen erhalten.</li>
+      </ul>
+      <h3>C. Informationen, die der Diensteanbieter nicht absichtlich direkt über die App erhebt</h3>
+      <ul>
+        <li>Ihren Namen, Ihre Postanschrift oder Ihre Telefonnummer</li>
+        <li>Genaue Standortdaten</li>
+        <li>Fotos, Mikrofonaufnahmen oder Kameraaufnahmen</li>
+        <li>Kontoregistrierungsdaten, da die Anwendung für ihre Kernfunktionen kein Konto erfordert</li>
+      </ul>
+      <h3>2. Wie die Informationen verwendet werden</h3>
+      <p>Die Anwendung nutzt die oben genannten Informationen, um ihre Kernfunktionen bereitzustellen und zu verbessern, insbesondere um:</p>
+      <ul>
+        <li>Short-Form-Inhalte oder unterstützte Apps/Seiten zu erkennen und zu blockieren;</li>
+        <li>Schutzprotokolle und Aktivitätsverlauf innerhalb der App anzuzeigen;</li>
+        <li>Zeitpläne, PIN-Schutz und vom Nutzer ausgewählte Sperrregeln durchzusetzen;</li>
+        <li>Ihre benutzerdefinierte Sperrnachricht und den zugehörigen UI-Status anzuzeigen;</li>
+        <li>Regeldefinitionen zu laden und zu aktualisieren, die von der Anwendung verwendet werden; und</li>
+        <li>Werbung über AdMob anzuzeigen.</li>
+      </ul>
+      <h3>3. Daten, die mit Dritten geteilt oder an Dritte übermittelt werden</h3>
+      <p>Der Diensteanbieter verkauft Ihre personenbezogenen oder sensiblen Daten nicht. Die Anwendung nutzt jedoch Drittanbieterdienste und Netzwerkinfrastruktur wie nachstehend beschrieben.</p>
+      <h3>A. Google AdMob</h3>
+      <p>Die Anwendung zeigt Werbung über Google AdMob an. AdMob und seine Partner können gemäß den Richtlinien von Google Daten wie Geräteinformationen, Kennungen, IP-Adresse, Werbedaten, Diagnosedaten und App-Interaktionsdaten verarbeiten.</p>
+      <p>AdMob-Datenschutzinformationen: <a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer">https://support.google.com/admob/answer/6128543</a></p>
+      <h3>B. Remote-Regelupdates von GitHub</h3>
+      <p>Die Anwendung kann Regeldateien von einer auf GitHub gehosteten URL herunterladen, um Sperrregeln zu aktualisieren. Dadurch können Netzwerkanfragen an GitHub oder dessen Infrastruktur gesendet werden. Standard-Netzwerkmetadaten wie Ihre IP-Adresse und Anfrage-Header können von diesen Anbietern im Rahmen normaler Webanfragen verarbeitet werden.</p>
+      <p>GitHub-Datenschutzerklärung: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a></p>
+      <h3>C. DNS-Weiterleitung für VPN-basierte Sperre</h3>
+      <p>Wenn die VPN-basierte Sperre aktiviert ist, können zulässige DNS-Anfragen an einen Upstream-DNS-Resolver weitergeleitet werden, damit Websites und Dienste weiterhin funktionieren. Das bedeutet, dass angefragte Domainnamen im Rahmen der normalen DNS-Auflösung an diesen Upstream-DNS-Anbieter übermittelt werden können.</p>
+      <p>Der derzeit von der Anwendung verwendete Upstream-DNS-Anbieter ist Cloudflare 1.1.1.1.</p>
+      <p>Cloudflare-Datenschutzinformationen: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">https://www.cloudflare.com/privacypolicy/</a></p>
+      <h3>4. Rechtsgrundlage, Offenlegung und sensibler Zugriff</h3>
+      <p>Da ThumbLock sensible Plattformfunktionen wie Barrierefreiheit, Nutzungsdatenzugriff, Paket-Sichtbarkeit und VPN-basierte Netzwerkverarbeitung verwendet, um Sicherheits- und Sperrfunktionen bereitzustellen, beabsichtigt der Diensteanbieter, dass diese Datenschutzerklärung zusammen mit allen In-App-Hinweisen gelesen wird, die vor oder während der Nutzung dieser Funktionen angezeigt werden.</p>
+      <p>Der Zugriff der Anwendung auf sensible Informationen soll auf Funktionen beschränkt sein, die der Nutzer vernünftigerweise erwarten kann, wie das Blockieren unterstützter Apps, das Blockieren unterstützter Browser-Inhalte, die Anzeige des Schutzverlaufs sowie die Durchsetzung von Zeitplänen oder PIN-Sperren.</p>
+      <h3>5. Datenspeicherung und Löschung</h3>
+      <ul>
+        <li><strong>Daten auf dem Gerät:</strong> Zeitpläne, lokaler Sitzungsverlauf, Einstellungen blockierter Apps, Sprache, benutzerdefinierte Sperrnachricht und PIN-bezogene Einstellungen werden in der Regel auf Ihrem Gerät gespeichert, bis Sie sie entfernen, die App-Daten löschen, die Anwendung deinstallieren oder durch neue Werte überschreiben.</li>
+        <li><strong>Support-E-Mails:</strong> Wenn Sie den Diensteanbieter per E-Mail kontaktieren, kann der Diensteanbieter diese Korrespondenz zu Support-, Rechts- oder Dokumentationszwecken aufbewahren.</li>
+        <li><strong>Drittanbieterdienste:</strong> Daten, die von AdMob, der GitHub-Infrastruktur, Cloudflare oder anderen Dritten verarbeitet werden, unterliegen deren eigenen Aufbewahrungspraktiken und Datenschutzrichtlinien.</li>
+      </ul>
+      <h3>6. Ihre Wahlmöglichkeiten</h3>
+      <ul>
+        <li>Sie können die Nutzung der Anwendung jederzeit beenden, indem Sie sie deinstallieren.</li>
+        <li>Sie können die meisten lokal gespeicherten Einstellungen löschen, indem Sie die App-Daten in den Android-Systemeinstellungen zurücksetzen.</li>
+        <li>Sie können optionale Berechtigungen oder Funktionen deaktivieren; einige Kernfunktionen der Sperre funktionieren dann möglicherweise nicht mehr.</li>
+        <li>Sie können Ihre benutzerdefinierte Sperrnachricht, Zeitpläne und PIN-Einstellungen innerhalb der App entfernen oder ändern.</li>
+      </ul>
+      <h3>7. Sicherheit</h3>
+      <p>Der Diensteanbieter verwendet angemessene Schutzmaßnahmen, um die von der Anwendung verarbeiteten Informationen zu schützen. Allerdings ist keine Methode der Speicherung, Übertragung oder Verarbeitung vollständig sicher, und der Diensteanbieter kann keine absolute Sicherheit garantieren.</p>
+      <h3>8. Datenschutz von Kindern</h3>
+      <p>Die Anwendung erhebt wissentlich keine personenbezogenen Daten direkt von Kindern über Kontoregistrierung oder ähnliche Formulare, da die Anwendung für ihre Kernnutzung keine Kontoerstellung erfordert. Wenn der Diensteanbieter Kenntnis davon erhält, dass ein Kind dem Diensteanbieter direkt personenbezogene Daten übermittelt hat, wird er angemessene Schritte unternehmen, um diese Informationen zu löschen.</p>
+      <p>Wenn Sie Elternteil oder Sorgeberechtigter sind und glauben, dass ein Kind dem Diensteanbieter direkt personenbezogene Daten übermittelt hat, kontaktieren Sie bitte den Diensteanbieter unter der unten angegebenen E-Mail-Adresse.</p>
+      <h3>9. Internationale Verarbeitung</h3>
+      <p>Abhängig von den verwendeten Drittanbieterdiensten können Informationen auf Servern außerhalb Ihres Landes oder Ihrer Region verarbeitet werden. Eine solche Verarbeitung erfolgt durch diese Drittanbieter nach deren eigenen Datenschutzbestimmungen.</p>
+      <h3>10. Änderungen dieser Datenschutzerklärung</h3>
+      <p>Diese Datenschutzerklärung kann von Zeit zu Zeit aktualisiert werden. Der Diensteanbieter wird diese Seite aktualisieren, wenn Änderungen vorgenommen werden. Soweit nach geltendem Recht zulässig, kann Ihre fortgesetzte Nutzung der Anwendung nach Inkrafttreten von Änderungen als Zustimmung zur überarbeiteten Datenschutzerklärung angesehen werden.</p>
+      <h3>11. Kontakt</h3>
+      <p>Wenn Sie Fragen zu dieser Datenschutzerklärung oder zu den Datenschutzpraktiken der Anwendung haben, kontaktieren Sie bitte:</p>
+      <p><strong>SungHoon Lee</strong><br />E-Mail: <a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a></p>
+    </section>
 
-    <h2>4. Legal Basis, Disclosure, and Sensitive Access</h2>
-    <p>
-      Because ThumbLock uses sensitive platform capabilities such as accessibility, usage access,
-      package visibility, and VPN-based network handling to provide security and blocking functionality,
-      the Service Provider intends this Privacy Policy to be read together with any in-app disclosures
-      shown before or during use of those features.
-    </p>
-    <p>
-      The Application’s access to sensitive information is intended to be limited to features reasonably
-      expected by the user, such as blocking supported apps, blocking supported browser content, displaying
-      protection history, and enforcing schedules or PIN lock.
-    </p>
+    <section id="ja" class="lang-section" lang="ja">
+      <span class="lang-label">日本語</span>
+      <h2>プライバシーポリシー</h2>
+      <p>本プライバシーポリシーは、<strong>SungHoon Lee</strong>（以下「サービス提供者」）が提供するモバイルアプリケーション <strong>ThumbLock</strong>（以下「本アプリ」）に適用されます。</p>
+      <p><strong>施行日:</strong> 2026-04-14</p>
+      <p>ThumbLock は、ショートフォームコンテンツのブロックおよび保護を目的としたアプリです。中核機能を提供するために、本アプリは端末、アプリ、ブラウザ、ネットワークに関連する一定の情報にアクセスし、またはこれを処理する場合があります。こうした処理の大部分は、<strong>ユーザーの端末内でローカルに行われます</strong>。</p>
+      <h3>1. 本アプリがアクセス、取得、または処理する情報</h3>
+      <h3>A. 端末内でローカルに処理される情報</h3>
+      <ul>
+        <li><strong>アクセシビリティ関連情報:</strong> アクセシビリティベースのブロック機能を有効にした場合、本アプリはショートフォームコンテンツを検出してブロックするために必要な画面上のアプリ情報を確認することがあります。これには、対応ブラウザのアドレスバーのテキスト、URL のホスト/パス情報、アプリまたはパッケージに関する情報が含まれる場合があります。</li>
+        <li><strong>利用状況およびフォアグラウンドアプリ情報:</strong> 本アプリは、どのアプリがブロックおよび保護機能の対象として現在アクティブであるかを判断するため、使用履歴へのアクセス情報およびアプリ状態情報を利用することがあります。</li>
+        <li><strong>インストール済みアプリ情報:</strong> 本アプリは、対応するブロック対象アプリが端末にインストールされているかを確認し、ブロック対象アプリ一覧および関連コントロールを構成することがあります。</li>
+        <li><strong>VPN/DNS ブロックデータ:</strong> VPN ベースのブロック機能を有効にした場合、本アプリは、どのブロック対象ホストを拒否すべきか判断するため、端末上で DNS 要求のドメイン名を確認することがあります。</li>
+        <li><strong>ローカル設定および保護データ:</strong> 本アプリは、スケジュール、ブロック対象アプリの選択状態、言語設定、カスタムブロックメッセージ、PIN ロック状態、ハッシュ化された PIN、保護セッション記録などの設定・保護関連データを端末内にローカル保存します。</li>
+        <li><strong>セッション履歴:</strong> 本アプリは、保護の有効化/無効化、強制終了、権限取り消し、およびそれに関連する保護セッションの時間情報などのタイムスタンプやイベント記録をローカル保存することがあります。</li>
+      </ul>
+      <h3>B. ユーザーが提供する情報</h3>
+      <ul>
+        <li><strong>カスタムブロックメッセージ:</strong> ユーザーが独自のブロックメッセージを入力した場合、そのテキストはユーザーが変更または削除するまで端末内にローカル保存されます。</li>
+        <li><strong>PIN/パスコード:</strong> ユーザーが PIN モードを有効にした場合、本アプリは <strong>ハッシュ化された</strong> PIN を端末内にローカル保存します。平文の PIN をサービス提供者が意図的に保存することはありません。</li>
+        <li><strong>連絡先情報:</strong> ユーザーがサポートのためにサービス提供者へメールを送信した場合、サービス提供者はメールアドレスおよびメッセージ内の情報を受け取ることがあります。</li>
+      </ul>
+      <h3>C. サービス提供者が本アプリを通じて意図的に直接取得しない情報</h3>
+      <ul>
+        <li>氏名、郵便住所、電話番号</li>
+        <li>高精度の位置情報</li>
+        <li>写真、マイク録音、カメラ録画</li>
+        <li>本アプリの中核機能の利用に必要なアカウント登録情報</li>
+      </ul>
+      <h3>2. 情報の利用目的</h3>
+      <p>本アプリは、以下の中核機能を提供し改善するために上記情報を利用します。</p>
+      <ul>
+        <li>ショートフォームコンテンツまたは対応アプリ/サイトの検出およびブロック</li>
+        <li>アプリ内での保護記録および利用履歴の表示</li>
+        <li>スケジュール、PIN 保護、ユーザーが選択したブロックルールの適用</li>
+        <li>ユーザー指定のブロックメッセージおよび関連 UI 状態の表示</li>
+        <li>本アプリが利用するルール定義の読み込みおよび更新</li>
+        <li>AdMob を通じた広告の表示</li>
+      </ul>
+      <h3>3. 第三者と共有または第三者へ送信されるデータ</h3>
+      <p>サービス提供者は、ユーザーの個人データまたはセンシティブデータを販売しません。ただし、本アプリは以下のとおり第三者サービスおよびネットワーク基盤を利用します。</p>
+      <h3>A. Google AdMob</h3>
+      <p>本アプリは Google AdMob を使用して広告を表示します。AdMob およびそのパートナーは、Google のポリシーに従い、端末情報、識別子、IP アドレス、広告関連データ、診断データ、アプリ利用データ等を処理することがあります。</p>
+      <p>AdMob のプライバシー情報: <a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer">https://support.google.com/admob/answer/6128543</a></p>
+      <h3>B. GitHub からのリモートルール更新</h3>
+      <p>本アプリは、ブロックルールを更新するために GitHub 上の URL からルールファイルをダウンロードする場合があります。これにより、GitHub またはその基盤に対してネットワークリクエストが送信されることがあります。IP アドレスやリクエストヘッダーなどの標準的なネットワークメタデータは、通常の Web リクエストの一部として当該提供者により処理される場合があります。</p>
+      <p>GitHub のプライバシーステートメント: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a></p>
+      <h3>C. VPN ベースブロックにおける DNS 転送</h3>
+      <p>VPN ベースのブロックが有効な場合、Web サイトやサービスを正常に動作させるため、許可された DNS クエリが上位 DNS リゾルバへ転送されることがあります。これは、要求されたドメイン名が通常の DNS 解決の一部として当該 DNS 提供者へ送信されることを意味します。</p>
+      <p>現在、本アプリが使用している上位 DNS 提供者は Cloudflare 1.1.1.1 です。</p>
+      <p>Cloudflare のプライバシー情報: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">https://www.cloudflare.com/privacypolicy/</a></p>
+      <h3>4. 法的根拠、開示、および機密情報へのアクセス</h3>
+      <p>ThumbLock は、セキュリティおよびブロック機能を提供するために、アクセシビリティ、使用履歴へのアクセス、パッケージ可視性、VPN ベースのネットワーク処理などのセンシティブなプラットフォーム機能を利用します。そのため、サービス提供者は、本プライバシーポリシーを、これらの機能の利用前または利用中にアプリ内で表示される告知とあわせて読まれることを想定しています。</p>
+      <p>本アプリによるセンシティブ情報へのアクセスは、対応アプリのブロック、対応ブラウザコンテンツのブロック、保護履歴の表示、スケジュールや PIN ロックの適用など、ユーザーが合理的に期待する機能に限定することを意図しています。</p>
+      <h3>5. データの保存および削除</h3>
+      <ul>
+        <li><strong>端末内データ:</strong> スケジュール、ローカルセッション履歴、ブロック対象アプリ設定、言語設定、カスタムブロックメッセージ、PIN 関連設定は、ユーザーが削除するか、アプリデータを消去するか、本アプリをアンインストールするか、新しい値で上書きするまで、通常は端末に保存されます。</li>
+        <li><strong>サポートメール:</strong> ユーザーがサービス提供者へメールで連絡した場合、サービス提供者はサポート、法的対応、記録保持のために当該通信内容を保持する場合があります。</li>
+        <li><strong>第三者サービス:</strong> AdMob、GitHub 基盤、Cloudflare、その他第三者により処理されるデータは、それぞれの保存方針およびプライバシーポリシーに従います。</li>
+      </ul>
+      <h3>6. ユーザーの選択</h3>
+      <ul>
+        <li>ユーザーはいつでも本アプリをアンインストールすることで利用を停止できます。</li>
+        <li>Android のシステム設定でアプリデータを消去することにより、多くのローカル保存設定を削除できます。</li>
+        <li>任意の権限や機能を無効にできますが、その場合、一部の中核的なブロック機能が正常に動作しなくなる可能性があります。</li>
+        <li>ユーザーは本アプリ内で、カスタムブロックメッセージ、スケジュール、PIN 設定を変更または削除できます。</li>
+      </ul>
+      <h3>7. セキュリティ</h3>
+      <p>サービス提供者は、本アプリが処理する情報を保護するために合理的な安全対策を講じます。ただし、保存、送信、処理のいずれの方法も完全に安全であるとは限らず、サービス提供者は絶対的な安全性を保証することはできません。</p>
+      <h3>8. 子どものプライバシー</h3>
+      <p>本アプリは、中核機能の利用にアカウント作成を必要としないため、アカウント登録などを通じて子どもから直接個人情報を故意に収集することはありません。サービス提供者が、子どもがサービス提供者に直接個人情報を提供したことを把握した場合、当該情報を削除するために合理的な措置を講じます。</p>
+      <p>保護者または後見人の方で、子どもがサービス提供者に直接個人情報を提供したと考えられる場合は、以下のメールアドレスまでご連絡ください。</p>
+      <h3>9. 国際的な処理</h3>
+      <p>利用される第三者サービスによっては、情報が利用者の国または地域外のサーバーで処理される場合があります。そのような処理は、各第三者提供者のプライバシー条件に従って行われます。</p>
+      <h3>10. 本プライバシーポリシーの変更</h3>
+      <p>本プライバシーポリシーは随時更新される場合があります。変更がある場合、サービス提供者は本ページを更新します。適用法令で認められる範囲において、変更の発効後も本アプリの利用を継続した場合、改定後のプライバシーポリシーに同意したものとみなされる場合があります。</p>
+      <h3>11. お問い合わせ</h3>
+      <p>本プライバシーポリシーまたは本アプリのプライバシー慣行についてご質問がある場合は、以下までご連絡ください。</p>
+      <p><strong>SungHoon Lee</strong><br />メール: <a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a></p>
+    </section>
 
-    <h2>5. Data Retention and Deletion</h2>
-    <ul>
-      <li>
-        <strong>On-device data:</strong> schedules, local session history, blocked-app settings, language,
-        custom block message, and PIN-related settings are generally retained on your device until you
-        remove them, clear the app’s data, uninstall the Application, or overwrite them with new values.
-      </li>
-      <li>
-        <strong>Support emails:</strong> if you contact the Service Provider by email, the Service Provider
-        may retain that correspondence for support, legal, or record-keeping purposes.
-      </li>
-      <li>
-        <strong>Third-party services:</strong> data processed by AdMob, GitHub infrastructure, Cloudflare,
-        or other third parties is governed by their own retention practices and privacy policies.
-      </li>
-    </ul>
+    <section id="th" class="lang-section" lang="th">
+      <span class="lang-label">ไทย</span>
+      <h2>นโยบายความเป็นส่วนตัว</h2>
+      <p>นโยบายความเป็นส่วนตัวฉบับนี้ใช้กับแอปพลิเคชันมือถือ <strong>ThumbLock</strong> (“แอปพลิเคชัน”) ซึ่งให้บริการโดย <strong>SungHoon Lee</strong> (“ผู้ให้บริการ”)</p>
+      <p><strong>วันที่มีผลบังคับใช้:</strong> 2026-04-14</p>
+      <p>ThumbLock เป็นแอปสำหรับบล็อกและปกป้องจากคอนเทนต์แบบสั้น เพื่อให้บริการฟังก์ชันหลักของแอป แอปพลิเคชันอาจเข้าถึงหรือประมวลผลข้อมูลบางประเภทที่เกี่ยวข้องกับอุปกรณ์ แอป เบราว์เซอร์ และเครือข่าย โดยการประมวลผลส่วนใหญ่จะเกิดขึ้น <strong>ภายในอุปกรณ์ของคุณแบบภายในเครื่อง</strong></p>
+      <h3>1. ข้อมูลที่แอปพลิเคชันเข้าถึง เก็บรวบรวม หรือประมวลผล</h3>
+      <h3>A. ข้อมูลที่ประมวลผลภายในอุปกรณ์ของคุณ</h3>
+      <ul>
+        <li><strong>ข้อมูลที่เกี่ยวข้องกับการช่วยการเข้าถึง:</strong> เมื่อคุณเปิดใช้การบล็อกด้วยบริการช่วยการเข้าถึง แอปพลิเคชันอาจตรวจสอบข้อมูลบนหน้าจอที่จำเป็นสำหรับการตรวจจับและบล็อกคอนเทนต์แบบสั้น รวมถึงข้อความในแถบที่อยู่ของเบราว์เซอร์ที่รองรับ ข้อมูล host/path ของ URL และบริบทของแอปหรือแพ็กเกจ</li>
+        <li><strong>ข้อมูลการใช้งานและแอปที่อยู่เบื้องหน้า:</strong> แอปพลิเคชันอาจใช้สิทธิ์การเข้าถึงข้อมูลการใช้งานและข้อมูลสถานะของแอปเพื่อระบุว่าแอปใดกำลังทำงานอยู่สำหรับฟังก์ชันการบล็อกและการปกป้อง</li>
+        <li><strong>ข้อมูลแอปที่ติดตั้งอยู่:</strong> แอปพลิเคชันอาจตรวจสอบว่าแอปที่รองรับสำหรับการบล็อกติดตั้งอยู่ในอุปกรณ์ของคุณหรือไม่ เพื่อจัดระเบียบรายการแอปที่ถูกบล็อกและตัวควบคุมที่เกี่ยวข้อง</li>
+        <li><strong>ข้อมูลการบล็อกผ่าน VPN/DNS:</strong> หากคุณเปิดใช้การบล็อกแบบอาศัย VPN แอปพลิเคชันอาจตรวจสอบชื่อโดเมนจากคำขอ DNS ภายในอุปกรณ์เพื่อพิจารณาว่าโฮสต์ที่ถูกบล็อกควรถูกปฏิเสธหรือไม่</li>
+        <li><strong>การตั้งค่าในเครื่องและข้อมูลการปกป้อง:</strong> แอปพลิเคชันจะเก็บข้อมูลการตั้งค่าและข้อมูลการปกป้องไว้ภายในอุปกรณ์ของคุณ เช่น ตารางเวลา การเลือกแอปที่ถูกบล็อก การตั้งค่าภาษา ข้อความบล็อกแบบกำหนดเอง สถานะการล็อกด้วย PIN PIN ที่ถูกแฮช และประวัติการใช้งานระบบปกป้อง</li>
+        <li><strong>ประวัติเซสชัน:</strong> แอปพลิเคชันอาจเก็บเวลาประทับและบันทึกเหตุการณ์ภายในเครื่อง เช่น การเปิด/ปิดการปกป้อง การถูกบังคับปิด การถูกถอนสิทธิ์ และข้อมูลเวลาที่เกี่ยวข้องกับเซสชันการปกป้อง</li>
+      </ul>
+      <h3>B. ข้อมูลที่คุณอาจเป็นผู้ให้</h3>
+      <ul>
+        <li><strong>ข้อความบล็อกแบบกำหนดเอง:</strong> หากคุณป้อนข้อความบล็อกของคุณเอง ข้อความดังกล่าวจะถูกเก็บไว้ในอุปกรณ์ของคุณจนกว่าคุณจะเปลี่ยนหรือลบออก</li>
+        <li><strong>PIN/รหัสผ่าน:</strong> หากคุณเปิดใช้โหมด PIN แอปพลิเคชันจะเก็บ PIN ที่ <strong>ผ่านการแฮช</strong> ไว้ในอุปกรณ์ของคุณ โดยผู้ให้บริการไม่ได้ตั้งใจเก็บ PIN ในรูปแบบข้อความปกติ</li>
+        <li><strong>ข้อมูลติดต่อ:</strong> หากคุณส่งอีเมลถึงผู้ให้บริการเพื่อขอความช่วยเหลือ ผู้ให้บริการอาจได้รับที่อยู่อีเมลของคุณและข้อมูลใด ๆ ที่คุณระบุไว้ในข้อความ</li>
+      </ul>
+      <h3>C. ข้อมูลที่ผู้ให้บริการไม่ได้ตั้งใจเก็บโดยตรงผ่านแอป</h3>
+      <ul>
+        <li>ชื่อ ที่อยู่ไปรษณีย์ หรือหมายเลขโทรศัพท์ของคุณ</li>
+        <li>ข้อมูลตำแหน่งที่ตั้งแบบละเอียด</li>
+        <li>ภาพถ่าย การบันทึกเสียงจากไมโครโฟน หรือวิดีโอจากกล้อง</li>
+        <li>ข้อมูลการสมัครบัญชี เนื่องจากแอปพลิเคชันไม่จำเป็นต้องมีบัญชีเพื่อใช้งานฟังก์ชันหลัก</li>
+      </ul>
+      <h3>2. วิธีการใช้ข้อมูล</h3>
+      <p>แอปพลิเคชันใช้ข้อมูลข้างต้นเพื่อให้บริการและปรับปรุงฟังก์ชันหลักของแอป ได้แก่</p>
+      <ul>
+        <li>ตรวจจับและบล็อกคอนเทนต์แบบสั้นหรือแอป/เว็บไซต์ที่รองรับ</li>
+        <li>แสดงบันทึกการปกป้องและประวัติกิจกรรมภายในแอป</li>
+        <li>บังคับใช้ตารางเวลา การปกป้องด้วย PIN และกฎการบล็อกที่ผู้ใช้เลือก</li>
+        <li>แสดงข้อความบล็อกแบบกำหนดเองและสถานะ UI ที่เกี่ยวข้อง</li>
+        <li>โหลดและอัปเดตกฎที่แอปพลิเคชันใช้ และ</li>
+        <li>แสดงโฆษณาผ่าน AdMob</li>
+      </ul>
+      <h3>3. ข้อมูลที่ถูกแบ่งปันหรือส่งต่อไปยังบุคคลที่สาม</h3>
+      <p>ผู้ให้บริการจะไม่ขายข้อมูลส่วนบุคคลหรือข้อมูลอ่อนไหวของคุณ อย่างไรก็ตาม แอปพลิเคชันใช้บริการของบุคคลที่สามและโครงสร้างพื้นฐานเครือข่ายตามที่อธิบายไว้ด้านล่าง</p>
+      <h3>A. Google AdMob</h3>
+      <p>แอปพลิเคชันแสดงโฆษณาผ่าน Google AdMob โดย AdMob และพันธมิตรอาจประมวลผลข้อมูล เช่น ข้อมูลอุปกรณ์ ตัวระบุ ที่อยู่ IP ข้อมูลด้านโฆษณา ข้อมูลการวินิจฉัย และข้อมูลการใช้งานแอปตามนโยบายของ Google</p>
+      <p>ข้อมูลความเป็นส่วนตัวของ AdMob: <a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer">https://support.google.com/admob/answer/6128543</a></p>
+      <h3>B. การอัปเดตกฎจาก GitHub</h3>
+      <p>แอปพลิเคชันอาจดาวน์โหลดไฟล์กฎจาก URL ที่โฮสต์อยู่บน GitHub เพื่ออัปเดตกฎการบล็อก ซึ่งอาจทำให้เกิดคำขอผ่านเครือข่ายไปยัง GitHub หรือโครงสร้างพื้นฐานของ GitHub ข้อมูลเมตาของเครือข่ายตามปกติ เช่น ที่อยู่ IP และส่วนหัวของคำขอ อาจถูกประมวลผลโดยผู้ให้บริการเหล่านั้นในกระบวนการร้องขอผ่านเว็บตามปกติ</p>
+      <p>คำชี้แจงด้านความเป็นส่วนตัวของ GitHub: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a></p>
+      <h3>C. การส่งต่อ DNS สำหรับการบล็อกแบบอาศัย VPN</h3>
+      <p>หากเปิดใช้การบล็อกแบบอาศัย VPN คำขอ DNS ที่ได้รับอนุญาตอาจถูกส่งต่อไปยังตัวแก้ไข DNS ต้นทาง (Upstream DNS resolver) เพื่อให้เว็บไซต์และบริการยังสามารถทำงานได้ตามปกติ ซึ่งหมายความว่าชื่อโดเมนที่ร้องขออาจถูกส่งไปยังผู้ให้บริการ DNS ดังกล่าวเป็นส่วนหนึ่งของการแก้ไข DNS ตามปกติ</p>
+      <p>ผู้ให้บริการ DNS ต้นทางที่แอปพลิเคชันใช้อยู่ในปัจจุบันคือ Cloudflare 1.1.1.1</p>
+      <p>ข้อมูลความเป็นส่วนตัวของ Cloudflare: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">https://www.cloudflare.com/privacypolicy/</a></p>
+      <h3>4. ฐานทางกฎหมาย การเปิดเผย และการเข้าถึงข้อมูลที่อ่อนไหว</h3>
+      <p>เนื่องจาก ThumbLock ใช้ความสามารถของแพลตฟอร์มที่มีความอ่อนไหว เช่น การช่วยการเข้าถึง การเข้าถึงข้อมูลการใช้งาน การมองเห็นแพ็กเกจ และการจัดการเครือข่ายด้วย VPN เพื่อให้บริการด้านความปลอดภัยและการบล็อก ผู้ให้บริการจึงตั้งใจให้นโยบายความเป็นส่วนตัวฉบับนี้ถูกอ่านควบคู่ไปกับคำชี้แจงภายในแอปที่แสดงก่อนหรือระหว่างการใช้ฟังก์ชันดังกล่าว</p>
+      <p>การเข้าถึงข้อมูลที่อ่อนไหวของแอปพลิเคชันมีเจตนาให้จำกัดอยู่เฉพาะฟังก์ชันที่ผู้ใช้อาจคาดหมายได้อย่างสมเหตุสมผล เช่น การบล็อกแอปที่รองรับ การบล็อกเนื้อหาบนเบราว์เซอร์ที่รองรับ การแสดงประวัติการปกป้อง และการบังคับใช้ตารางเวลาหรือ PIN lock</p>
+      <h3>5. การเก็บรักษาและการลบข้อมูล</h3>
+      <ul>
+        <li><strong>ข้อมูลบนอุปกรณ์:</strong> ตารางเวลา ประวัติเซสชันในเครื่อง การตั้งค่าแอปที่ถูกบล็อก ภาษา ข้อความบล็อกแบบกำหนดเอง และการตั้งค่าที่เกี่ยวข้องกับ PIN โดยทั่วไปจะถูกเก็บไว้ในอุปกรณ์ของคุณจนกว่าคุณจะลบ ล้างข้อมูลแอป ถอนการติดตั้งแอปพลิเคชัน หรือเขียนทับด้วยค่าใหม่</li>
+        <li><strong>อีเมลติดต่อฝ่ายสนับสนุน:</strong> หากคุณติดต่อผู้ให้บริการทางอีเมล ผู้ให้บริการอาจเก็บรักษาการติดต่อดังกล่าวไว้เพื่อวัตถุประสงค์ด้านการสนับสนุน กฎหมาย หรือการจัดเก็บบันทึก</li>
+        <li><strong>บริการของบุคคลที่สาม:</strong> ข้อมูลที่ประมวลผลโดย AdMob โครงสร้างพื้นฐานของ GitHub Cloudflare หรือบุคคลที่สามอื่น ๆ อยู่ภายใต้แนวปฏิบัติด้านการเก็บรักษาและนโยบายความเป็นส่วนตัวของแต่ละฝ่าย</li>
+      </ul>
+      <h3>6. ทางเลือกของคุณ</h3>
+      <ul>
+        <li>คุณสามารถหยุดใช้แอปพลิเคชันได้ทุกเมื่อโดยการถอนการติดตั้ง</li>
+        <li>คุณสามารถลบการตั้งค่าส่วนใหญ่ที่เก็บไว้ภายในเครื่องได้โดยการล้างข้อมูลแอปในหน้าการตั้งค่าระบบ Android</li>
+        <li>คุณสามารถปิดใช้งานสิทธิ์หรือฟังก์ชันเสริมได้ แต่ฟังก์ชันการบล็อกหลักบางอย่างอาจไม่ทำงานต่อไป</li>
+        <li>คุณสามารถลบหรือเปลี่ยนข้อความบล็อกแบบกำหนดเอง ตารางเวลา และการตั้งค่า PIN ภายในแอปได้</li>
+      </ul>
+      <h3>7. ความปลอดภัย</h3>
+      <p>ผู้ให้บริการใช้มาตรการที่สมเหตุสมผลเพื่อปกป้องข้อมูลที่แอปพลิเคชันประมวลผล อย่างไรก็ตาม ไม่มีวิธีการจัดเก็บ ส่งผ่าน หรือประมวลผลใดที่ปลอดภัยอย่างสมบูรณ์ และผู้ให้บริการไม่สามารถรับประกันความปลอดภัยแบบสัมบูรณ์ได้</p>
+      <h3>8. ความเป็นส่วนตัวของเด็ก</h3>
+      <p>แอปพลิเคชันไม่ได้เก็บข้อมูลส่วนบุคคลจากเด็กโดยตรงโดยเจตนาผ่านการสมัครบัญชีหรือแบบฟอร์มลักษณะคล้ายกัน เนื่องจากแอปพลิเคชันไม่จำเป็นต้องสร้างบัญชีเพื่อใช้งานฟังก์ชันหลัก หากผู้ให้บริการทราบว่าเด็กได้ให้ข้อมูลส่วนบุคคลแก่ผู้ให้บริการโดยตรง ผู้ให้บริการจะดำเนินการอย่างสมเหตุสมผลเพื่อลบข้อมูลดังกล่าว</p>
+      <p>หากคุณเป็นผู้ปกครองหรือผู้ดูแลและเชื่อว่าเด็กได้ให้ข้อมูลส่วนบุคคลแก่ผู้ให้บริการโดยตรง โปรดติดต่อผู้ให้บริการตามที่อยู่อีเมลด้านล่าง</p>
+      <h3>9. การประมวลผลระหว่างประเทศ</h3>
+      <p>ขึ้นอยู่กับบริการของบุคคลที่สามที่ใช้ ข้อมูลอาจถูกประมวลผลบนเซิร์ฟเวอร์ที่ตั้งอยู่นอกประเทศหรือภูมิภาคของคุณ โดยการประมวลผลดังกล่าวจะอยู่ภายใต้เงื่อนไขด้านความเป็นส่วนตัวของผู้ให้บริการบุคคลที่สามแต่ละราย</p>
+      <h3>10. การเปลี่ยนแปลงนโยบายความเป็นส่วนตัวฉบับนี้</h3>
+      <p>นโยบายความเป็นส่วนตัวฉบับนี้อาจได้รับการปรับปรุงเป็นครั้งคราว ผู้ให้บริการจะอัปเดตหน้านี้เมื่อมีการเปลี่ยนแปลง ภายใต้ขอบเขตที่กฎหมายที่ใช้บังคับอนุญาต การใช้งานแอปพลิเคชันอย่างต่อเนื่องของคุณหลังจากการเปลี่ยนแปลงมีผล อาจถือเป็นการยอมรับนโยบายความเป็นส่วนตัวฉบับปรับปรุงแล้ว</p>
+      <h3>11. ติดต่อ</h3>
+      <p>หากคุณมีคำถามเกี่ยวกับนโยบายความเป็นส่วนตัวฉบับนี้หรือแนวปฏิบัติด้านความเป็นส่วนตัวของแอปพลิเคชัน โปรดติดต่อ:</p>
+      <p><strong>SungHoon Lee</strong><br />อีเมล: <a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a></p>
+    </section>
 
-    <h2>6. Your Choices</h2>
-    <ul>
-      <li>You may stop using the Application at any time by uninstalling it.</li>
-      <li>You may delete most locally stored settings by clearing the app’s data in Android system settings.</li>
-      <li>You may disable optional permissions or features, but some core blocking features may no longer work.</li>
-      <li>You may remove or change your custom block message, schedules, and PIN settings within the app.</li>
-    </ul>
-
-    <h2>7. Security</h2>
-    <p>
-      The Service Provider uses reasonable safeguards designed to protect information processed by the
-      Application. However, no method of storage, transmission, or processing is completely secure, and
-      the Service Provider cannot guarantee absolute security.
-    </p>
-
-    <h2>8. Children’s Privacy</h2>
-    <p>
-      The Application does not knowingly collect personal information directly from children through account
-      registration or similar forms because the Application does not require account creation for its core use.
-      If the Service Provider becomes aware that a child has directly provided personal information to the
-      Service Provider, the Service Provider will take reasonable steps to delete that information.
-    </p>
-    <p>
-      If you are a parent or guardian and believe that a child has provided personal information directly to
-      the Service Provider, please contact the Service Provider at the email address below.
-    </p>
-
-    <h2>9. International Processing</h2>
-    <p>
-      Depending on the third-party services used, information may be processed on servers located outside
-      your country or region. Third-party providers handle such processing under their own privacy terms.
-    </p>
-
-    <h2>10. Changes to This Privacy Policy</h2>
-    <p>
-      This Privacy Policy may be updated from time to time. The Service Provider will update this page when
-      changes are made. Your continued use of the Application after changes become effective means you accept
-      the revised Privacy Policy, to the extent permitted by applicable law.
-    </p>
-
-    <h2>11. Contact</h2>
-    <p>
-      If you have questions about this Privacy Policy or the Application’s privacy practices, please contact:
-    </p>
-    <p>
-      <strong>SungHoon Lee</strong><br />
-      Email: <a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a>
-    </p>
   </main>
 </body>
 </html>
