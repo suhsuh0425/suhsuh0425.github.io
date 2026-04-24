@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Comment Artist Privacy Policy</title>
   <style>
-    :root{--bg:#050505;--panel:#111;--text:#f7f2e8;--muted:#b8b2a7;--line:#f7f2e8;--accent:#f0b53a;--accent-dark:#1f1604;--shadow:rgba(0,0,0,.34);color-scheme:dark}
+    :root{--bg:#050505;--text:#f7f2e8;--muted:#b8b2a7;--line:#f7f2e8;--accent:#f0b53a;--accent-dark:#1f1604;--shadow:rgba(0,0,0,.34);color-scheme:dark}
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{margin:0;min-height:100vh;background:linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),var(--bg);background-size:28px 28px;color:var(--text);font-family:Pretendard,"Apple SD Gothic Neo","Noto Sans KR","Segoe UI",Helvetica,Arial,sans-serif;line-height:1.65}
@@ -14,11 +14,11 @@
     .masthead,.policy-shell{border:3px dashed var(--line);background:rgba(17,17,17,.96);box-shadow:8px 8px 0 var(--shadow)}
     .masthead{padding:clamp(22px,4vw,38px)}
     .brand-row{margin-bottom:24px}
-    .eyebrow{margin:0;color:var(--accent);font-size:.78rem;font-weight:900;text-transform:uppercase}
-    h1{margin:0;max-width:760px;font-size:clamp(2.2rem,7vw,5.4rem);line-height:.95;text-transform:uppercase}
+    .eyebrow{margin:0;color:var(--accent);font-size:.78rem;font-weight:900;letter-spacing:0;text-transform:uppercase}
+    h1{margin:0;max-width:760px;font-size:clamp(2.2rem,7vw,5.4rem);line-height:.95;letter-spacing:0;text-transform:uppercase}
     .subtitle{max-width:720px;margin:20px 0 0;color:var(--muted);font-size:clamp(1rem,2vw,1.15rem)}
     .tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:18px 0 0}
-    .lang-tab{min-height:46px;border:2px solid var(--line);background:#000;color:var(--text);cursor:pointer;font:inherit;font-size:.86rem;font-weight:900;text-transform:uppercase}
+    .lang-tab{min-height:46px;border:2px solid var(--line);background:#000;color:var(--text);cursor:pointer;font:inherit;font-size:.86rem;font-weight:900;letter-spacing:0;text-transform:uppercase}
     .lang-tab:hover,.lang-tab:focus-visible{border-color:var(--accent);outline:none}
     .lang-tab[aria-selected="true"]{background:var(--accent);color:#000;border-color:var(--accent)}
     .policy-shell{margin-top:18px}
@@ -27,13 +27,12 @@
     .meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
     .chip{display:inline-flex;align-items:center;min-height:34px;padding:5px 10px;border:2px solid var(--line);background:#000;color:var(--text);font-size:.82rem;font-weight:800}
     .chip.accent{background:var(--accent-dark);border-color:var(--accent);color:var(--accent)}
-    h2{margin:30px 0 10px;color:var(--accent);font-size:clamp(1.2rem,3vw,1.65rem);line-height:1.2;text-transform:uppercase}
+    h2{margin:30px 0 10px;color:var(--accent);font-size:clamp(1.2rem,3vw,1.65rem);line-height:1.2;letter-spacing:0;text-transform:uppercase}
     h2:first-of-type{margin-top:0}
     p{margin:0 0 14px;color:var(--text);font-size:1rem}
     ul{margin:0 0 18px;padding-left:22px}
     li{margin:8px 0}
     strong{color:#fff;font-weight:900}
-    .footer-note{margin-top:18px;color:var(--muted);font-size:.88rem}
     @media (max-width:680px){.page{width:min(100% - 20px,920px);padding-top:16px}.tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.masthead,.policy-shell{box-shadow:5px 5px 0 var(--shadow)}}
   </style>
 </head>
@@ -42,9 +41,9 @@
     <header class="masthead">
       <div class="brand-row">
         <p class="eyebrow">Comment Artist</p>
-        <h1>Privacy Policy</h1>
+        <h1 id="policy-title">Privacy Policy</h1>
       </div>
-      <p class="subtitle">Select a language below. This page is a static policy page for the Android app and does not load analytics, ads, fonts, or tracking scripts.</p>
+      <p class="subtitle" id="policy-subtitle">Select a language below. This static page does not load analytics, ads, external fonts, or tracking scripts.</p>
       <nav class="tabs" aria-label="Policy language">
         <button class="lang-tab" type="button" data-target="en" aria-selected="true">English</button>
         <button class="lang-tab" type="button" data-target="ko" aria-selected="false">한국어</button>
@@ -57,55 +56,58 @@
       <section class="policy" data-lang="en" lang="en">
         <div class="meta">
           <span class="chip accent">Comment Artist for Android</span>
-          <span class="chip">Effective date: April 23, 2026</span>
-          <span class="chip">Developer: SungHoon Lee</span>
+          <span class="chip">Effective date: April 24, 2026</span>
+          <span class="chip">Developer / Service Provider: SungHoon Lee (이성훈)</span>
         </div>
 
-        <h2>Overview</h2>
-        <p>This Privacy Policy explains how Comment Artist for Android ("Comment Artist" or the "App") handles information. The App was created by SungHoon Lee ("Developer", "we", "us", or "our").</p>
-        <p>Comment Artist is designed to work locally on your device. In the current version, the App does not require an account, does not show ads, and does not include analytics or crash-reporting SDKs.</p>
+        <h2>Privacy Policy</h2>
+        <p>This Privacy Policy explains how Comment Artist for Android ("Comment Artist" or the "App") handles information. The App is developed and provided by SungHoon Lee (이성훈) ("Developer" or "Service Provider") as a free app and is provided as is.</p>
 
-        <h2>Information the App Uses on Your Device</h2>
-        <p>The App may access or use the following information only to provide its features:</p>
+        <h2>Information the App Uses</h2>
+        <p>The current version of the App processes information locally on your device to provide its features. This may include:</p>
         <ul>
-          <li><strong>Images you choose:</strong> If you select an image through Android's photo picker, the App accesses only the image you selected and converts it into braille-style text art on your device.</li>
-          <li><strong>Text you enter and drawings you create:</strong> The App uses this content on your device to generate braille-style text art.</li>
-          <li><strong>Saved outputs:</strong> If you save a generated result in the App's library, the App stores that result locally on your device. This may include the output name, source label, generated braille text, row and column size, format preset, favorite status, and creation time.</li>
-          <li><strong>App settings:</strong> The App stores your language and theme preferences locally so they can be restored the next time you open the App.</li>
-          <li><strong>Clipboard:</strong> When you tap a copy button, the App places the generated braille text on your device's system clipboard. After that, the clipboard is handled by Android and your device settings.</li>
+          <li>images that you select through Android's photo picker;</li>
+          <li>text that you type and drawings that you create in the App;</li>
+          <li>generated braille-style text art, including edits that you choose to copy or save;</li>
+          <li>local library metadata, such as output name, source type, row and column count, selected format or preset, favorite status, creation time, and an internal deduplication key; and</li>
+          <li>App settings, such as language and theme preferences.</li>
         </ul>
+        <p>The App uses Android's photo picker so you choose the image to share with the App. The App does not request access to your full photo library.</p>
+        <p>Selected images, entered text, drawings, generated outputs, saved library items, and settings are processed on your device. The App does not upload them to the Developer's servers.</p>
+        <p>The current App package does not request Android's Internet permission and is not designed to transmit your content or usage data to a server.</p>
+        <p>The App does not require an account. The Developer does not ask you to provide your name, email address, phone number, account information, or other personal identifiers through the App.</p>
+        <p>The App does not request or collect precise or approximate location, contacts, messages, call logs, camera or microphone data, advertising ID, usage analytics, crash reports, IP address, or device diagnostics.</p>
+        <p>The App does not use artificial intelligence (AI), remote AI services, or cloud processing services to process your data or provide features.</p>
 
-        <h2>Information We Do Not Collect</h2>
-        <p>In the current version, Comment Artist does not collect, upload, transmit, sell, or share your personal information with the Developer or third parties. In particular, the App does not collect or send:</p>
-        <ul>
-          <li>your name, email address, phone number, or account information;</li>
-          <li>your precise or approximate location;</li>
-          <li>your contacts, messages, or call logs;</li>
-          <li>your advertising ID or other tracking identifiers;</li>
-          <li>usage analytics, crash reports, IP address, or device diagnostics to the Developer; or</li>
-          <li>your images, entered text, drawings, or generated outputs to a remote AI service or cloud processing service.</li>
-        </ul>
+        <h2>Clipboard</h2>
+        <p>When you tap a copy action, the App places the generated braille-style text on your device's system clipboard at your direction. After that, the clipboard is handled by Android, your keyboard, apps where you paste the content, and your device settings.</p>
 
-        <h2>Third-Party Services and External Links</h2>
-        <p>The current version of the App does not use third-party advertising, analytics, or crash-reporting services.</p>
-        <p>The App may contain links to external websites, such as open-source license pages. If you open an external link, that website is governed by its own privacy practices.</p>
+        <h2>Third-Party Services and Links</h2>
+        <p>The current version of the App does not use third-party advertising, analytics, or crash-reporting SDKs. It does not periodically transmit aggregated or anonymized usage data to external services.</p>
+        <p>The Developer does not collect, receive, sell, or share your personal information through the App.</p>
+        <p>The App may include links to external websites, such as open-source license pages. If you choose to open an external link, that website or browser is governed by its own terms and privacy practices.</p>
+
+        <h2>Your Choices</h2>
+        <p>You can stop the App's local processing of information by uninstalling it. You can also remove locally stored App data by clearing the App's storage in Android settings.</p>
 
         <h2>Data Retention and Deletion</h2>
-        <p>Data stored by the App stays on your device until you remove it.</p>
-        <ul>
-          <li>You can delete saved outputs from the App's library.</li>
-          <li>You can remove all locally stored App data by clearing the App's storage in Android settings or by uninstalling the App.</li>
-          <li>Content copied to the system clipboard remains there until it is overwritten, cleared, or otherwise removed by Android or your device settings.</li>
-        </ul>
+        <p>Selected images, entered text, and drawings are used to generate output on your device. The App does not store the original selected image as a library file.</p>
+        <p>Saved outputs and settings remain on your device until you delete them, clear the App's storage, uninstall the App, or older saved outputs are removed by the App's local library limit.</p>
+        <p>You can delete saved outputs from the App's library. Clearing the App's storage or uninstalling the App removes the locally stored library and settings from that device.</p>
+        <p>Because Android backup is currently allowed for the App, Android or your device manufacturer may include app-private saved outputs and settings in device backup, restore, or device-to-device transfer if those features are enabled on your device. The Developer does not operate or access those backups.</p>
+        <p>Content copied to the system clipboard remains there until it is overwritten, cleared, or otherwise removed by Android, another app, or your device settings.</p>
+
+        <h2>Children</h2>
+        <p>The App is not directed to children under 13. The Developer does not knowingly collect personal information from children through the App.</p>
 
         <h2>Security</h2>
-        <p>Saved outputs and settings are stored in the App's local app-private storage area provided by Android. No storage method is perfectly secure, but the App is designed so that your content stays on your device unless you choose to copy it to the system clipboard or open an external link.</p>
+        <p>Saved outputs and settings are stored in the App's local app-private storage area provided by Android. No method of electronic storage is perfectly secure, but the current version of the App is designed so that your content is processed locally unless you choose to copy it to the system clipboard, open an external link, or use Android backup or device-transfer features controlled by your device.</p>
 
-        <h2>Children's Privacy</h2>
-        <p>Comment Artist is not directed to children under 13, and we do not knowingly collect personal information from children through the App.</p>
+        <h2>Changes</h2>
+        <p>This Privacy Policy may be updated from time to time. When it is updated, the effective date above will be changed. You are encouraged to review this page periodically.</p>
 
-        <h2>Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. When we do, we will update the effective date above.</p>
+        <h2>Your Consent</h2>
+        <p>By using the App, you acknowledge the handling of information described in this Privacy Policy.</p>
 
         <h2>Contact</h2>
         <p>If you have questions about this Privacy Policy or the App's privacy practices, contact the Developer at <a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a>.</p>
@@ -114,202 +116,236 @@
       <section class="policy" data-lang="ko" lang="ko" hidden>
         <div class="meta">
           <span class="chip accent">Comment Artist Android 앱</span>
-          <span class="chip">시행일: 2026년 4월 23일</span>
-          <span class="chip">개발자: SungHoon Lee</span>
+          <span class="chip">시행일: 2026년 4월 24일</span>
+          <span class="chip">개발자 / 서비스 제공자: SungHoon Lee (이성훈)</span>
         </div>
 
-        <h2>개요</h2>
-        <p>이 개인정보 처리방침은 Android용 Comment Artist("Comment Artist" 또는 "앱")가 정보를 처리하는 방식을 설명합니다. 이 앱은 SungHoon Lee("개발자", "당사")가 만들었습니다.</p>
-        <p>Comment Artist는 사용자의 기기 안에서 작동하도록 설계되어 있습니다. 현재 버전의 앱은 계정을 요구하지 않으며, 광고를 표시하지 않고, 분석 SDK나 크래시 리포팅 SDK를 포함하지 않습니다.</p>
+        <h2>개인정보처리방침</h2>
+        <p>이 개인정보처리방침은 Android용 Comment Artist(이하 "Comment Artist" 또는 "앱")가 정보를 처리하는 방식을 설명합니다. 이 앱은 SungHoon Lee (이성훈)(이하 "개발자" 또는 "서비스 제공자")가 무료로 개발 및 제공하며, 있는 그대로 제공됩니다.</p>
 
-        <h2>앱이 기기에서 사용하는 정보</h2>
-        <p>앱은 기능 제공을 위해 아래 정보를 기기 안에서만 접근하거나 사용할 수 있습니다.</p>
+        <h2>앱이 사용하는 정보</h2>
+        <p>현재 버전의 앱은 기능을 제공하기 위해 다음과 같은 정보를 사용자의 기기 안에서 로컬로 처리할 수 있습니다.</p>
         <ul>
-          <li><strong>사용자가 선택한 이미지:</strong> Android 사진 선택기를 통해 이미지를 선택하면, 앱은 사용자가 직접 선택한 해당 이미지에만 접근하여 기기 안에서 점자 스타일 텍스트 아트로 변환합니다.</li>
-          <li><strong>사용자가 입력한 텍스트와 직접 그린 그림:</strong> 앱은 이 내용을 기기 안에서 점자 스타일 텍스트 아트로 생성하는 데 사용합니다.</li>
-          <li><strong>저장한 결과물:</strong> 생성된 결과물을 앱의 보관함에 저장하면 해당 결과물은 기기에 로컬로 저장됩니다. 여기에는 결과물 이름, 원본 라벨, 생성된 점자 텍스트, 행과 열 크기, 포맷 프리셋, 즐겨찾기 여부, 생성 시간이 포함될 수 있습니다.</li>
-          <li><strong>앱 설정:</strong> 앱은 다음 실행 시 설정을 복원하기 위해 언어와 테마 설정을 기기에 로컬로 저장합니다.</li>
-          <li><strong>클립보드:</strong> 복사 버튼을 누르면 앱은 생성된 점자 텍스트를 사용자의 기기 시스템 클립보드에 복사합니다. 이후 클립보드는 Android 및 기기 설정에 따라 처리됩니다.</li>
+          <li>Android 사진 선택 도구를 통해 사용자가 직접 선택한 이미지</li>
+          <li>사용자가 앱에 입력한 텍스트와 앱에서 만든 그림</li>
+          <li>사용자가 복사하거나 저장하기로 선택한 점자 스타일 텍스트 아트 및 편집 내용</li>
+          <li>결과물 이름, 원본 유형, 행과 열 수, 선택한 형식 또는 프리셋, 즐겨찾기 여부, 생성 시간, 내부 중복 방지 키와 같은 로컬 보관함 메타데이터</li>
+          <li>언어 및 테마 설정과 같은 앱 설정</li>
         </ul>
+        <p>앱은 Android 사진 선택 도구를 사용하므로, 사용자는 앱에 공유할 이미지를 직접 선택합니다. 앱은 전체 사진 보관함에 대한 접근 권한을 요청하지 않습니다.</p>
+        <p>선택한 이미지, 입력한 텍스트, 그림, 생성 결과물, 보관함에 저장한 항목 및 설정은 사용자의 기기에서 처리됩니다. 앱은 이러한 정보를 개발자의 서버로 업로드하지 않습니다.</p>
+        <p>현재 앱 패키지는 Android의 인터넷 권한을 요청하지 않으며, 사용자의 콘텐츠나 사용 데이터를 서버로 전송하도록 설계되어 있지 않습니다.</p>
+        <p>앱은 계정 생성을 요구하지 않습니다. 개발자는 앱을 통해 이름, 이메일 주소, 전화번호, 계정 정보 또는 그 밖의 개인 식별 정보를 요청하지 않습니다.</p>
+        <p>앱은 정확한 위치 또는 대략적인 위치, 연락처, 메시지, 통화 기록, 카메라 또는 마이크 데이터, 광고 ID, 사용 분석, 오류 보고, IP 주소, 기기 진단 정보를 요청하거나 수집하지 않습니다.</p>
+        <p>앱은 사용자의 데이터를 처리하거나 기능을 제공하기 위해 인공지능(AI), 원격 AI 서비스 또는 클라우드 처리 서비스를 사용하지 않습니다.</p>
 
-        <h2>당사가 수집하지 않는 정보</h2>
-        <p>현재 버전의 Comment Artist는 개인정보를 수집, 업로드, 전송, 판매 또는 제3자와 공유하지 않습니다. 특히 앱은 아래 정보를 수집하거나 전송하지 않습니다.</p>
-        <ul>
-          <li>이름, 이메일 주소, 전화번호 또는 계정 정보</li>
-          <li>정확한 위치 또는 대략적인 위치</li>
-          <li>연락처, 메시지 또는 통화 기록</li>
-          <li>광고 ID 또는 기타 추적 식별자</li>
-          <li>개발자에게 전송되는 사용 분석 정보, 크래시 리포트, IP 주소 또는 기기 진단 정보</li>
-          <li>원격 AI 서비스 또는 클라우드 처리 서비스로 전송되는 이미지, 입력 텍스트, 그림 또는 생성 결과물</li>
-        </ul>
+        <h2>클립보드</h2>
+        <p>사용자가 복사 동작을 실행하면, 앱은 사용자의 요청에 따라 생성된 점자 스타일 텍스트를 기기의 시스템 클립보드에 넣습니다. 그 이후 클립보드는 Android, 사용자의 키보드, 붙여넣기를 수행하는 앱 및 기기 설정에 따라 처리됩니다.</p>
 
-        <h2>제3자 서비스 및 외부 링크</h2>
-        <p>현재 버전의 앱은 제3자 광고, 분석 또는 크래시 리포팅 서비스를 사용하지 않습니다.</p>
-        <p>앱에는 오픈소스 라이선스 페이지와 같은 외부 웹사이트 링크가 포함될 수 있습니다. 외부 링크를 열면 해당 웹사이트의 개인정보 처리방침이 적용됩니다.</p>
+        <h2>제3자 서비스 및 링크</h2>
+        <p>현재 버전의 앱은 제3자 광고, 분석 또는 오류 보고 SDK를 사용하지 않습니다. 집계되거나 익명화된 사용 데이터도 외부 서비스로 주기적으로 전송하지 않습니다.</p>
+        <p>개발자는 앱을 통해 사용자의 개인정보를 수집, 수신, 판매 또는 공유하지 않습니다.</p>
+        <p>앱에는 오픈소스 라이선스 페이지와 같은 외부 웹사이트 링크가 포함될 수 있습니다. 사용자가 외부 링크를 열면 해당 웹사이트 또는 브라우저의 약관과 개인정보 처리 방식이 적용됩니다.</p>
 
-        <h2>보관 및 삭제</h2>
-        <p>앱이 저장한 데이터는 사용자가 삭제할 때까지 기기에 남아 있습니다.</p>
-        <ul>
-          <li>저장된 결과물은 앱의 보관함에서 삭제할 수 있습니다.</li>
-          <li>Android 설정에서 앱 저장공간을 삭제하거나 앱을 제거하면 앱에 로컬로 저장된 데이터를 모두 삭제할 수 있습니다.</li>
-          <li>시스템 클립보드에 복사된 내용은 Android 또는 기기 설정에 따라 덮어쓰기, 삭제 또는 제거될 때까지 클립보드에 남아 있을 수 있습니다.</li>
-        </ul>
+        <h2>사용자의 선택</h2>
+        <p>사용자는 앱을 제거하여 앱의 로컬 정보 처리를 중단할 수 있습니다. Android 설정에서 앱 저장공간을 삭제하여 로컬로 저장된 앱 데이터도 삭제할 수 있습니다.</p>
+
+        <h2>데이터 보관 및 삭제</h2>
+        <p>선택한 이미지, 입력한 텍스트 및 그림은 사용자의 기기에서 결과물을 생성하는 데 사용됩니다. 앱은 원본 선택 이미지를 보관함 파일로 저장하지 않습니다.</p>
+        <p>저장된 결과물과 설정은 사용자가 삭제하거나, 앱 저장공간을 삭제하거나, 앱을 제거하거나, 앱의 로컬 보관함 제한에 따라 오래된 저장 결과물이 제거될 때까지 기기에 남아 있습니다.</p>
+        <p>저장된 결과물은 앱의 보관함에서 삭제할 수 있습니다. 앱 저장공간을 삭제하거나 앱을 제거하면 해당 기기에 로컬로 저장된 보관함과 설정이 삭제됩니다.</p>
+        <p>현재 앱은 Android 백업을 허용하도록 설정되어 있으므로, 사용자의 기기에서 백업, 복원 또는 기기 간 전송 기능이 켜져 있는 경우 Android 또는 기기 제조사가 앱 전용 저장공간에 있는 저장 결과물과 설정을 백업, 복원 또는 전송 대상에 포함할 수 있습니다. 개발자는 이러한 백업을 운영하거나 열람하지 않습니다.</p>
+        <p>시스템 클립보드에 복사된 내용은 Android, 다른 앱 또는 기기 설정에 의해 덮어쓰기, 삭제 또는 제거될 때까지 클립보드에 남아 있을 수 있습니다.</p>
+
+        <h2>아동</h2>
+        <p>이 앱은 만 13세 미만 아동을 대상으로 하지 않습니다. 개발자는 앱을 통해 아동의 개인정보를 고의로 수집하지 않습니다.</p>
 
         <h2>보안</h2>
-        <p>저장된 결과물과 설정은 Android가 제공하는 앱 전용 로컬 저장공간에 저장됩니다. 어떤 저장 방식도 완벽하게 안전하다고 보장할 수는 없지만, 앱은 사용자가 시스템 클립보드로 복사하거나 외부 링크를 열지 않는 한 콘텐츠가 기기 안에 머물도록 설계되어 있습니다.</p>
+        <p>저장된 결과물과 설정은 Android가 제공하는 앱 전용 로컬 저장공간에 저장됩니다. 전자적 저장 방식이 완벽하게 안전하다고 보장할 수는 없지만, 현재 버전의 앱은 사용자가 시스템 클립보드에 복사하거나 외부 링크를 열거나 기기에서 제어하는 Android 백업 또는 기기 전송 기능을 사용하지 않는 한 콘텐츠가 로컬에서 처리되도록 설계되어 있습니다.</p>
 
-        <h2>아동의 개인정보</h2>
-        <p>Comment Artist는 만 13세 미만의 아동을 대상으로 하지 않으며, 앱을 통해 아동의 개인정보를 고의로 수집하지 않습니다.</p>
+        <h2>변경</h2>
+        <p>이 개인정보처리방침은 수시로 업데이트될 수 있습니다. 업데이트가 있을 경우 위 시행일이 변경됩니다. 사용자는 이 페이지를 정기적으로 확인하는 것이 좋습니다.</p>
 
-        <h2>처리방침 변경</h2>
-        <p>이 개인정보 처리방침은 필요에 따라 변경될 수 있습니다. 변경되는 경우 위의 시행일을 갱신합니다.</p>
+        <h2>동의</h2>
+        <p>앱을 사용함으로써 사용자는 이 개인정보처리방침에 설명된 정보 처리 방식을 확인한 것으로 봅니다.</p>
 
         <h2>문의</h2>
-        <p>이 개인정보 처리방침 또는 앱의 개인정보 처리 방식에 관한 질문은 개발자에게 이메일로 문의할 수 있습니다: <a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a></p>
+        <p>이 개인정보처리방침 또는 앱의 개인정보 처리 방식에 관해 궁금한 점이 있으면 개발자에게 <a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a>로 문의할 수 있습니다.</p>
       </section>
 
       <section class="policy" data-lang="es" lang="es" hidden>
         <div class="meta">
           <span class="chip accent">Comment Artist para Android</span>
-          <span class="chip">Fecha de entrada en vigor: 23 de abril de 2026</span>
-          <span class="chip">Desarrollador: SungHoon Lee</span>
+          <span class="chip">Fecha de entrada en vigor: 24 de abril de 2026</span>
+          <span class="chip">Desarrollador / Proveedor del servicio: SungHoon Lee (이성훈)</span>
         </div>
 
-        <h2>Resumen</h2>
-        <p>Esta Política de Privacidad explica cómo Comment Artist para Android ("Comment Artist" o la "App") gestiona la información. La App fue creada por SungHoon Lee ("Desarrollador", "nosotros" o "nuestro").</p>
-        <p>Comment Artist está diseñada para funcionar localmente en tu dispositivo. En la versión actual, la App no requiere una cuenta, no muestra anuncios y no incluye SDK de analítica ni de informes de fallos.</p>
+        <h2>Política de privacidad</h2>
+        <p>Esta Política de privacidad explica cómo Comment Artist para Android ("Comment Artist" o la "app") maneja la información. La app fue desarrollada y es proporcionada por SungHoon Lee (이성훈) (el "Desarrollador" o "Proveedor del servicio") como una app gratuita y se ofrece tal como está.</p>
 
-        <h2>Información que la App usa en tu dispositivo</h2>
-        <p>La App puede acceder a la siguiente información o usarla únicamente para ofrecer sus funciones:</p>
+        <h2>Información que usa la app</h2>
+        <p>La versión actual de la app procesa información localmente en tu dispositivo para ofrecer sus funciones. Esto puede incluir:</p>
         <ul>
-          <li><strong>Imágenes que eliges:</strong> Si seleccionas una imagen mediante el selector de fotos de Android, la App accede solo a la imagen que elegiste y la convierte en arte de texto estilo braille en tu dispositivo.</li>
-          <li><strong>Texto que escribes y dibujos que creas:</strong> La App usa este contenido en tu dispositivo para generar arte de texto estilo braille.</li>
-          <li><strong>Resultados guardados:</strong> Si guardas un resultado generado en la biblioteca de la App, ese resultado se almacena localmente en tu dispositivo. Puede incluir el nombre del resultado, la etiqueta de origen, el texto braille generado, el tamaño en filas y columnas, el formato seleccionado, el estado de favorito y la fecha de creación.</li>
-          <li><strong>Ajustes de la App:</strong> La App guarda localmente tus preferencias de idioma y tema para restaurarlas la próxima vez que abras la App.</li>
-          <li><strong>Portapapeles:</strong> Cuando tocas un botón de copia, la App coloca el texto braille generado en el portapapeles del sistema de tu dispositivo. A partir de ese momento, el portapapeles queda gestionado por Android y por los ajustes de tu dispositivo.</li>
+          <li>imágenes que seleccionas mediante el selector de fotos de Android;</li>
+          <li>texto que escribes y dibujos que creas en la app;</li>
+          <li>arte de texto estilo braille, incluidas las ediciones que decides copiar o guardar;</li>
+          <li>metadatos locales de la biblioteca, como nombre del resultado, tipo de origen, número de filas y columnas, formato o preset seleccionado, estado de favorito, fecha de creación y una clave interna de deduplicación; y</li>
+          <li>ajustes de la app, como idioma y tema.</li>
         </ul>
+        <p>La app usa el selector de fotos de Android para que tú elijas la imagen que compartes con la app. La app no solicita acceso a toda tu biblioteca de fotos.</p>
+        <p>Las imágenes seleccionadas, el texto ingresado, los dibujos, los resultados generados, los elementos guardados en la biblioteca y los ajustes se procesan en tu dispositivo. La app no los sube a los servidores del Desarrollador.</p>
+        <p>El paquete actual de la app no solicita el permiso de Internet de Android y no está diseñado para transmitir tu contenido ni datos de uso a un servidor.</p>
+        <p>La app no requiere una cuenta. El Desarrollador no te pide tu nombre, correo electrónico, número de teléfono, datos de cuenta ni otros identificadores personales a través de la app.</p>
+        <p>La app no solicita ni recopila ubicación precisa o aproximada, contactos, mensajes, registros de llamadas, datos de cámara o micrófono, ID de publicidad, analítica de uso, informes de fallos, dirección IP ni diagnósticos del dispositivo.</p>
+        <p>La app no usa inteligencia artificial (IA), servicios remotos de IA ni servicios de procesamiento en la nube para procesar tus datos o proporcionar funciones.</p>
 
-        <h2>Información que no recopilamos</h2>
-        <p>En la versión actual, Comment Artist no recopila, sube, transmite, vende ni comparte tu información personal con el Desarrollador ni con terceros. En particular, la App no recopila ni envía:</p>
-        <ul>
-          <li>tu nombre, dirección de correo electrónico, número de teléfono o información de cuenta;</li>
-          <li>tu ubicación precisa o aproximada;</li>
-          <li>tus contactos, mensajes o registros de llamadas;</li>
-          <li>tu ID de publicidad u otros identificadores de seguimiento;</li>
-          <li>analíticas de uso, informes de fallos, dirección IP o diagnósticos del dispositivo al Desarrollador; ni</li>
-          <li>tus imágenes, texto escrito, dibujos o resultados generados a un servicio remoto de IA o de procesamiento en la nube.</li>
-        </ul>
+        <h2>Portapapeles</h2>
+        <p>Cuando usas una acción de copiar, la app coloca el texto estilo braille generado en el portapapeles del sistema de tu dispositivo por indicación tuya. Después de eso, el portapapeles queda gestionado por Android, tu teclado, las apps donde pegues el contenido y los ajustes de tu dispositivo.</p>
 
-        <h2>Servicios de terceros y enlaces externos</h2>
-        <p>La versión actual de la App no usa servicios de publicidad, analítica ni informes de fallos de terceros.</p>
-        <p>La App puede incluir enlaces a sitios web externos, como páginas de licencias de código abierto. Si abres un enlace externo, se aplicarán las prácticas de privacidad de ese sitio web.</p>
+        <h2>Servicios de terceros y enlaces</h2>
+        <p>La versión actual de la app no usa SDKs de publicidad, analítica ni informes de fallos de terceros. Tampoco transmite periódicamente datos de uso agregados o anonimizados a servicios externos.</p>
+        <p>El Desarrollador no recopila, recibe, vende ni comparte tu información personal a través de la app.</p>
+        <p>La app puede incluir enlaces a sitios web externos, como páginas de licencias de código abierto. Si decides abrir un enlace externo, ese sitio web o navegador se regirá por sus propios términos y prácticas de privacidad.</p>
 
-        <h2>Conservación y eliminación</h2>
-        <p>Los datos almacenados por la App permanecen en tu dispositivo hasta que los elimines.</p>
-        <ul>
-          <li>Puedes eliminar los resultados guardados desde la biblioteca de la App.</li>
-          <li>Puedes eliminar todos los datos locales de la App borrando el almacenamiento de la App en los ajustes de Android o desinstalando la App.</li>
-          <li>El contenido copiado al portapapeles del sistema permanece allí hasta que Android o los ajustes de tu dispositivo lo sobrescriban, lo borren o lo eliminen de otra forma.</li>
-        </ul>
+        <h2>Tus opciones</h2>
+        <p>Puedes detener el procesamiento local de información de la app desinstalándola. También puedes eliminar los datos locales de la app borrando su almacenamiento desde los ajustes de Android.</p>
+
+        <h2>Conservación y eliminación de datos</h2>
+        <p>Las imágenes seleccionadas, el texto ingresado y los dibujos se usan para generar resultados en tu dispositivo. La app no guarda la imagen original seleccionada como archivo de biblioteca.</p>
+        <p>Los resultados guardados y los ajustes permanecen en tu dispositivo hasta que los elimines, borres el almacenamiento de la app, desinstales la app o la app quite resultados antiguos por el límite local de su biblioteca.</p>
+        <p>Puedes eliminar resultados guardados desde la biblioteca de la app. Al borrar el almacenamiento de la app o desinstalarla, se elimina de ese dispositivo la biblioteca y los ajustes guardados localmente.</p>
+        <p>Como actualmente la app permite la copia de seguridad de Android, Android o el fabricante de tu dispositivo pueden incluir resultados guardados y ajustes privados de la app en copias de seguridad, restauraciones o transferencias de un dispositivo a otro si esas funciones están activadas en tu dispositivo. El Desarrollador no opera ni accede a esas copias de seguridad.</p>
+        <p>El contenido copiado al portapapeles del sistema permanece allí hasta que Android, otra app o los ajustes de tu dispositivo lo sobrescriban, borren o eliminen de otro modo.</p>
+
+        <h2>Menores</h2>
+        <p>La app no está dirigida a menores de 13 años. El Desarrollador no recopila deliberadamente información personal de menores a través de la app.</p>
 
         <h2>Seguridad</h2>
-        <p>Los resultados guardados y los ajustes se almacenan en el área local y privada de la App que proporciona Android. Ningún método de almacenamiento es perfectamente seguro, pero la App está diseñada para que tu contenido permanezca en tu dispositivo salvo que decidas copiarlo al portapapeles del sistema o abrir un enlace externo.</p>
+        <p>Los resultados guardados y los ajustes se almacenan en el área local y privada de la app que proporciona Android. Ningún método de almacenamiento electrónico es perfectamente seguro, pero la versión actual de la app está diseñada para procesar tu contenido localmente, salvo que decidas copiarlo al portapapeles del sistema, abrir un enlace externo o usar funciones de copia de seguridad o transferencia de dispositivo controladas por tu dispositivo.</p>
 
-        <h2>Privacidad de menores</h2>
-        <p>Comment Artist no está dirigida a menores de 13 años, y no recopilamos deliberadamente información personal de menores a través de la App.</p>
+        <h2>Cambios</h2>
+        <p>Esta Política de privacidad puede actualizarse ocasionalmente. Cuando se actualice, se modificará la fecha de entrada en vigor indicada arriba. Te recomendamos revisar esta página periódicamente.</p>
 
-        <h2>Cambios en esta política</h2>
-        <p>Podemos actualizar esta Política de Privacidad ocasionalmente. Cuando lo hagamos, actualizaremos la fecha de entrada en vigor indicada arriba.</p>
+        <h2>Tu consentimiento</h2>
+        <p>Al usar la app, reconoces el manejo de la información descrito en esta Política de privacidad.</p>
 
         <h2>Contacto</h2>
-        <p>Si tienes preguntas sobre esta Política de Privacidad o sobre las prácticas de privacidad de la App, puedes contactar con el Desarrollador en <a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a>.</p>
+        <p>Si tienes preguntas sobre esta Política de privacidad o sobre las prácticas de privacidad de la app, puedes contactar al Desarrollador en <a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a>.</p>
       </section>
 
       <section class="policy" data-lang="pt" lang="pt-BR" hidden>
         <div class="meta">
           <span class="chip accent">Comment Artist para Android</span>
-          <span class="chip">Data de vigência: 23 de abril de 2026</span>
-          <span class="chip">Desenvolvedor: SungHoon Lee</span>
+          <span class="chip">Data de vigência: 24 de abril de 2026</span>
+          <span class="chip">Desenvolvedor / Provedor do serviço: SungHoon Lee (이성훈)</span>
         </div>
 
-        <h2>Visão geral</h2>
-        <p>Esta Política de Privacidade explica como o Comment Artist para Android ("Comment Artist" ou "App") lida com informações. O App foi criado por SungHoon Lee ("Desenvolvedor", "nós" ou "nosso").</p>
-        <p>O Comment Artist foi desenvolvido para funcionar localmente no seu dispositivo. Na versão atual, o App não exige conta, não exibe anúncios e não inclui SDKs de análise ou de relatórios de falhas.</p>
+        <h2>Política de Privacidade</h2>
+        <p>Esta Política de Privacidade explica como o Comment Artist para Android ("Comment Artist" ou o "Aplicativo") trata informações. O Aplicativo foi desenvolvido e é fornecido por SungHoon Lee (이성훈) (o "Desenvolvedor" ou "Provedor do serviço") como um aplicativo gratuito e é oferecido no estado em que se encontra.</p>
 
-        <h2>Informações que o App usa no seu dispositivo</h2>
-        <p>O App pode acessar ou usar as informações abaixo apenas para oferecer seus recursos:</p>
+        <h2>Informações usadas pelo Aplicativo</h2>
+        <p>A versão atual do Aplicativo processa informações localmente no seu dispositivo para oferecer seus recursos. Isso pode incluir:</p>
         <ul>
-          <li><strong>Imagens escolhidas por você:</strong> Se você selecionar uma imagem pelo seletor de fotos do Android, o App acessará somente a imagem escolhida e a converterá em arte de texto no estilo braille no seu dispositivo.</li>
-          <li><strong>Texto digitado e desenhos criados por você:</strong> O App usa esse conteúdo no seu dispositivo para gerar arte de texto no estilo braille.</li>
-          <li><strong>Resultados salvos:</strong> Se você salvar um resultado gerado na biblioteca do App, esse resultado será armazenado localmente no seu dispositivo. Isso pode incluir o nome do resultado, o rótulo de origem, o texto braille gerado, o tamanho em linhas e colunas, o formato selecionado, o status de favorito e a data de criação.</li>
-          <li><strong>Configurações do App:</strong> O App salva localmente suas preferências de idioma e tema para restaurá-las na próxima vez que você abrir o App.</li>
-          <li><strong>Área de transferência:</strong> Quando você toca em um botão de copiar, o App coloca o texto braille gerado na área de transferência do sistema do seu dispositivo. Depois disso, a área de transferência é gerenciada pelo Android e pelas configurações do seu dispositivo.</li>
+          <li>imagens que você seleciona pelo seletor de fotos do Android;</li>
+          <li>texto que você digita e desenhos que você cria no Aplicativo;</li>
+          <li>arte de texto no estilo braille, incluindo edições que você decide copiar ou salvar;</li>
+          <li>metadados locais da biblioteca, como nome do resultado, tipo de origem, número de linhas e colunas, formato ou predefinição selecionada, status de favorito, data de criação e uma chave interna de deduplicação; e</li>
+          <li>configurações do Aplicativo, como idioma e tema.</li>
         </ul>
+        <p>O Aplicativo usa o seletor de fotos do Android para que você escolha a imagem que será compartilhada com o Aplicativo. O Aplicativo não solicita acesso a toda a sua biblioteca de fotos.</p>
+        <p>As imagens selecionadas, o texto digitado, os desenhos, os resultados gerados, os itens salvos na biblioteca e as configurações são processados no seu dispositivo. O Aplicativo não envia esses dados aos servidores do Desenvolvedor.</p>
+        <p>O pacote atual do Aplicativo não solicita a permissão de Internet do Android e não foi desenvolvido para transmitir seu conteúdo ou dados de uso a um servidor.</p>
+        <p>O Aplicativo não exige uma conta. O Desenvolvedor não pede seu nome, endereço de e-mail, número de telefone, dados de conta ou outros identificadores pessoais por meio do Aplicativo.</p>
+        <p>O Aplicativo não solicita nem coleta localização precisa ou aproximada, contatos, mensagens, registros de chamadas, dados de câmera ou microfone, ID de publicidade, análise de uso, relatórios de falhas, endereço IP ou diagnósticos do dispositivo.</p>
+        <p>O Aplicativo não usa inteligência artificial (IA), serviços remotos de IA nem serviços de processamento em nuvem para processar seus dados ou fornecer recursos.</p>
 
-        <h2>Informações que não coletamos</h2>
-        <p>Na versão atual, o Comment Artist não coleta, envia, transmite, vende nem compartilha suas informações pessoais com o Desenvolvedor ou com terceiros. Em especial, o App não coleta nem envia:</p>
-        <ul>
-          <li>seu nome, endereço de e-mail, número de telefone ou informações de conta;</li>
-          <li>sua localização precisa ou aproximada;</li>
-          <li>seus contatos, mensagens ou registros de chamadas;</li>
-          <li>seu ID de publicidade ou outros identificadores de rastreamento;</li>
-          <li>análises de uso, relatórios de falhas, endereço IP ou diagnósticos do dispositivo ao Desenvolvedor; nem</li>
-          <li>suas imagens, texto digitado, desenhos ou resultados gerados a um serviço remoto de IA ou de processamento em nuvem.</li>
-        </ul>
+        <h2>Área de transferência</h2>
+        <p>Quando você usa uma ação de copiar, o Aplicativo coloca o texto no estilo braille gerado na área de transferência do sistema do seu dispositivo por sua solicitação. Depois disso, a área de transferência passa a ser gerenciada pelo Android, pelo seu teclado, pelos apps onde você colar o conteúdo e pelas configurações do seu dispositivo.</p>
 
-        <h2>Serviços de terceiros e links externos</h2>
-        <p>A versão atual do App não usa serviços de publicidade, análise ou relatórios de falhas de terceiros.</p>
-        <p>O App pode incluir links para sites externos, como páginas de licenças de código aberto. Se você abrir um link externo, serão aplicadas as práticas de privacidade desse site.</p>
+        <h2>Serviços de terceiros e links</h2>
+        <p>A versão atual do Aplicativo não usa SDKs de publicidade, análise ou relatórios de falhas de terceiros. Também não transmite periodicamente dados de uso agregados ou anonimizados a serviços externos.</p>
+        <p>O Desenvolvedor não coleta, recebe, vende nem compartilha suas informações pessoais por meio do Aplicativo.</p>
+        <p>O Aplicativo pode incluir links para sites externos, como páginas de licenças de código aberto. Se você decidir abrir um link externo, esse site ou navegador será regido por seus próprios termos e práticas de privacidade.</p>
 
-        <h2>Retenção e exclusão</h2>
-        <p>Os dados armazenados pelo App permanecem no seu dispositivo até que você os remova.</p>
-        <ul>
-          <li>Você pode excluir resultados salvos pela biblioteca do App.</li>
-          <li>Você pode remover todos os dados locais do App apagando o armazenamento do App nas configurações do Android ou desinstalando o App.</li>
-          <li>O conteúdo copiado para a área de transferência do sistema permanece lá até ser substituído, apagado ou removido de outra forma pelo Android ou pelas configurações do seu dispositivo.</li>
-        </ul>
+        <h2>Suas escolhas</h2>
+        <p>Você pode interromper o processamento local de informações pelo Aplicativo desinstalando-o. Também pode remover os dados locais do Aplicativo apagando o armazenamento dele nas configurações do Android.</p>
+
+        <h2>Retenção e exclusão de dados</h2>
+        <p>As imagens selecionadas, o texto digitado e os desenhos são usados para gerar resultados no seu dispositivo. O Aplicativo não salva a imagem original selecionada como arquivo da biblioteca.</p>
+        <p>Os resultados salvos e as configurações permanecem no seu dispositivo até que você os exclua, apague o armazenamento do Aplicativo, desinstale o Aplicativo ou o Aplicativo remova resultados antigos por causa do limite local da biblioteca.</p>
+        <p>Você pode excluir resultados salvos pela biblioteca do Aplicativo. Ao apagar o armazenamento do Aplicativo ou desinstalá-lo, a biblioteca e as configurações armazenadas localmente são removidas desse dispositivo.</p>
+        <p>Como o Aplicativo permite atualmente o backup do Android, o Android ou o fabricante do seu dispositivo pode incluir resultados salvos e configurações privadas do Aplicativo em backups, restaurações ou transferências de um dispositivo para outro se esses recursos estiverem ativados no seu dispositivo. O Desenvolvedor não opera nem acessa esses backups.</p>
+        <p>O conteúdo copiado para a área de transferência do sistema permanece lá até ser substituído, apagado ou removido de outra forma pelo Android, por outro app ou pelas configurações do seu dispositivo.</p>
+
+        <h2>Crianças</h2>
+        <p>O Aplicativo não é direcionado a crianças menores de 13 anos. O Desenvolvedor não coleta intencionalmente informações pessoais de crianças por meio do Aplicativo.</p>
 
         <h2>Segurança</h2>
-        <p>Resultados salvos e configurações ficam armazenados na área local e privada do App fornecida pelo Android. Nenhum método de armazenamento é perfeitamente seguro, mas o App foi desenvolvido para manter seu conteúdo no dispositivo, a menos que você escolha copiá-lo para a área de transferência do sistema ou abrir um link externo.</p>
+        <p>Os resultados salvos e as configurações ficam armazenados na área local e privada do Aplicativo fornecida pelo Android. Nenhum método de armazenamento eletrônico é perfeitamente seguro, mas a versão atual do Aplicativo foi desenvolvida para processar seu conteúdo localmente, a menos que você escolha copiá-lo para a área de transferência do sistema, abrir um link externo ou usar recursos de backup ou transferência de dispositivo controlados pelo seu dispositivo.</p>
 
-        <h2>Privacidade de crianças</h2>
-        <p>O Comment Artist não é direcionado a crianças menores de 13 anos, e não coletamos intencionalmente informações pessoais de crianças por meio do App.</p>
+        <h2>Alterações</h2>
+        <p>Esta Política de Privacidade poderá ser atualizada ocasionalmente. Quando isso acontecer, a data de vigência acima será alterada. Recomendamos que você revise esta página periodicamente.</p>
 
-        <h2>Alterações nesta política</h2>
-        <p>Podemos atualizar esta Política de Privacidade ocasionalmente. Quando isso acontecer, atualizaremos a data de vigência indicada acima.</p>
+        <h2>Seu consentimento</h2>
+        <p>Ao usar o Aplicativo, você reconhece o tratamento das informações descrito nesta Política de Privacidade.</p>
 
         <h2>Contato</h2>
-        <p>Se você tiver dúvidas sobre esta Política de Privacidade ou sobre as práticas de privacidade do App, entre em contato com o Desenvolvedor pelo e-mail <a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a>.</p>
+        <p>Se você tiver dúvidas sobre esta Política de Privacidade ou sobre as práticas de privacidade do Aplicativo, entre em contato com o Desenvolvedor pelo e-mail <a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a>.</p>
       </section>
     </div>
-
-    <p class="footer-note">This page is intended for the Google Play privacy policy URL for Comment Artist.</p>
   </main>
 
   <script>
     const tabs = Array.from(document.querySelectorAll(".lang-tab"));
     const policies = Array.from(document.querySelectorAll(".policy"));
     const supported = new Set(policies.map((policy) => policy.dataset.lang));
+    const languageLabels = {
+      en: {
+        title: "Privacy Policy",
+        subtitle: "Select a language below. This static page does not load analytics, ads, external fonts, or tracking scripts.",
+        navLabel: "Policy language",
+        documentTitle: "Comment Artist Privacy Policy",
+      },
+      ko: {
+        title: "개인정보처리방침",
+        subtitle: "아래에서 언어를 선택하세요. 이 정적 페이지는 분석 도구, 광고, 외부 폰트 또는 추적 스크립트를 불러오지 않습니다.",
+        navLabel: "방침 언어",
+        documentTitle: "Comment Artist 개인정보처리방침",
+      },
+      es: {
+        title: "Política de privacidad",
+        subtitle: "Elige un idioma. Esta página estática no carga analítica, anuncios, fuentes externas ni scripts de seguimiento.",
+        navLabel: "Idioma de la política",
+        documentTitle: "Política de privacidad de Comment Artist",
+      },
+      pt: {
+        title: "Política de Privacidade",
+        subtitle: "Escolha um idioma. Esta página estática não carrega ferramentas de análise, anúncios, fontes externas nem scripts de rastreamento.",
+        navLabel: "Idioma da política",
+        documentTitle: "Política de Privacidade do Comment Artist",
+      },
+    };
 
     function pickInitialLanguage() {
       const fromHash = window.location.hash.replace("#", "").toLowerCase();
       if (supported.has(fromHash)) return fromHash;
-      const saved = window.localStorage.getItem("commentArtistPolicyLang");
-      if (supported.has(saved)) return saved;
-      const browser = (navigator.language || "en").slice(0, 2).toLowerCase();
-      return supported.has(browser) ? browser : "en";
+      return "en";
     }
 
     function setLanguage(lang, updateHash = true) {
       if (!supported.has(lang)) return;
+      const labels = languageLabels[lang] || languageLabels.en;
       document.documentElement.lang = lang === "pt" ? "pt-BR" : lang;
+      document.title = labels.documentTitle;
+      document.getElementById("policy-title").textContent = labels.title;
+      document.getElementById("policy-subtitle").textContent = labels.subtitle;
+      document.querySelector(".tabs").setAttribute("aria-label", labels.navLabel);
       policies.forEach((policy) => {
         policy.hidden = policy.dataset.lang !== lang;
       });
       tabs.forEach((tab) => {
         tab.setAttribute("aria-selected", String(tab.dataset.target === lang));
       });
-      window.localStorage.setItem("commentArtistPolicyLang", lang);
       if (updateHash) history.replaceState(null, "", `#${lang}`);
     }
 
