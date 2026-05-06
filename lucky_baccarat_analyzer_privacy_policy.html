@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Lucky Predictor Privacy Policy</title>
+    <title>Lucky Baccarat Analyzer Privacy Policy</title>
     <meta
       name="description"
-      content="Privacy Policy for Lucky Predictor, an offline baccarat analysis app."
+      content="Privacy Policy for Lucky Baccarat Analyzer, an offline baccarat analysis app."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,13 +25,9 @@
         --shadow-light: #ffffff;
         --text: #1d2433;
         --text-muted: #6f7b8d;
-
-        --banker: #d85f5f;
-        --player: #5478e4;
-        --tie: #3fae86;
+        --divider: rgba(111, 123, 141, 0.22);
         --accent: #b58b56;
-
-        --divider: #d5dce6;
+        --player: #5478e4;
         --glass-overlay: #131a25;
         --glass-shadow: #000000;
       }
@@ -45,7 +41,7 @@
           --shadow-light: #434f61;
           --text: #f1f4f8;
           --text-muted: #b2becd;
-          --divider: #3d4757;
+          --divider: rgba(178, 190, 205, 0.2);
           --glass-overlay: #141b25;
           --glass-shadow: #0b1016;
         }
@@ -62,212 +58,109 @@
           sans-serif;
         color: var(--text);
         background:
-          radial-gradient(circle at 16% 8%, rgba(255, 255, 255, 0.34), transparent 26%),
-          radial-gradient(circle at 86% 92%, rgba(84, 120, 228, 0.12), transparent 24%),
+          radial-gradient(circle at 14% 4%, rgba(255, 255, 255, 0.3), transparent 24%),
+          radial-gradient(circle at 88% 92%, rgba(84, 120, 228, 0.1), transparent 22%),
           linear-gradient(180deg, var(--background) 0%, color-mix(in srgb, var(--background) 88%, var(--glass-overlay) 12%) 100%);
         line-height: 1.72;
       }
 
       .page {
-        width: min(860px, calc(100% - 24px));
+        width: min(840px, calc(100% - 24px));
         margin: 0 auto;
-        padding: 22px 0 52px;
+        padding: 18px 0 46px;
       }
 
-      .scrim {
+      .sheet {
         position: relative;
-        border-radius: 34px;
         overflow: hidden;
-        border: 1px solid color-mix(in srgb, var(--shadow-light) 58%, transparent);
+        border-radius: 34px;
+        border: 1px solid color-mix(in srgb, var(--shadow-light) 56%, transparent);
         background:
           linear-gradient(
             145deg,
-            color-mix(in srgb, var(--panel-raised) 82%, var(--shadow-light) 18%),
-            color-mix(in srgb, var(--panel-raised) 74%, transparent) 54%,
+            color-mix(in srgb, var(--panel-raised) 84%, var(--shadow-light) 16%),
+            color-mix(in srgb, var(--panel-raised) 72%, transparent) 52%,
             color-mix(in srgb, var(--panel) 82%, transparent)
           );
         box-shadow:
-          0 26px 52px color-mix(in srgb, var(--glass-shadow) 18%, transparent),
-          -10px -10px 24px color-mix(in srgb, var(--shadow-light) 58%, transparent);
+          0 28px 56px color-mix(in srgb, var(--glass-shadow) 18%, transparent),
+          -10px -10px 24px color-mix(in srgb, var(--shadow-light) 56%, transparent);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
       }
 
-      .scrim::before {
+      .sheet::before {
         content: "";
         position: absolute;
         inset: 0;
         pointer-events: none;
         background:
-          radial-gradient(circle at 18% 0%, color-mix(in srgb, var(--shadow-light) 52%, transparent), transparent 30%),
+          radial-gradient(circle at 18% 0%, color-mix(in srgb, var(--shadow-light) 48%, transparent), transparent 30%),
           radial-gradient(circle at 100% 100%, color-mix(in srgb, var(--glass-overlay) 10%, transparent), transparent 28%);
       }
 
-      .sheet {
+      .content {
         position: relative;
         z-index: 1;
-        padding: 26px;
+        padding: 28px 26px 24px;
       }
 
-      .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 8px 12px;
-        border-radius: 999px;
-        background: color-mix(in srgb, var(--shadow-light) 42%, transparent);
-        color: var(--text-muted);
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        box-shadow:
-          inset 0 1px 0 color-mix(in srgb, var(--shadow-light) 48%, transparent),
-          0 10px 20px color-mix(in srgb, var(--glass-shadow) 6%, transparent);
-      }
-
-      .eyebrow::before {
-        content: "";
-        width: 9px;
-        height: 9px;
-        border-radius: 999px;
-        background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 72%, white 28%));
-      }
-
-      .header {
-        display: grid;
-        gap: 14px;
-      }
-
-      .header-top {
-        display: flex;
-        justify-content: space-between;
-        gap: 12px;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-
-      .effective {
-        color: var(--text-muted);
-        font-size: 0.92rem;
-        font-weight: 600;
+      header {
+        padding-bottom: 18px;
       }
 
       h1 {
         margin: 0;
-        font-size: clamp(2.05rem, 5vw, 3rem);
-        line-height: 1.02;
+        font-size: clamp(2.1rem, 5vw, 3rem);
+        line-height: 1.03;
         letter-spacing: -0.055em;
         font-weight: 800;
       }
 
       .lead {
-        margin: 0;
+        margin: 14px 0 0;
         max-width: 60ch;
         color: var(--text-muted);
         font-size: 1rem;
       }
 
-      .status-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 2px;
-      }
-
-      .status-chip {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 11px 14px;
-        min-height: 42px;
-        border-radius: 18px;
-        background: color-mix(in srgb, var(--shadow-light) 44%, transparent);
-        color: var(--text);
-        font-size: 0.92rem;
+      .effective {
+        margin-top: 14px;
+        color: var(--text-muted);
+        font-size: 0.9rem;
         font-weight: 600;
-        box-shadow:
-          inset 0 1px 0 color-mix(in srgb, var(--shadow-light) 52%, transparent),
-          0 12px 18px color-mix(in srgb, var(--glass-shadow) 7%, transparent);
       }
 
-      .status-chip::before {
-        content: "";
-        width: 10px;
-        height: 10px;
-        border-radius: 999px;
-        background: var(--player);
-        flex: none;
+      .section {
+        padding: 18px 0 0;
+        margin-top: 18px;
+        border-top: 1px solid var(--divider);
       }
 
-      .status-chip.banker::before {
-        background: var(--banker);
+      .section:first-of-type {
+        margin-top: 0;
       }
 
-      .status-chip.tie::before {
-        background: var(--tie);
-      }
-
-      .status-chip.accent::before {
-        background: var(--accent);
-      }
-
-      .stack {
-        display: grid;
-        gap: 14px;
-        margin-top: 20px;
-      }
-
-      .panel {
-        padding: 18px 18px 16px;
-        border-radius: 24px;
-        border: 1px solid color-mix(in srgb, var(--shadow-light) 44%, transparent);
-        background:
-          linear-gradient(
-            145deg,
-            color-mix(in srgb, var(--panel-raised) 86%, var(--shadow-light) 14%),
-            color-mix(in srgb, var(--panel) 78%, transparent)
-          );
-        box-shadow:
-          10px 12px 26px color-mix(in srgb, var(--shadow-dark) 24%, transparent),
-          -8px -8px 18px color-mix(in srgb, var(--shadow-light) 44%, transparent);
-      }
-
-      .panel-header {
+      .section-head {
         display: flex;
-        align-items: center;
         gap: 12px;
+        align-items: baseline;
         margin-bottom: 10px;
       }
 
-      .index {
-        width: 36px;
-        height: 36px;
-        border-radius: 14px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+      .section-index {
         flex: none;
+        color: var(--text-muted);
         font-size: 0.95rem;
-        font-weight: 800;
-        letter-spacing: -0.04em;
-        color: var(--text);
-        background:
-          linear-gradient(
-            145deg,
-            color-mix(in srgb, var(--shadow-light) 62%, transparent),
-            color-mix(in srgb, var(--panel) 86%, transparent)
-          );
-        box-shadow:
-          inset 0 1px 0 color-mix(in srgb, var(--shadow-light) 58%, transparent),
-          0 10px 18px color-mix(in srgb, var(--glass-shadow) 8%, transparent);
+        font-weight: 700;
+        letter-spacing: 0.02em;
       }
 
-      .panel h2 {
+      .section-title {
         margin: 0;
-        font-size: 1.05rem;
+        font-size: 1.06rem;
         font-weight: 800;
-        letter-spacing: -0.025em;
+        letter-spacing: -0.02em;
       }
 
       p {
@@ -278,76 +171,45 @@
         margin-bottom: 0;
       }
 
+      .notice {
+        margin-top: 14px;
+        padding-top: 14px;
+        border-top: 1px solid color-mix(in srgb, var(--accent) 28%, var(--divider));
+      }
+
+      .notice-title {
+        margin: 0 0 8px;
+        color: var(--text);
+        font-size: 0.92rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
       ul {
-        margin: 12px 0 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        gap: 10px;
+        margin: 10px 0 0 0;
+        padding-left: 20px;
       }
 
       li {
-        display: grid;
-        grid-template-columns: 10px 1fr;
-        gap: 12px;
-        align-items: start;
-        padding: 12px 14px;
-        border-radius: 18px;
-        background: color-mix(in srgb, var(--shadow-light) 34%, transparent);
-        border: 1px solid color-mix(in srgb, var(--shadow-light) 36%, transparent);
-      }
-
-      li::before {
-        content: "";
-        width: 10px;
-        height: 10px;
-        margin-top: 0.42rem;
-        border-radius: 999px;
-        background: var(--player);
-      }
-
-      .notice {
-        margin-top: 14px;
-        padding: 16px;
-        border-radius: 22px;
-        background:
-          linear-gradient(
-            145deg,
-            color-mix(in srgb, var(--accent) 16%, var(--panel-raised) 84%),
-            color-mix(in srgb, var(--panel) 76%, transparent)
-          );
-        border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--shadow-light) 30%);
-      }
-
-      .notice h3 {
         margin: 0 0 8px;
-        font-size: 0.9rem;
-        font-weight: 800;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
+        padding-left: 2px;
       }
 
-      .notice p:last-child {
-        margin-top: 8px;
+      li::marker {
+        color: color-mix(in srgb, var(--text-muted) 78%, transparent);
       }
 
-      .summary-grid {
+      .contact {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
-        margin-top: 12px;
+        gap: 8px;
       }
 
-      .summary-item {
-        padding: 14px;
-        border-radius: 18px;
-        background: color-mix(in srgb, var(--shadow-light) 34%, transparent);
-        border: 1px solid color-mix(in srgb, var(--shadow-light) 36%, transparent);
+      .contact-row {
+        display: grid;
+        gap: 2px;
       }
 
-      .summary-label {
-        display: block;
-        margin-bottom: 5px;
+      .contact-label {
         color: var(--text-muted);
         font-size: 0.78rem;
         font-weight: 700;
@@ -355,14 +217,9 @@
         text-transform: uppercase;
       }
 
-      .summary-value {
-        font-size: 0.94rem;
+      .contact-value {
+        font-size: 0.96rem;
         font-weight: 600;
-      }
-
-      .contact {
-        display: grid;
-        gap: 10px;
       }
 
       a {
@@ -375,274 +232,248 @@
       }
 
       .footer {
-        margin-top: 16px;
-        padding: 0 4px;
+        margin-top: 14px;
         color: var(--text-muted);
-        font-size: 0.88rem;
+        font-size: 0.86rem;
         text-align: center;
       }
 
       @media (max-width: 640px) {
         .page {
-          width: min(100% - 16px, 860px);
-          padding-top: 14px;
-        }
-
-        .scrim {
-          border-radius: 28px;
+          width: min(100% - 16px, 840px);
+          padding-top: 12px;
         }
 
         .sheet {
-          padding: 18px;
+          border-radius: 28px;
         }
 
-        .summary-grid {
-          grid-template-columns: 1fr;
+        .content {
+          padding: 22px 18px 18px;
+        }
+
+        .section-head {
+          gap: 10px;
         }
       }
     </style>
   </head>
   <body>
     <main class="page">
-      <section class="scrim">
-        <div class="sheet">
-          <header class="header">
-            <div class="header-top">
-              <div class="eyebrow">Privacy Policy</div>
-              <div class="effective">Effective date: May 5, 2026</div>
-            </div>
-
-            <h1>Lucky Predictor Privacy Policy</h1>
-
+      <section class="sheet">
+        <div class="content">
+          <header>
+            <h1>Lucky Baccarat Analyzer Privacy Policy</h1>
             <p class="lead">
-              This Privacy Policy applies to Lucky Predictor, an offline
+              This Privacy Policy applies to Lucky Baccarat Analyzer, an offline
               baccarat analysis app provided by SungHoon Lee
               (&#51060;&#49457;&#54984;).
             </p>
-
-            <div class="status-row">
-              <div class="status-chip accent">Offline analyzer</div>
-              <div class="status-chip">No ads or tracking</div>
-              <div class="status-chip tie">Local settings only</div>
-              <div class="status-chip banker">No wagering service</div>
-            </div>
+            <div class="effective">Effective date: May 5, 2026</div>
           </header>
 
-          <div class="stack">
-            <section class="panel">
-              <div class="panel-header">
-                <div class="index">1</div>
-                <h2>Summary</h2>
-              </div>
+          <section class="section">
+            <div class="section-head">
+              <div class="section-index">1.</div>
+              <h2 class="section-title">Summary</h2>
+            </div>
+            <p>
+              Lucky Baccarat Analyzer is designed to work offline. The App does
+              not collect, transmit, sell, or share personal information from
+              within the App for its core analyzer experience.
+            </p>
+            <p>
+              The App does not use advertising SDKs, analytics SDKs,
+              crash-reporting SDKs, advertising identifiers, or web views for
+              the analyzer feature.
+            </p>
+            <div class="notice">
+              <div class="notice-title">Important Notice</div>
               <p>
-                Lucky Predictor is designed to work offline. The App does not
-                collect, transmit, sell, or share personal information from
-                within the App for its core analyzer experience.
+                The App is provided for informational and entertainment purposes
+                only. It does not provide gambling services, accept wagers, or
+                facilitate real-money betting.
               </p>
               <p>
-                The App does not use advertising SDKs, analytics SDKs,
-                crash-reporting SDKs, advertising identifiers, or web views for
-                the analyzer feature.
+                Any analysis, predictions, or statistics shown in the App do
+                not guarantee outcomes and must not be treated as financial,
+                betting, or gambling advice. Users are responsible for complying
+                with the laws and regulations that apply in their location.
               </p>
+            </div>
+          </section>
 
-              <div class="notice">
-                <h3>Important Notice</h3>
-                <p>
-                  The App is provided for informational and entertainment
-                  purposes only. It does not provide gambling services, accept
-                  wagers, or facilitate real-money betting.
-                </p>
-                <p>
-                  Any analysis, predictions, or statistics shown in the App do
-                  not guarantee outcomes and must not be treated as financial,
-                  betting, or gambling advice. Users are responsible for
-                  complying with the laws and regulations that apply in their
-                  location.
-                </p>
-              </div>
-            </section>
+          <section class="section">
+            <div class="section-head">
+              <div class="section-index">2.</div>
+              <h2 class="section-title">Information Stored on Your Device</h2>
+            </div>
+            <p>
+              To remember your preferences, the App stores only the following
+              settings locally on your device:
+            </p>
+            <ul>
+              <li>dark mode preference</li>
+              <li>vibration preference</li>
+              <li>language preference</li>
+              <li>startup consent status</li>
+            </ul>
+            <p>
+              These settings are stored locally on your device and are not
+              transmitted to the Developer from within the App.
+            </p>
+          </section>
 
-            <section class="panel">
-              <div class="panel-header">
-                <div class="index">2</div>
-                <h2>Information Stored on Your Device</h2>
-              </div>
-              <p>
-                To remember your preferences, the App stores only the following
-                settings locally on your device:
-              </p>
-              <ul>
-                <li>dark mode preference</li>
-                <li>vibration preference</li>
-                <li>language preference</li>
-                <li>startup consent status</li>
-              </ul>
-              <p>
-                These settings are stored locally on your device and are not
-                transmitted to the Developer from within the App.
-              </p>
-            </section>
+          <section class="section">
+            <div class="section-head">
+              <div class="section-index">3.</div>
+              <h2 class="section-title">Information the App Does Not Collect</h2>
+            </div>
+            <p>
+              The App does not collect personal information from within the App
+              such as:
+            </p>
+            <ul>
+              <li>name, email address, or phone number</li>
+              <li>precise or approximate location</li>
+              <li>contacts, photos, microphone input, or camera data</li>
+              <li>payment information or financial account information</li>
+              <li>device advertising identifiers</li>
+              <li>usage analytics or behavioral tracking data</li>
+            </ul>
+          </section>
 
-            <section class="panel">
-              <div class="panel-header">
-                <div class="index">3</div>
-                <h2>Information the App Does Not Collect</h2>
-              </div>
-              <p>
-                The App does not collect personal information from within the
-                App such as:
-              </p>
-              <ul>
-                <li>name, email address, or phone number</li>
-                <li>precise or approximate location</li>
-                <li>contacts, photos, microphone input, or camera data</li>
-                <li>payment information or financial account information</li>
-                <li>device advertising identifiers</li>
-                <li>usage analytics or behavioral tracking data</li>
-              </ul>
-            </section>
+          <section class="section">
+            <div class="section-head">
+              <div class="section-index">4.</div>
+              <h2 class="section-title">Internet Access and Third-Party Services</h2>
+            </div>
+            <p>
+              The App is intended to operate offline and does not rely on an
+              internet connection for its analyzer features.
+            </p>
+            <p>
+              The App does not include third-party advertising, analytics, or
+              crash-reporting services.
+            </p>
+            <p>
+              If your device or operating system automatically backs up app
+              data, that backup is handled by your platform provider under its
+              own terms and settings, not by the Developer.
+            </p>
+            <p>
+              App stores or platform providers such as Google Play or Apple may
+              process information related to downloading, updating, billing, or
+              platform operations under their own privacy policies. Those
+              activities are outside the App's direct operation.
+            </p>
+          </section>
 
-            <section class="panel">
-              <div class="panel-header">
-                <div class="index">4</div>
-                <h2>Internet Access and Third-Party Services</h2>
-              </div>
-              <p>
-                The App is intended to operate offline and does not rely on an
-                internet connection for its analyzer features.
-              </p>
-              <p>
-                The App does not include third-party advertising, analytics, or
-                crash-reporting services.
-              </p>
-              <p>
-                If your device or operating system automatically backs up app
-                data, that backup is handled by your platform provider under its
-                own terms and settings, not by the Developer.
-              </p>
-              <p>
-                App stores or platform providers such as Google Play or Apple
-                may process information related to downloading, updating,
-                billing, or platform operations under their own privacy
-                policies. Those activities are outside the App's direct
-                operation.
-              </p>
-            </section>
+          <section class="section">
+            <div class="section-head">
+              <div class="section-index">5.</div>
+              <h2 class="section-title">Contacting the Developer</h2>
+            </div>
+            <p>
+              If you contact the Developer by email, the Developer will receive
+              your email address and any information you include in your
+              message.
+            </p>
+            <p>
+              That information will be used only to respond to your inquiry or
+              address your request, unless disclosure is required by law.
+            </p>
+          </section>
 
-            <section class="panel">
-              <div class="panel-header">
-                <div class="index">5</div>
-                <h2>Contacting the Developer</h2>
-              </div>
-              <p>
-                If you contact the Developer by email, the Developer will
-                receive your email address and any information you include in
-                your message.
-              </p>
-              <p>
-                That information will be used only to respond to your inquiry or
-                address your request, unless disclosure is required by law.
-              </p>
-            </section>
+          <section class="section">
+            <div class="section-head">
+              <div class="section-index">6.</div>
+              <h2 class="section-title">Data Retention and Deletion</h2>
+            </div>
+            <p>
+              Preference settings stored locally on your device remain there
+              until you clear the App's data or uninstall the App, subject to
+              any device-level backup settings you choose to use.
+            </p>
+            <p>
+              Because the Developer does not receive these locally stored
+              settings from within the App, the Developer cannot independently
+              access or delete them on your device.
+            </p>
+          </section>
 
-            <section class="panel">
-              <div class="panel-header">
-                <div class="index">6</div>
-                <h2>Data Retention and Deletion</h2>
-              </div>
-              <p>
-                Preference settings stored locally on your device remain there
-                until you clear the App's data or uninstall the App, subject to
-                any device-level backup settings you choose to use.
-              </p>
-              <p>
-                Because the Developer does not receive these locally stored
-                settings from within the App, the Developer cannot independently
-                access or delete them on your device.
-              </p>
-            </section>
+          <section class="section">
+            <div class="section-head">
+              <div class="section-index">7.</div>
+              <h2 class="section-title">Children's Privacy</h2>
+            </div>
+            <p>
+              The App is not directed to children under the age of 13. The
+              Developer does not knowingly collect personal information from
+              children through the App.
+            </p>
+            <p>
+              If you believe a child has provided personal information directly
+              to the Developer by email, please contact the Developer so
+              appropriate steps can be taken.
+            </p>
+          </section>
 
-            <section class="panel">
-              <div class="panel-header">
-                <div class="index">7</div>
-                <h2>Children's Privacy</h2>
-              </div>
-              <p>
-                The App is not directed to children under the age of 13. The
-                Developer does not knowingly collect personal information from
-                children through the App.
-              </p>
-              <p>
-                If you believe a child has provided personal information
-                directly to the Developer by email, please contact the Developer
-                so appropriate steps can be taken.
-              </p>
-            </section>
+          <section class="section">
+            <div class="section-head">
+              <div class="section-index">8.</div>
+              <h2 class="section-title">Security</h2>
+            </div>
+            <p>
+              Because the App is designed to work offline and does not transmit
+              personal data from within the App for its core analyzer
+              experience, the Developer does not maintain server-side personal
+              data for normal App operation.
+            </p>
+            <p>
+              The security of locally stored settings depends in part on the
+              security controls of your device and operating system.
+            </p>
+          </section>
 
-            <section class="panel">
-              <div class="panel-header">
-                <div class="index">8</div>
-                <h2>Security</h2>
-              </div>
-              <p>
-                Because the App is designed to work offline and does not
-                transmit personal data from within the App for its core analyzer
-                experience, the Developer does not maintain server-side personal
-                data for normal App operation.
-              </p>
-              <p>
-                The security of locally stored settings depends in part on the
-                security controls of your device and operating system.
-              </p>
-            </section>
+          <section class="section">
+            <div class="section-head">
+              <div class="section-index">9.</div>
+              <h2 class="section-title">Changes to This Privacy Policy</h2>
+            </div>
+            <p>
+              This Privacy Policy may be updated from time to time. If it is
+              updated, the revised version will be posted with a new effective
+              date.
+            </p>
+          </section>
 
-            <section class="panel">
-              <div class="panel-header">
-                <div class="index">9</div>
-                <h2>Changes to This Privacy Policy</h2>
-              </div>
-              <p>
-                This Privacy Policy may be updated from time to time. If it is
-                updated, the revised version will be posted with a new effective
-                date.
-              </p>
-            </section>
-
-            <section class="panel">
-              <div class="panel-header">
-                <div class="index">10</div>
-                <h2>Contact</h2>
-              </div>
-              <div class="summary-grid">
-                <div class="summary-item">
-                  <span class="summary-label">Developer</span>
-                  <div class="summary-value">
-                    SungHoon Lee (&#51060;&#49457;&#54984;)
-                  </div>
-                </div>
-                <div class="summary-item">
-                  <span class="summary-label">Email</span>
-                  <div class="summary-value">
-                    <a href="mailto:digitalspaceout.official@gmail.com">
-                      digitalspaceout.official@gmail.com
-                    </a>
-                  </div>
-                </div>
-                <div class="summary-item">
-                  <span class="summary-label">App Scope</span>
-                  <div class="summary-value">Lucky Predictor mobile app</div>
-                </div>
-                <div class="summary-item">
-                  <span class="summary-label">Core Function</span>
-                  <div class="summary-value">Offline baccarat analysis</div>
+          <section class="section">
+            <div class="section-head">
+              <div class="section-index">10.</div>
+              <h2 class="section-title">Contact</h2>
+            </div>
+            <div class="contact">
+              <div class="contact-row">
+                <div class="contact-label">Developer</div>
+                <div class="contact-value">
+                  SungHoon Lee (&#51060;&#49457;&#54984;)
                 </div>
               </div>
-            </section>
-          </div>
+              <div class="contact-row">
+                <div class="contact-label">Email</div>
+                <div class="contact-value">
+                  <a href="mailto:digitalspaceout.official@gmail.com">
+                    digitalspaceout.official@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
 
-      <div class="footer">Lucky Predictor Privacy Policy</div>
+      <div class="footer">Lucky Baccarat Analyzer Privacy Policy</div>
     </main>
   </body>
 </html>
