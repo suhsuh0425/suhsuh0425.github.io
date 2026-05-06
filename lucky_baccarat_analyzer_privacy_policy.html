@@ -3,227 +3,537 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Lucky Baccarat Analyzer Privacy Policy</title>
+    <title>Lucky Predictor Privacy Policy</title>
+    <meta
+      name="description"
+      content="Privacy Policy for Lucky Predictor, an offline baccarat analysis app."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <style>
       :root {
         color-scheme: light;
-        --bg: #f5f7fb;
-        --surface: #ffffff;
-        --text: #172033;
-        --muted: #5c677d;
-        --border: #d8e0ef;
-        --accent: #1e5eff;
+        --bg: #e6ebf2;
+        --panel: #e8edf4;
+        --panel-raised: #f4f7fb;
+        --shadow-dark: #b4c0d0;
+        --shadow-light: #ffffff;
+        --text: #1d2433;
+        --muted: #6f7b8d;
+        --banker: #d85f5f;
+        --player: #5478e4;
+        --tie: #3fae86;
+        --accent: #b58b56;
+        --divider: #d5dce6;
       }
 
       * {
         box-sizing: border-box;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        background: linear-gradient(180deg, #eef3ff 0%, var(--bg) 100%);
+        min-height: 100vh;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
         color: var(--text);
-        line-height: 1.7;
+        background:
+          radial-gradient(circle at top left, rgba(255, 255, 255, 0.88), transparent 34%),
+          radial-gradient(circle at bottom right, rgba(180, 192, 208, 0.38), transparent 32%),
+          linear-gradient(180deg, #edf2f8 0%, var(--bg) 45%, #dde4ec 100%);
+        line-height: 1.72;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.56), transparent 18%),
+          radial-gradient(circle at 82% 88%, rgba(180, 192, 208, 0.36), transparent 24%);
+        opacity: 0.95;
       }
 
       main {
-        max-width: 860px;
+        position: relative;
+        z-index: 1;
+        width: min(960px, calc(100% - 32px));
         margin: 0 auto;
-        padding: 40px 20px 72px;
+        padding: 40px 0 72px;
       }
 
-      .card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 24px;
-        padding: 28px;
-        box-shadow: 0 16px 40px rgba(23, 32, 51, 0.08);
+      .hero,
+      .section {
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.66);
+        background:
+          linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.82),
+            rgba(244, 247, 251, 0.76) 54%,
+            rgba(232, 237, 244, 0.8)
+          );
+        box-shadow:
+          0 24px 48px rgba(180, 192, 208, 0.28),
+          -10px -10px 24px rgba(255, 255, 255, 0.72);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
       }
 
-      h1,
-      h2 {
-        line-height: 1.25;
-        margin: 0 0 16px;
+      .hero {
+        padding: 34px 32px 30px;
       }
 
-      h1 {
-        font-size: clamp(2rem, 5vw, 2.7rem);
-      }
-
-      h2 {
-        font-size: 1.2rem;
-        margin-top: 32px;
-      }
-
-      p {
-        margin: 0 0 14px;
-      }
-
-      ul {
-        margin: 0 0 14px 20px;
-        padding: 0;
-      }
-
-      li {
-        margin-bottom: 8px;
+      .hero::after,
+      .section::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(circle at 14% 8%, rgba(255, 255, 255, 0.54), transparent 24%),
+          radial-gradient(circle at 100% 100%, rgba(180, 192, 208, 0.22), transparent 28%);
       }
 
       .eyebrow {
-        display: inline-block;
-        margin-bottom: 12px;
-        font-size: 0.82rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.5);
+        color: var(--muted);
+        font-size: 0.78rem;
         font-weight: 700;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.16em;
         text-transform: uppercase;
-        color: var(--accent);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.68),
+          0 10px 18px rgba(180, 192, 208, 0.16);
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 9px;
+        height: 9px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--accent), #cfb082);
+        box-shadow: 0 0 0 5px rgba(181, 139, 86, 0.12);
+      }
+
+      h1,
+      h2,
+      h3,
+      p,
+      li {
+        position: relative;
+        z-index: 1;
+      }
+
+      h1 {
+        margin: 18px 0 10px;
+        font-size: clamp(2.2rem, 5.4vw, 3.35rem);
+        line-height: 1.02;
+        letter-spacing: -0.06em;
+        font-weight: 800;
+      }
+
+      .subtitle {
+        max-width: 760px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.02rem;
       }
 
       .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .meta-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 11px 14px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.54);
+        color: var(--text);
+        font-size: 0.92rem;
+        font-weight: 600;
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.72),
+          0 12px 22px rgba(180, 192, 208, 0.16);
+      }
+
+      .meta-chip::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: var(--player);
+        flex: none;
+      }
+
+      .meta-chip.banker::before {
+        background: var(--banker);
+      }
+
+      .meta-chip.tie::before {
+        background: var(--tie);
+      }
+
+      .meta-chip.accent::before {
+        background: var(--accent);
+      }
+
+      .stack {
+        display: grid;
+        gap: 18px;
+        margin-top: 22px;
+      }
+
+      .section {
+        padding: 24px 24px 22px;
+      }
+
+      .section h2 {
+        margin: 0 0 12px;
+        font-size: 1.06rem;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+
+      .section p {
+        margin: 0 0 12px;
+      }
+
+      .section p:last-child,
+      .section ul:last-child {
+        margin-bottom: 0;
+      }
+
+      .section ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+
+      .section li {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        padding: 12px 14px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.45);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.66),
+          0 10px 18px rgba(180, 192, 208, 0.12);
+      }
+
+      .section li::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        margin-top: 0.62em;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--player), #89a1f3);
+        flex: none;
+      }
+
+      .notice {
+        padding: 18px 18px 16px;
+        border-radius: 22px;
+        margin-top: 18px;
+        background:
+          linear-gradient(
+            135deg,
+            rgba(181, 139, 86, 0.18),
+            rgba(255, 255, 255, 0.5)
+          );
+        border: 1px solid rgba(181, 139, 86, 0.18);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.54),
+          0 12px 22px rgba(180, 192, 208, 0.12);
+      }
+
+      .notice h3 {
+        margin: 0 0 8px;
+        font-size: 0.92rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .notice p:last-child {
+        margin-bottom: 0;
+      }
+
+      .contact {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 14px 16px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.46);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.68),
+          0 12px 18px rgba(180, 192, 208, 0.12);
+      }
+
+      .label {
         color: var(--muted);
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
       }
 
       a {
-        color: var(--accent);
+        color: var(--player);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        margin-top: 18px;
+        padding: 0 6px;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      @media (max-width: 720px) {
+        main {
+          width: min(100% - 20px, 960px);
+          padding-top: 22px;
+        }
+
+        .hero,
+        .section {
+          border-radius: 24px;
+        }
+
+        .hero {
+          padding: 24px 20px 22px;
+        }
+
+        .section {
+          padding: 20px 18px 18px;
+        }
+
+        h1 {
+          letter-spacing: -0.05em;
+        }
+
+        .meta {
+          gap: 10px;
+        }
+
+        .meta-chip {
+          width: 100%;
+        }
       }
     </style>
   </head>
   <body>
     <main>
-      <article class="card">
+      <section class="hero">
         <div class="eyebrow">Privacy Policy</div>
-        <h1>Lucky Baccarat Analyzer Privacy Policy</h1>
-        <p class="meta">Effective date: May 5, 2026</p>
+        <h1>Lucky Predictor Privacy Policy</h1>
+        <p class="subtitle">
+          This Privacy Policy applies to Lucky Predictor, an offline baccarat
+          analysis app provided by SungHoon Lee (&#51060;&#49457;&#54984;).
+        </p>
+        <div class="meta">
+          <div class="meta-chip accent">Effective date: May 5, 2026</div>
+          <div class="meta-chip">Offline analyzer</div>
+          <div class="meta-chip banker">No ads or wagering</div>
+          <div class="meta-chip tie">No analytics or tracking</div>
+        </div>
+      </section>
 
-        <p>
-          This Privacy Policy applies to Lucky Baccarat Analyzer (the "App"), a mobile
-          application provided by SungHoon Lee (이성훈) (the "Developer").
-        </p>
+      <div class="stack">
+        <section class="section">
+          <h2>1. Summary</h2>
+          <p>
+            Lucky Predictor is designed to work offline. The App does not
+            collect, transmit, sell, or share personal information from within
+            the App for its core analyzer experience.
+          </p>
+          <p>
+            The App does not use advertising SDKs, analytics SDKs,
+            crash-reporting SDKs, advertising identifiers, or web views for the
+            analyzer feature.
+          </p>
+          <div class="notice">
+            <h3>Important Notice</h3>
+            <p>
+              The App is provided for informational and entertainment purposes
+              only. It does not provide gambling services, accept wagers, or
+              facilitate real-money betting.
+            </p>
+            <p>
+              Any analysis, predictions, or statistics shown in the App do not
+              guarantee outcomes and must not be treated as financial, betting,
+              or gambling advice. Users are responsible for complying with the
+              laws and regulations that apply in their location.
+            </p>
+          </div>
+        </section>
 
-        <h2>1. Summary</h2>
-        <p>
-          Lucky Baccarat Analyzer is designed to work offline. The App does not collect,
-          transmit, sell, or share personal information from within the App for
-          its core analyzer experience.
-        </p>
-        <p>
-          The App does not use advertising SDKs, analytics SDKs,
-          crash-reporting SDKs, advertising identifiers, or web views for the
-          analyzer feature.
-        </p>
+        <section class="section">
+          <h2>2. Information Stored on Your Device</h2>
+          <p>
+            To remember your preferences, the App stores only the following
+            settings locally on your device:
+          </p>
+          <ul>
+            <li>dark mode preference</li>
+            <li>vibration preference</li>
+            <li>language preference</li>
+            <li>startup consent status</li>
+          </ul>
+          <p>
+            These settings are stored locally on your device and are not
+            transmitted to the Developer from within the App.
+          </p>
+        </section>
 
-        <h2>2. Information Stored on Your Device</h2>
-        <p>
-          To remember your preferences, the App stores only the following
-          settings locally on your device:
-        </p>
-        <ul>
-          <li>dark mode preference</li>
-          <li>vibration preference</li>
-          <li>language preference</li>
-          <li>startup consent status</li>
-        </ul>
-        <p>
-          These settings are stored locally on your device and are not
-          transmitted to the Developer from within the App.
-        </p>
+        <section class="section">
+          <h2>3. Information the App Does Not Collect</h2>
+          <p>
+            The App does not collect personal information from within the App
+            such as:
+          </p>
+          <ul>
+            <li>name, email address, or phone number</li>
+            <li>precise or approximate location</li>
+            <li>contacts, photos, microphone input, or camera data</li>
+            <li>payment information or financial account information</li>
+            <li>device advertising identifiers</li>
+            <li>usage analytics or behavioral tracking data</li>
+          </ul>
+        </section>
 
-        <h2>3. Information the App Does Not Collect</h2>
-        <p>
-          The App does not collect personal information from within the App such
-          as:
-        </p>
-        <ul>
-          <li>name, email address, or phone number</li>
-          <li>precise or approximate location</li>
-          <li>contacts, photos, microphone input, or camera data</li>
-          <li>payment information or financial account information</li>
-          <li>device advertising identifiers</li>
-          <li>usage analytics or behavioral tracking data</li>
-        </ul>
+        <section class="section">
+          <h2>4. Internet Access and Third-Party Services</h2>
+          <p>
+            The App is intended to operate offline and does not rely on an
+            internet connection for its analyzer features.
+          </p>
+          <p>
+            The App does not include third-party advertising, analytics, or
+            crash-reporting services.
+          </p>
+          <p>
+            If your device or operating system automatically backs up app data,
+            that backup is handled by your platform provider under its own terms
+            and settings, not by the Developer.
+          </p>
+          <p>
+            App stores or platform providers such as Google Play or Apple may
+            process information related to downloading, updating, billing, or
+            platform operations under their own privacy policies. Those
+            activities are outside the App's direct operation.
+          </p>
+        </section>
 
-        <h2>4. Internet Access and Third-Party Services</h2>
-        <p>
-          The App is intended to operate offline and does not rely on an
-          internet connection for its analyzer features.
-        </p>
-        <p>
-          The App does not include third-party advertising, analytics, or
-          crash-reporting services.
-        </p>
-        <p>
-          If your device or operating system automatically backs up app data,
-          that backup is handled by your platform provider under its own terms
-          and settings, not by the Developer.
-        </p>
-        <p>
-          App stores or platform providers such as Google Play or Apple may
-          process information related to downloading, updating, billing, or
-          platform operations under their own privacy policies. Those activities
-          are outside the App's direct operation.
-        </p>
+        <section class="section">
+          <h2>5. Contacting the Developer</h2>
+          <p>
+            If you contact the Developer by email, the Developer will receive
+            your email address and any information you include in your message.
+          </p>
+          <p>
+            That information will be used only to respond to your inquiry or
+            address your request, unless disclosure is required by law.
+          </p>
+        </section>
 
-        <h2>5. Contacting the Developer</h2>
-        <p>
-          If you contact the Developer by email, the Developer will receive your
-          email address and any information you include in your message.
-        </p>
-        <p>
-          That information will be used only to respond to your inquiry or
-          address your request, unless disclosure is required by law.
-        </p>
+        <section class="section">
+          <h2>6. Data Retention and Deletion</h2>
+          <p>
+            Preference settings stored locally on your device remain there until
+            you clear the App's data or uninstall the App, subject to any
+            device-level backup settings you choose to use.
+          </p>
+          <p>
+            Because the Developer does not receive these locally stored settings
+            from within the App, the Developer cannot independently access or
+            delete them on your device.
+          </p>
+        </section>
 
-        <h2>6. Data Retention and Deletion</h2>
-        <p>
-          Preference settings stored locally on your device remain there until
-          you clear the App's data or uninstall the App, subject to any
-          device-level backup settings you choose to use.
-        </p>
-        <p>
-          Because the Developer does not receive these locally stored settings
-          from within the App, the Developer cannot independently access or
-          delete them on your device.
-        </p>
+        <section class="section">
+          <h2>7. Children's Privacy</h2>
+          <p>
+            The App is not directed to children under the age of 13. The
+            Developer does not knowingly collect personal information from
+            children through the App.
+          </p>
+          <p>
+            If you believe a child has provided personal information directly to
+            the Developer by email, please contact the Developer so appropriate
+            steps can be taken.
+          </p>
+        </section>
 
-        <h2>7. Children's Privacy</h2>
-        <p>
-          The App is not directed to children under the age of 13. The
-          Developer does not knowingly collect personal information from
-          children through the App.
-        </p>
-        <p>
-          If you believe a child has provided personal information directly to
-          the Developer by email, please contact the Developer so appropriate
-          steps can be taken.
-        </p>
+        <section class="section">
+          <h2>8. Security</h2>
+          <p>
+            Because the App is designed to work offline and does not transmit
+            personal data from within the App for its core analyzer experience,
+            the Developer does not maintain server-side personal data for normal
+            App operation.
+          </p>
+          <p>
+            The security of locally stored settings depends in part on the
+            security controls of your device and operating system.
+          </p>
+        </section>
 
-        <h2>8. Security</h2>
-        <p>
-          Because the App is designed to work offline and does not transmit
-          personal data from within the App for its core analyzer experience,
-          the Developer does not maintain server-side personal data for normal
-          App operation.
-        </p>
-        <p>
-          The security of locally stored settings depends in part on the
-          security controls of your device and operating system.
-        </p>
+        <section class="section">
+          <h2>9. Changes to This Privacy Policy</h2>
+          <p>
+            This Privacy Policy may be updated from time to time. If it is
+            updated, the revised version will be posted with a new effective
+            date.
+          </p>
+        </section>
 
-        <h2>9. Changes to This Privacy Policy</h2>
-        <p>
-          This Privacy Policy may be updated from time to time. If it is
-          updated, the revised version will be posted with a new effective date.
-        </p>
+        <section class="section">
+          <h2>10. Contact</h2>
+          <div class="contact">
+            <span class="label">Developer</span>
+            <strong>SungHoon Lee (&#51060;&#49457;&#54984;)</strong>
+            <span class="label">Email</span>
+            <a href="mailto:digitalspaceout.official@gmail.com">
+              digitalspaceout.official@gmail.com
+            </a>
+          </div>
+        </section>
+      </div>
 
-        <h2>10. Contact</h2>
-        <p>
-          SungHoon Lee (이성훈)<br />
-          Email:
-          <a href="mailto:digitalspaceout.official@gmail.com">
-            digitalspaceout.official@gmail.com
-          </a>
-        </p>
-      </article>
+      <footer>
+        Lucky Predictor Privacy Policy
+      </footer>
     </main>
   </body>
 </html>
