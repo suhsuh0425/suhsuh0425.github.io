@@ -1,0 +1,1078 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lucky Blackjack Analyzer Privacy Policy</title>
+    <meta
+      name="description"
+      content="Privacy Policy for Lucky Blackjack Analyzer, an offline blackjack analysis app."
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+
+        --background: #e6ebf2;
+        --panel: #e8edf4;
+        --panel-raised: #f4f7fb;
+        --shadow-dark: #b4c0d0;
+        --shadow-light: #ffffff;
+        --text: #1d2433;
+        --text-muted: #6f7b8d;
+        --divider: rgba(111, 123, 141, 0.22);
+        --accent: #b58b56;
+        --player: #5478e4;
+        --glass-overlay: #131a25;
+        --glass-shadow: #000000;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background: #262d38;
+          --panel: #2c3441;
+          --panel-raised: #333d4c;
+          --shadow-dark: #1a2029;
+          --shadow-light: #434f61;
+          --text: #f1f4f8;
+          --text-muted: #b2becd;
+          --divider: rgba(178, 190, 205, 0.2);
+          --glass-overlay: #141b25;
+          --glass-shadow: #0b1016;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 14% 4%, rgba(255, 255, 255, 0.3), transparent 24%),
+          radial-gradient(circle at 88% 92%, rgba(84, 120, 228, 0.1), transparent 22%),
+          linear-gradient(180deg, var(--background) 0%, color-mix(in srgb, var(--background) 88%, var(--glass-overlay) 12%) 100%);
+        line-height: 1.72;
+      }
+
+      .page {
+        width: min(840px, calc(100% - 24px));
+        margin: 0 auto;
+        padding: 18px 0 46px;
+      }
+
+      .sheet {
+        position: relative;
+        overflow: hidden;
+        border-radius: 34px;
+        border: 1px solid color-mix(in srgb, var(--shadow-light) 56%, transparent);
+        background:
+          linear-gradient(
+            145deg,
+            color-mix(in srgb, var(--panel-raised) 84%, var(--shadow-light) 16%),
+            color-mix(in srgb, var(--panel-raised) 72%, transparent) 52%,
+            color-mix(in srgb, var(--panel) 82%, transparent)
+          );
+        box-shadow:
+          0 28px 56px color-mix(in srgb, var(--glass-shadow) 18%, transparent),
+          -10px -10px 24px color-mix(in srgb, var(--shadow-light) 56%, transparent);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+
+      .sheet::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(circle at 18% 0%, color-mix(in srgb, var(--shadow-light) 48%, transparent), transparent 30%),
+          radial-gradient(circle at 100% 100%, color-mix(in srgb, var(--glass-overlay) 10%, transparent), transparent 28%);
+      }
+
+      .content {
+        position: relative;
+        z-index: 1;
+        padding: 28px 26px 24px;
+      }
+
+      header {
+        padding-bottom: 18px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.1rem, 5vw, 3rem);
+        line-height: 1.03;
+        letter-spacing: -0.055em;
+        font-weight: 800;
+      }
+
+      .lead {
+        margin: 14px 0 0;
+        max-width: 60ch;
+        color: var(--text-muted);
+        font-size: 1rem;
+      }
+
+      .effective {
+        margin-top: 14px;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      .language-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 18px;
+      }
+
+      .language-links a {
+        border: 1px solid var(--divider);
+        border-radius: 999px;
+        padding: 6px 10px;
+        color: var(--text-muted);
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+
+      .locale-block {
+        padding-top: 24px;
+        margin-top: 24px;
+        border-top: 1px solid var(--divider);
+      }
+
+      .locale-block:first-of-type {
+        padding-top: 0;
+        margin-top: 0;
+        border-top: 0;
+      }
+
+      .locale-title {
+        margin: 0;
+        font-size: 1.38rem;
+        line-height: 1.16;
+        letter-spacing: -0.02em;
+        font-weight: 800;
+      }
+
+      .section {
+        padding: 18px 0 0;
+        margin-top: 18px;
+        border-top: 1px solid var(--divider);
+      }
+
+      .section:first-of-type {
+        margin-top: 0;
+      }
+
+      .section-head {
+        display: flex;
+        gap: 12px;
+        align-items: baseline;
+        margin-bottom: 10px;
+      }
+
+      .section-index {
+        flex: none;
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      .section-title {
+        margin: 0;
+        font-size: 1.06rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      .notice {
+        margin-top: 14px;
+        padding-top: 14px;
+        border-top: 1px solid color-mix(in srgb, var(--accent) 28%, var(--divider));
+      }
+
+      .notice-title {
+        margin: 0 0 8px;
+        color: var(--text);
+        font-size: 0.92rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      ul {
+        margin: 10px 0 0 0;
+        padding-left: 20px;
+      }
+
+      li {
+        margin: 0 0 8px;
+        padding-left: 2px;
+      }
+
+      li::marker {
+        color: color-mix(in srgb, var(--text-muted) 78%, transparent);
+      }
+
+      .contact {
+        display: grid;
+        gap: 8px;
+      }
+
+      .contact-row {
+        display: grid;
+        gap: 2px;
+      }
+
+      .contact-label {
+        color: var(--text-muted);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .contact-value {
+        font-size: 0.96rem;
+        font-weight: 600;
+      }
+
+      a {
+        color: var(--player);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        margin-top: 14px;
+        color: var(--text-muted);
+        font-size: 0.86rem;
+        text-align: center;
+      }
+
+      @media (max-width: 640px) {
+        .page {
+          width: min(100% - 16px, 840px);
+          padding-top: 12px;
+        }
+
+        .sheet {
+          border-radius: 28px;
+        }
+
+        .content {
+          padding: 22px 18px 18px;
+        }
+
+        .section-head {
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="sheet">
+        <div class="content">
+          <header>
+            <h1>Lucky Blackjack Analyzer Privacy Policy</h1>
+            <p class="lead">
+              This Privacy Policy applies to Lucky Blackjack Analyzer, an offline
+              blackjack analysis app provided by SungHoon Lee (이성훈). Localized
+              versions are provided below for every language supported in the
+              app.
+            </p>
+            <div class="effective">Effective date: July 6, 2026</div>
+            <nav class="language-links" aria-label="Language versions">
+              <a href="#en">English</a>
+              <a href="#ko">한국어</a>
+              <a href="#th">ไทย</a>
+              <a href="#zh-Hans">简体中文</a>
+              <a href="#zh-Hant-HK">繁體中文</a>
+              <a href="#fil">Filipino</a>
+              <a href="#vi">Tiếng Việt</a>
+            </nav>
+          </header>
+
+          <article id="en" class="locale-block" lang="en">
+            <h2 class="locale-title">English</h2>
+            <div class="effective">Effective date: July 6, 2026</div>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">1.</div>
+                <h3 class="section-title">Summary</h3>
+              </div>
+              <p>
+                Lucky Blackjack Analyzer is designed to work offline. The app
+                does not collect, transmit, sell, or share personal information
+                from within the app for its core analyzer experience.
+              </p>
+              <p>
+                The app does not use advertising SDKs, analytics SDKs,
+                crash-reporting SDKs, advertising identifiers, or web views for
+                the analyzer feature.
+              </p>
+              <div class="notice">
+                <div class="notice-title">Important Notice</div>
+                <p>
+                  The app is provided for informational and entertainment
+                  purposes only. It does not provide gambling services, accept
+                  wagers, or facilitate real-money betting.
+                </p>
+                <p>
+                  Any analysis, predictions, or statistics shown in the app do
+                  not guarantee outcomes and must not be treated as financial,
+                  betting, or gambling advice. Users are responsible for
+                  complying with the laws and regulations that apply in their
+                  location.
+                </p>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">2.</div>
+                <h3 class="section-title">Information Stored on Your Device</h3>
+              </div>
+              <p>
+                To remember your preferences, the app stores only dark mode,
+                vibration, language, and startup consent status locally on your
+                device. These settings are not transmitted to the Developer from
+                within the app.
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">3.</div>
+                <h3 class="section-title">Information the App Does Not Collect</h3>
+              </div>
+              <p>
+                The app does not collect personal information from within the
+                app such as name, email address, phone number, location,
+                contacts, photos, microphone input, camera data, payment
+                information, financial account information, device advertising
+                identifiers, usage analytics, or behavioral tracking data.
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">4.</div>
+                <h3 class="section-title">Internet Access and Third Parties</h3>
+              </div>
+              <p>
+                The app is intended to operate offline and does not rely on an
+                internet connection for its analyzer features. It does not
+                include third-party advertising, analytics, or crash-reporting
+                services.
+              </p>
+              <p>
+                Device backup, app store downloads, updates, billing, and
+                platform operations may be handled by your device provider,
+                Google Play, Apple, or another platform provider under their own
+                terms and privacy policies.
+              </p>
+              <p>
+                PRO subscriptions are processed through Google Play Billing. The
+                Developer does not receive your payment card number, bank
+                account details, or payment credentials from within the app. The
+                app may receive subscription status from Google Play on your
+                device to unlock PRO features, but it does not send that status
+                to a Developer-operated server.
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">5.</div>
+                <h3 class="section-title">Retention, Security, and Children</h3>
+              </div>
+              <p>
+                Local preference settings remain on your device until you clear
+                app data or uninstall the app, subject to any device-level
+                backup settings you choose to use. Because the Developer does
+                not receive these locally stored settings from within the app,
+                the Developer cannot independently access or delete them on your
+                device.
+              </p>
+              <p>
+                The app does not allow users to create an app account. You can
+                delete local app settings by clearing the app data in your
+                device settings or uninstalling the app.
+              </p>
+              <p>
+                Because the app contains casino-themed analysis content, it is
+                intended for adults aged 18 or older and is not directed to
+                children or teens. The Developer does not knowingly collect
+                personal information from children through the app. Security of
+                locally stored settings depends in part on your device and
+                operating system.
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">6.</div>
+                <h3 class="section-title">Contact and Updates</h3>
+              </div>
+              <p>
+                If you contact the Developer by email, the Developer will
+                receive your email address and any information you include in
+                your message. That information will be used only to respond to
+                your inquiry or address your request, unless disclosure is
+                required by law.
+              </p>
+              <p>
+                This Privacy Policy may be updated from time to time. If it is
+                updated, the revised version will be posted with a new effective
+                date.
+              </p>
+              <div class="contact">
+                <div class="contact-row">
+                  <div class="contact-label">Developer</div>
+                  <div class="contact-value">SungHoon Lee (이성훈)</div>
+                </div>
+                <div class="contact-row">
+                  <div class="contact-label">Email</div>
+                  <div class="contact-value">
+                    <a href="mailto:digitalspaceout.official@gmail.com">
+                      digitalspaceout.official@gmail.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </article>
+
+          <article id="ko" class="locale-block" lang="ko">
+            <h2 class="locale-title">한국어</h2>
+            <div class="effective">시행일: 2026년 7월 6일</div>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">1.</div>
+                <h3 class="section-title">요약</h3>
+              </div>
+              <p>
+                Lucky Blackjack Analyzer는 오프라인으로 동작하도록 설계된 블랙잭 분석 앱입니다. 앱의 핵심 분석 기능은 앱 내부에서 개인정보를 수집, 전송, 판매 또는 공유하지 않습니다.
+              </p>
+              <p>
+                앱은 분석 기능을 위해 광고 SDK, 분석 SDK, 크래시 리포팅 SDK, 광고 식별자 또는 웹뷰를 사용하지 않습니다.
+              </p>
+              <div class="notice">
+                <div class="notice-title">중요 안내</div>
+                <p>
+                  앱은 정보 제공 및 엔터테인먼트 목적으로만 제공됩니다. 도박 서비스를 제공하거나 베팅을 접수하거나 실제 금전 베팅을 중개하지 않습니다.
+                </p>
+                <p>
+                  앱에 표시되는 분석, 예측, 통계는 결과를 보장하지 않으며 재정, 베팅 또는 도박 관련 조언으로 간주해서는 안 됩니다. 사용자는 거주 지역에 적용되는 법률과 규정을 준수할 책임이 있습니다.
+                </p>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">2.</div>
+                <h3 class="section-title">기기에 저장되는 정보</h3>
+              </div>
+              <p>
+                앱은 사용자의 설정을 기억하기 위해 다크 모드, 진동, 언어, 시작 동의 상태만 기기에 로컬로 저장합니다. 이 설정은 앱 내부에서 개발자에게 전송되지 않습니다.
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">3.</div>
+                <h3 class="section-title">앱이 수집하지 않는 정보</h3>
+              </div>
+              <p>
+                앱은 이름, 이메일 주소, 전화번호, 위치, 연락처, 사진, 마이크 입력, 카메라 데이터, 결제 정보, 금융 계정 정보, 기기 광고 식별자, 사용 분석 또는 행동 추적 데이터와 같은 개인정보를 앱 내부에서 수집하지 않습니다.
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">4.</div>
+                <h3 class="section-title">인터넷 접근 및 제3자 서비스</h3>
+              </div>
+              <p>
+                앱은 오프라인 사용을 전제로 하며 분석 기능을 위해 인터넷 연결에 의존하지 않습니다. 제3자 광고, 분석 또는 크래시 리포팅 서비스를 포함하지 않습니다.
+              </p>
+              <p>
+                기기 백업, 앱 스토어 다운로드, 업데이트, 결제, 플랫폼 운영은 기기 제공자, Google Play, Apple 또는 기타 플랫폼 제공자의 약관과 개인정보 처리방침에 따라 처리될 수 있습니다.
+              </p>
+              <p>
+                PRO 구독은 Google Play Billing을 통해 처리됩니다. 개발자는 앱 내부에서 사용자의 결제 카드 번호, 은행 계좌 정보 또는 결제 인증 정보를 받지 않습니다. 앱은 PRO 기능을 잠금 해제하기 위해 사용자의 기기에서 Google Play의 구독 상태를 확인할 수 있지만, 이 상태를 개발자가 운영하는 서버로 전송하지 않습니다.
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">5.</div>
+                <h3 class="section-title">보관, 보안 및 아동 개인정보</h3>
+              </div>
+              <p>
+                로컬 설정은 사용자가 앱 데이터를 삭제하거나 앱을 제거할 때까지 기기에 남아 있으며, 사용자가 선택한 기기 수준 백업 설정의 영향을 받을 수 있습니다. 개발자는 앱 내부에서 이 로컬 설정을 수신하지 않으므로 사용자의 기기에서 해당 정보를 독립적으로 접근하거나 삭제할 수 없습니다.
+              </p>
+              <p>
+                앱은 앱 계정 생성을 제공하지 않습니다. 사용자는 기기 설정에서 앱 데이터를 삭제하거나 앱을 제거하여 로컬 앱 설정을 삭제할 수 있습니다.
+              </p>
+              <p>
+                앱은 카지노 테마의 분석 콘텐츠를 포함하므로 만 18세 이상 성인을 대상으로 하며 아동 또는 청소년을 대상으로 하지 않습니다. 개발자는 앱을 통해 아동의 개인정보를 고의로 수집하지 않습니다. 로컬 설정의 보안은 사용자의 기기와 운영체제 보안 설정에 일부 의존합니다.
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">6.</div>
+                <h3 class="section-title">문의 및 변경</h3>
+              </div>
+              <p>
+                사용자가 이메일로 개발자에게 문의하는 경우, 개발자는 이메일 주소와 메시지에 포함된 정보를 받게 됩니다. 해당 정보는 법에서 요구하지 않는 한 문의에 응답하거나 요청을 처리하기 위해서만 사용됩니다.
+              </p>
+              <p>
+                본 개인정보 처리방침은 수시로 업데이트될 수 있으며, 업데이트 시 새로운 시행일과 함께 게시됩니다.
+              </p>
+              <div class="contact">
+                <div class="contact-row">
+                  <div class="contact-label">개발자</div>
+                  <div class="contact-value">SungHoon Lee (이성훈)</div>
+                </div>
+                <div class="contact-row">
+                  <div class="contact-label">이메일</div>
+                  <div class="contact-value">
+                    <a href="mailto:digitalspaceout.official@gmail.com">
+                      digitalspaceout.official@gmail.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </article>
+
+          <article id="th" class="locale-block" lang="th">
+            <h2 class="locale-title">ไทย</h2>
+            <div class="effective">วันที่มีผลบังคับใช้: 6 กรกฎาคม 2026</div>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">1.</div>
+                <h3 class="section-title">สรุป</h3>
+              </div>
+              <p>
+                Lucky Blackjack Analyzer เป็นแอปวิเคราะห์แบล็กแจ็กแบบออฟไลน์ ฟีเจอร์วิเคราะห์หลักของแอปไม่เก็บรวบรวม ส่งต่อ ขาย หรือแบ่งปันข้อมูลส่วนบุคคลจากภายในแอป
+              </p>
+              <p>
+                แอปไม่ใช้ SDK โฆษณา, SDK วิเคราะห์, SDK รายงานข้อขัดข้อง, ตัวระบุโฆษณา หรือเว็บวิวสำหรับฟีเจอร์วิเคราะห์
+              </p>
+              <div class="notice">
+                <div class="notice-title">ประกาศสำคัญ</div>
+                <p>
+                  แอปนี้มีไว้เพื่อข้อมูลและความบันเทิงเท่านั้น ไม่ให้บริการการพนัน ไม่รับเดิมพัน และไม่อำนวยความสะดวกให้กับการเดิมพันด้วยเงินจริง
+                </p>
+                <p>
+                  การวิเคราะห์ การคาดการณ์ หรือสถิติในแอปไม่รับประกันผลลัพธ์ และไม่ควรถูกใช้เป็นคำแนะนำทางการเงิน การเดิมพัน หรือการพนัน ผู้ใช้ต้องรับผิดชอบในการปฏิบัติตามกฎหมายและข้อกำหนดในพื้นที่ของตน
+                </p>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">2.</div>
+                <h3 class="section-title">ข้อมูลที่จัดเก็บบนอุปกรณ์ของคุณ</h3>
+              </div>
+              <p>
+                เพื่อจดจำค่ากำหนดของคุณ แอปจะจัดเก็บเฉพาะโหมดมืด การสั่น ภาษา และสถานะการยินยอมเมื่อเริ่มต้นไว้ภายในอุปกรณ์ ข้อมูลเหล่านี้ไม่ถูกส่งไปยังผู้พัฒนาจากภายในแอป
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">3.</div>
+                <h3 class="section-title">ข้อมูลที่แอปไม่เก็บรวบรวม</h3>
+              </div>
+              <p>
+                แอปไม่เก็บข้อมูลส่วนบุคคลจากภายในแอป เช่น ชื่อ อีเมล หมายเลขโทรศัพท์ ตำแหน่ง รายชื่อผู้ติดต่อ รูปภาพ เสียงจากไมโครโฟน ข้อมูลกล้อง ข้อมูลชำระเงิน ข้อมูลบัญชีการเงิน ตัวระบุโฆษณาของอุปกรณ์ ข้อมูลวิเคราะห์การใช้งาน หรือข้อมูลติดตามพฤติกรรม
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">4.</div>
+                <h3 class="section-title">อินเทอร์เน็ตและบุคคลที่สาม</h3>
+              </div>
+              <p>
+                แอปมีวัตถุประสงค์ให้ทำงานแบบออฟไลน์และไม่พึ่งพาการเชื่อมต่ออินเทอร์เน็ตสำหรับฟีเจอร์วิเคราะห์ แอปไม่มีบริการโฆษณา วิเคราะห์ หรือรายงานข้อขัดข้องจากบุคคลที่สาม
+              </p>
+              <p>
+                การสำรองข้อมูลอุปกรณ์ การดาวน์โหลดแอป การอัปเดต การเรียกเก็บเงิน และการดำเนินงานของแพลตฟอร์มอาจดำเนินการโดยผู้ให้บริการอุปกรณ์, Google Play, Apple หรือผู้ให้บริการแพลตฟอร์มอื่นตามข้อกำหนดและนโยบายความเป็นส่วนตัวของตน
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">5.</div>
+                <h3 class="section-title">การเก็บรักษา ความปลอดภัย และเด็ก</h3>
+              </div>
+              <p>
+                ค่ากำหนดที่จัดเก็บภายในเครื่องจะอยู่บนอุปกรณ์ของคุณจนกว่าคุณจะล้างข้อมูลแอปหรือลบแอป โดยขึ้นอยู่กับการตั้งค่าการสำรองข้อมูลระดับอุปกรณ์ที่คุณเลือกใช้ เนื่องจากผู้พัฒนาไม่ได้รับค่ากำหนดเหล่านี้จากภายในแอป ผู้พัฒนาจึงไม่สามารถเข้าถึงหรือลบข้อมูลเหล่านี้บนอุปกรณ์ของคุณได้เอง
+              </p>
+              <p>
+                แอปไม่ได้มุ่งเป้าไปที่เด็กอายุต่ำกว่า 13 ปี และผู้พัฒนาไม่ได้จงใจเก็บข้อมูลส่วนบุคคลจากเด็กผ่านแอป ความปลอดภัยของค่ากำหนดที่จัดเก็บภายในเครื่องขึ้นอยู่กับอุปกรณ์และระบบปฏิบัติการของคุณบางส่วน
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">6.</div>
+                <h3 class="section-title">การติดต่อและการอัปเดต</h3>
+              </div>
+              <p>
+                หากคุณติดต่อผู้พัฒนาทางอีเมล ผู้พัฒนาจะได้รับที่อยู่อีเมลและข้อมูลที่คุณใส่ไว้ในข้อความ ข้อมูลดังกล่าวจะใช้เฉพาะเพื่อตอบคำถามหรือจัดการคำขอของคุณ เว้นแต่กฎหมายจะกำหนดให้เปิดเผย
+              </p>
+              <p>
+                นโยบายความเป็นส่วนตัวนี้อาจมีการอัปเดตเป็นครั้งคราว หากมีการอัปเดต เวอร์ชันใหม่จะถูกเผยแพร่พร้อมวันที่มีผลบังคับใช้ใหม่
+              </p>
+              <div class="contact">
+                <div class="contact-row">
+                  <div class="contact-label">ผู้พัฒนา</div>
+                  <div class="contact-value">SungHoon Lee (이성훈)</div>
+                </div>
+                <div class="contact-row">
+                  <div class="contact-label">อีเมล</div>
+                  <div class="contact-value">
+                    <a href="mailto:digitalspaceout.official@gmail.com">
+                      digitalspaceout.official@gmail.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </article>
+
+          <article id="zh-Hans" class="locale-block" lang="zh-Hans">
+            <h2 class="locale-title">简体中文</h2>
+            <div class="effective">生效日期：2026 年 7 月 6 日</div>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">1.</div>
+                <h3 class="section-title">摘要</h3>
+              </div>
+              <p>
+                Lucky Blackjack Analyzer 是一款离线黑杰克分析应用。应用的核心分析体验不会在应用内收集、传输、出售或共享个人信息。
+              </p>
+              <p>
+                应用不会为分析功能使用广告 SDK、分析 SDK、崩溃报告 SDK、广告标识符或网页视图。
+              </p>
+              <div class="notice">
+                <div class="notice-title">重要提示</div>
+                <p>
+                  应用仅用于信息参考与娱乐用途。应用不提供博彩服务，不接受投注，也不促成真钱投注。
+                </p>
+                <p>
+                  应用中显示的任何分析、预测或统计都不保证结果，也不得被视为金融、投注或博彩建议。用户有责任遵守所在地适用的法律法规。
+                </p>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">2.</div>
+                <h3 class="section-title">存储在你设备上的信息</h3>
+              </div>
+              <p>
+                为记住你的偏好，应用只会在你的设备本地保存深色模式、振动、语言和启动同意状态。这些设置不会从应用内传输给开发者。
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">3.</div>
+                <h3 class="section-title">应用不收集的信息</h3>
+              </div>
+              <p>
+                应用不会在应用内收集姓名、电子邮件地址、电话号码、位置、联系人、照片、麦克风输入、相机数据、付款信息、金融账户信息、设备广告标识符、使用分析或行为追踪数据等个人信息。
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">4.</div>
+                <h3 class="section-title">互联网访问与第三方</h3>
+              </div>
+              <p>
+                应用旨在离线运行，分析功能不依赖互联网连接。应用不包含第三方广告、分析或崩溃报告服务。
+              </p>
+              <p>
+                设备备份、应用商店下载、更新、计费和平台运营可能由你的设备提供商、Google Play、Apple 或其他平台提供商按照其自身条款和隐私政策处理。
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">5.</div>
+                <h3 class="section-title">保留、安全与儿童</h3>
+              </div>
+              <p>
+                本地偏好设置会保留在你的设备上，直到你清除应用数据或卸载应用，并受你选择使用的设备级备份设置影响。由于开发者不会从应用内接收这些本地设置，开发者无法独立访问或删除你设备上的这些信息。
+              </p>
+              <p>
+                应用并非面向 13 岁以下儿童，开发者不会通过应用故意收集儿童的个人信息。本地设置的安全性在一定程度上取决于你的设备和操作系统。
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">6.</div>
+                <h3 class="section-title">联系与更新</h3>
+              </div>
+              <p>
+                如果你通过电子邮件联系开发者，开发者会收到你的电子邮件地址以及你在邮件中包含的信息。除非法律要求披露，这些信息只会用于回复你的咨询或处理你的请求。
+              </p>
+              <p>
+                本隐私政策可能会不时更新。更新后，修订版本将与新的生效日期一起发布。
+              </p>
+              <div class="contact">
+                <div class="contact-row">
+                  <div class="contact-label">开发者</div>
+                  <div class="contact-value">SungHoon Lee (이성훈)</div>
+                </div>
+                <div class="contact-row">
+                  <div class="contact-label">电子邮件</div>
+                  <div class="contact-value">
+                    <a href="mailto:digitalspaceout.official@gmail.com">
+                      digitalspaceout.official@gmail.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </article>
+
+          <article id="zh-Hant-HK" class="locale-block" lang="zh-Hant-HK">
+            <h2 class="locale-title">繁體中文</h2>
+            <div class="effective">生效日期：2026 年 7 月 6 日</div>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">1.</div>
+                <h3 class="section-title">摘要</h3>
+              </div>
+              <p>
+                Lucky Blackjack Analyzer 是一款離線黑傑克分析應用。本應用的核心分析體驗不會在應用內收集、傳送、出售或分享個人資料。
+              </p>
+              <p>
+                本應用不會為分析功能使用廣告 SDK、分析 SDK、錯誤回報 SDK、廣告識別碼或網頁檢視。
+              </p>
+              <div class="notice">
+                <div class="notice-title">重要提示</div>
+                <p>
+                  本應用僅供資訊參考與娛樂用途。本應用不提供博彩服務、不接受投注，亦不促成真金錢投注。
+                </p>
+                <p>
+                  應用中顯示的任何分析、預測或統計均不保證結果，亦不得被視為金融、投注或博彩建議。使用者有責任遵守所在地適用的法律及規例。
+                </p>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">2.</div>
+                <h3 class="section-title">儲存在你裝置上的資料</h3>
+              </div>
+              <p>
+                為記住你的偏好，本應用只會在你的裝置本地儲存深色模式、震動、語言及啟動同意狀態。這些設定不會從應用內傳送給開發者。
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">3.</div>
+                <h3 class="section-title">本應用不收集的資料</h3>
+              </div>
+              <p>
+                本應用不會在應用內收集姓名、電郵地址、電話號碼、位置、聯絡人、相片、咪高峰輸入、相機資料、付款資料、金融帳戶資料、裝置廣告識別碼、使用分析或行為追蹤資料等個人資料。
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">4.</div>
+                <h3 class="section-title">互聯網存取與第三方</h3>
+              </div>
+              <p>
+                本應用旨在離線運作，分析功能不依賴互聯網連線。本應用不包含第三方廣告、分析或錯誤回報服務。
+              </p>
+              <p>
+                裝置備份、應用商店下載、更新、收費及平台營運可能由你的裝置提供者、Google Play、Apple 或其他平台提供者根據其自身條款及私隱政策處理。
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">5.</div>
+                <h3 class="section-title">保留、安全與兒童</h3>
+              </div>
+              <p>
+                本地偏好設定會保留在你的裝置上，直到你清除應用資料或移除應用，並受你選擇使用的裝置級備份設定影響。由於開發者不會從應用內接收這些本地設定，開發者無法獨立存取或刪除你裝置上的這些資料。
+              </p>
+              <p>
+                本應用並非面向 13 歲以下兒童，開發者不會透過本應用故意收集兒童的個人資料。本地設定的安全性在一定程度上取決於你的裝置和作業系統。
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">6.</div>
+                <h3 class="section-title">聯絡與更新</h3>
+              </div>
+              <p>
+                如你透過電郵聯絡開發者，開發者會收到你的電郵地址及你在訊息中包含的資料。除非法律要求披露，該等資料只會用於回覆你的查詢或處理你的請求。
+              </p>
+              <p>
+                本私隱政策可能會不時更新。更新後，修訂版本將連同新的生效日期一併發布。
+              </p>
+              <div class="contact">
+                <div class="contact-row">
+                  <div class="contact-label">開發者</div>
+                  <div class="contact-value">SungHoon Lee (이성훈)</div>
+                </div>
+                <div class="contact-row">
+                  <div class="contact-label">電郵</div>
+                  <div class="contact-value">
+                    <a href="mailto:digitalspaceout.official@gmail.com">
+                      digitalspaceout.official@gmail.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </article>
+
+          <article id="fil" class="locale-block" lang="fil">
+            <h2 class="locale-title">Filipino</h2>
+            <div class="effective">Petsa ng bisa: Hulyo 6, 2026</div>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">1.</div>
+                <h3 class="section-title">Buod</h3>
+              </div>
+              <p>
+                Ang Lucky Blackjack Analyzer ay isang offline na blackjack analysis app. Hindi nangongolekta, nagpapadala, nagbebenta, o nagbabahagi ang pangunahing analyzer experience ng personal na impormasyon mula sa loob ng app.
+              </p>
+              <p>
+                Hindi gumagamit ang app ng advertising SDK, analytics SDK, crash-reporting SDK, advertising identifier, o web view para sa analyzer feature.
+              </p>
+              <div class="notice">
+                <div class="notice-title">Mahalagang Paalala</div>
+                <p>
+                  Ang app ay para lamang sa impormasyon at aliwan. Hindi ito nagbibigay ng serbisyo sa pagsusugal, hindi tumatanggap ng taya, at hindi nagpapadali ng pustahang may totoong pera.
+                </p>
+                <p>
+                  Anumang pagsusuri, hula, o estadistika sa app ay hindi garantiya ng resulta at hindi dapat ituring na payong pinansyal, payo sa pagtaya, o payo sa pagsusugal. Responsibilidad ng mga user na sumunod sa mga batas at regulasyong naaangkop sa kanilang lokasyon.
+                </p>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">2.</div>
+                <h3 class="section-title">Impormasyong Naka-store sa Iyong Device</h3>
+              </div>
+              <p>
+                Para maalala ang iyong mga preference, lokal na iniimbak ng app sa iyong device ang dark mode, vibration, wika, at startup consent status lamang. Hindi ipinapadala ang mga setting na ito sa Developer mula sa loob ng app.
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">3.</div>
+                <h3 class="section-title">Impormasyong Hindi Kinokolekta ng App</h3>
+              </div>
+              <p>
+                Hindi nangongolekta ang app mula sa loob ng app ng personal na impormasyon gaya ng pangalan, email address, numero ng telepono, lokasyon, contacts, larawan, input mula sa mikropono, camera data, payment information, financial account information, device advertising identifiers, usage analytics, o behavioral tracking data.
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">4.</div>
+                <h3 class="section-title">Internet at Mga Third Party</h3>
+              </div>
+              <p>
+                Nilalayon ng app na gumana offline at hindi umaasa sa internet connection para sa analyzer features. Wala itong third-party advertising, analytics, o crash-reporting services.
+              </p>
+              <p>
+                Ang device backup, pag-download sa app store, mga update, billing, at platform operations ay maaaring hawakan ng iyong device provider, Google Play, Apple, o ibang platform provider sa ilalim ng sarili nilang terms at privacy policies.
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">5.</div>
+                <h3 class="section-title">Retention, Security, at Mga Bata</h3>
+              </div>
+              <p>
+                Nananatili sa iyong device ang lokal na preference settings hanggang i-clear mo ang app data o i-uninstall ang app, depende sa anumang device-level backup settings na pipiliin mong gamitin. Dahil hindi natatanggap ng Developer ang mga lokal na setting na ito mula sa loob ng app, hindi ito malayang maa-access o mabubura ng Developer sa iyong device.
+              </p>
+              <p>
+                Hindi nakatuon ang app sa mga batang wala pang 13 taong gulang, at hindi sinasadyang nangongolekta ang Developer ng personal na impormasyon mula sa mga bata sa pamamagitan ng app. Ang seguridad ng lokal na settings ay bahagyang nakadepende sa iyong device at operating system.
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">6.</div>
+                <h3 class="section-title">Pakikipag-ugnayan at Mga Update</h3>
+              </div>
+              <p>
+                Kung kokontakin mo ang Developer sa email, matatanggap ng Developer ang iyong email address at anumang impormasyong isasama mo sa mensahe. Gagamitin lamang ito para sagutin ang iyong tanong o tugunan ang iyong kahilingan, maliban kung kinakailangan ang disclosure ng batas.
+              </p>
+              <p>
+                Maaaring i-update ang Privacy Policy na ito paminsan-minsan. Kapag na-update, ipo-post ang bagong bersyon kasama ang bagong petsa ng bisa.
+              </p>
+              <div class="contact">
+                <div class="contact-row">
+                  <div class="contact-label">Developer</div>
+                  <div class="contact-value">SungHoon Lee (이성훈)</div>
+                </div>
+                <div class="contact-row">
+                  <div class="contact-label">Email</div>
+                  <div class="contact-value">
+                    <a href="mailto:digitalspaceout.official@gmail.com">
+                      digitalspaceout.official@gmail.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </article>
+
+          <article id="vi" class="locale-block" lang="vi">
+            <h2 class="locale-title">Tiếng Việt</h2>
+            <div class="effective">Ngày có hiệu lực: 6 tháng 7, 2026</div>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">1.</div>
+                <h3 class="section-title">Tóm tắt</h3>
+              </div>
+              <p>
+                Lucky Blackjack Analyzer là ứng dụng phân tích blackjack ngoại tuyến. Trải nghiệm phân tích cốt lõi của ứng dụng không thu thập, truyền, bán hoặc chia sẻ thông tin cá nhân từ bên trong ứng dụng.
+              </p>
+              <p>
+                Ứng dụng không sử dụng SDK quảng cáo, SDK phân tích, SDK báo cáo sự cố, mã định danh quảng cáo hoặc web view cho tính năng phân tích.
+              </p>
+              <div class="notice">
+                <div class="notice-title">Thông báo quan trọng</div>
+                <p>
+                  Ứng dụng chỉ được cung cấp cho mục đích thông tin và giải trí. Ứng dụng không cung cấp dịch vụ cờ bạc, không nhận cược và không hỗ trợ đặt cược bằng tiền thật.
+                </p>
+                <p>
+                  Mọi phân tích, dự đoán hoặc thống kê hiển thị trong ứng dụng không bảo đảm kết quả và không được xem là lời khuyên tài chính, cá cược hoặc cờ bạc. Người dùng có trách nhiệm tuân thủ luật pháp và quy định áp dụng tại nơi mình sinh sống.
+                </p>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">2.</div>
+                <h3 class="section-title">Thông tin được lưu trên thiết bị</h3>
+              </div>
+              <p>
+                Để ghi nhớ tùy chọn của bạn, ứng dụng chỉ lưu cục bộ trên thiết bị các trạng thái chế độ tối, rung, ngôn ngữ và đồng ý khi khởi động. Các cài đặt này không được truyền đến Nhà phát triển từ bên trong ứng dụng.
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">3.</div>
+                <h3 class="section-title">Thông tin ứng dụng không thu thập</h3>
+              </div>
+              <p>
+                Ứng dụng không thu thập thông tin cá nhân từ bên trong ứng dụng như tên, địa chỉ email, số điện thoại, vị trí, danh bạ, ảnh, dữ liệu từ micro, dữ liệu camera, thông tin thanh toán, thông tin tài khoản tài chính, mã định danh quảng cáo thiết bị, phân tích sử dụng hoặc dữ liệu theo dõi hành vi.
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">4.</div>
+                <h3 class="section-title">Internet và bên thứ ba</h3>
+              </div>
+              <p>
+                Ứng dụng được thiết kế để hoạt động ngoại tuyến và không phụ thuộc vào kết nối internet cho các tính năng phân tích. Ứng dụng không bao gồm dịch vụ quảng cáo, phân tích hoặc báo cáo sự cố của bên thứ ba.
+              </p>
+              <p>
+                Sao lưu thiết bị, tải ứng dụng từ cửa hàng, cập nhật, thanh toán và vận hành nền tảng có thể do nhà cung cấp thiết bị, Google Play, Apple hoặc nhà cung cấp nền tảng khác xử lý theo điều khoản và chính sách quyền riêng tư riêng của họ.
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">5.</div>
+                <h3 class="section-title">Lưu giữ, bảo mật và trẻ em</h3>
+              </div>
+              <p>
+                Các tùy chọn cục bộ vẫn nằm trên thiết bị của bạn cho đến khi bạn xóa dữ liệu ứng dụng hoặc gỡ cài đặt ứng dụng, tùy thuộc vào mọi cài đặt sao lưu cấp thiết bị mà bạn chọn sử dụng. Vì Nhà phát triển không nhận các cài đặt cục bộ này từ bên trong ứng dụng, Nhà phát triển không thể tự truy cập hoặc xóa chúng trên thiết bị của bạn.
+              </p>
+              <p>
+                Ứng dụng không hướng đến trẻ em dưới 13 tuổi và Nhà phát triển không cố ý thu thập thông tin cá nhân của trẻ em thông qua ứng dụng. Mức độ bảo mật của các cài đặt cục bộ phụ thuộc một phần vào thiết bị và hệ điều hành của bạn.
+              </p>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div class="section-index">6.</div>
+                <h3 class="section-title">Liên hệ và cập nhật</h3>
+              </div>
+              <p>
+                Nếu bạn liên hệ với Nhà phát triển qua email, Nhà phát triển sẽ nhận địa chỉ email của bạn và mọi thông tin bạn đưa vào tin nhắn. Thông tin đó chỉ được sử dụng để trả lời câu hỏi hoặc xử lý yêu cầu của bạn, trừ khi pháp luật yêu cầu tiết lộ.
+              </p>
+              <p>
+                Chính sách quyền riêng tư này có thể được cập nhật theo thời gian. Nếu được cập nhật, phiên bản sửa đổi sẽ được đăng cùng ngày có hiệu lực mới.
+              </p>
+              <div class="contact">
+                <div class="contact-row">
+                  <div class="contact-label">Nhà phát triển</div>
+                  <div class="contact-value">SungHoon Lee (이성훈)</div>
+                </div>
+                <div class="contact-row">
+                  <div class="contact-label">Email</div>
+                  <div class="contact-value">
+                    <a href="mailto:digitalspaceout.official@gmail.com">
+                      digitalspaceout.official@gmail.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </article>
+        </div>
+      </section>
+
+      <div class="footer">Lucky Blackjack Analyzer Privacy Policy</div>
+    </main>
+  </body>
+</html>
