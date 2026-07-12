@@ -6,7 +6,7 @@
     <title>Lucky Baccarat Analyzer Privacy Policy</title>
     <meta
       name="description"
-      content="Privacy Policy for Lucky Baccarat Analyzer, an offline baccarat analysis app."
+      content="Privacy Policy for Lucky Baccarat Analyzer, an offline-first baccarat analysis app with Google Play subscription verification."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -265,11 +265,11 @@
           <header>
             <h1>Lucky Baccarat Analyzer Privacy Policy</h1>
             <p class="lead">
-              This Privacy Policy applies to Lucky Baccarat Analyzer, an offline
-              baccarat analysis app provided by SungHoon Lee
+              This Privacy Policy applies to Lucky Baccarat Analyzer, an
+              offline-first baccarat analysis app provided by SungHoon Lee
               (&#51060;&#49457;&#54984;).
             </p>
-            <div class="effective">Effective date: May 5, 2026</div>
+            <div class="effective">Effective date: July 12, 2026</div>
           </header>
 
           <section class="section">
@@ -278,14 +278,16 @@
               <h2 class="section-title">Summary</h2>
             </div>
             <p>
-              Lucky Baccarat Analyzer is designed to work offline. The App does
-              not collect, transmit, sell, or share personal information from
-              within the App for its core analyzer experience.
+              Lucky Baccarat Analyzer keeps analyzer inputs, history, and
+              preferences on your device. These analyzer data are not sent to
+              the Developer.
             </p>
             <p>
               The App does not use advertising SDKs, analytics SDKs,
               crash-reporting SDKs, advertising identifiers, or web views for
-              the analyzer feature.
+              the analyzer feature. Limited data is processed only to verify
+              and manage Google Play PRO subscriptions and to prevent abuse, as
+              described below.
             </p>
             <div class="notice">
               <div class="notice-title">Important Notice</div>
@@ -309,38 +311,49 @@
               <h2 class="section-title">Information Stored on Your Device</h2>
             </div>
             <p>
-              To remember your preferences, the App stores only the following
-              settings locally on your device:
+              The App stores the following information locally on your device:
             </p>
             <ul>
               <li>dark mode preference</li>
               <li>vibration preference</li>
               <li>language preference</li>
               <li>startup consent status</li>
+              <li>analyzer history and state</li>
+              <li>a random app-installation identifier</li>
+              <li>an encrypted, signed PRO entitlement with a limited lifetime</li>
             </ul>
             <p>
-              These settings are stored locally on your device and are not
-              transmitted to the Developer from within the App.
+              Analyzer history and preferences are not transmitted to the
+              Developer. The random installation identifier is used only for
+              subscription verification and abuse prevention.
             </p>
           </section>
 
           <section class="section">
             <div class="section-head">
               <div class="section-index">3.</div>
-              <h2 class="section-title">Information the App Does Not Collect</h2>
+              <h2 class="section-title">Data Processed for PRO Verification</h2>
             </div>
             <p>
-              The App does not collect personal information from within the App
-              such as:
+              When you purchase, restore, or recheck PRO, the App sends the
+              following data over HTTPS to the Developer's Google Cloud server:
             </p>
             <ul>
-              <li>name, email address, or phone number</li>
-              <li>precise or approximate location</li>
-              <li>contacts, photos, microphone input, or camera data</li>
-              <li>payment information or financial account information</li>
-              <li>device advertising identifiers</li>
-              <li>usage analytics or behavioral tracking data</li>
+              <li>a Google Play purchase token</li>
+              <li>a random app-installation identifier</li>
+              <li>the request time and requested product identifier</li>
+              <li>a Play Integrity token used to verify the app and device</li>
             </ul>
+            <p>
+              The server converts purchase and installation identifiers to
+              one-way hashes before storing them. It stores subscription status
+              and expiry, Integrity result, recent hashed installation records,
+              and limited fraud-prevention and notification metadata. It does
+              not receive your name, email address, phone number, card number,
+              financial account information, contacts, precise location,
+              photos, microphone or camera data, advertising identifier,
+              analyzer history, or behavioral analytics.
+            </p>
           </section>
 
           <section class="section">
@@ -349,23 +362,28 @@
               <h2 class="section-title">Internet Access and Third-Party Services</h2>
             </div>
             <p>
-              The App is intended to operate offline and does not rely on an
-              internet connection for its analyzer features.
+              Analyzer features can operate offline. Internet access is used
+              for Google Play billing, subscription verification, Play
+              Integrity checks, subscription-status notifications, privacy
+              policy links, app downloads, and updates.
             </p>
             <p>
               The App does not include third-party advertising, analytics, or
               crash-reporting services.
             </p>
             <p>
-              If your device or operating system automatically backs up app
-              data, that backup is handled by your platform provider under its
-              own terms and settings, not by the Developer.
+              Google Play processes purchases and Play Integrity data under
+              Google's terms and privacy policy. Google Cloud hosts the
+              verification service and may process technical connection logs,
+              including an IP address, user agent, request time, response
+              status, and service diagnostics. The Developer does not use this
+              information for advertising or cross-app tracking.
             </p>
             <p>
-              App stores or platform providers such as Google Play or Apple may
-              process information related to downloading, updating, billing, or
-              platform operations under their own privacy policies. Those
-              activities are outside the App's direct operation.
+              If your device or operating system automatically backs up app
+              data, that backup is handled by your platform provider under its
+              own terms and settings. Secure PRO credentials are excluded from
+              Android backup and device transfer by the App's backup rules.
             </p>
           </section>
 
@@ -391,14 +409,20 @@
               <h2 class="section-title">Data Retention and Deletion</h2>
             </div>
             <p>
-              Preference settings stored locally on your device remain there
-              until you clear the App's data or uninstall the App, subject to
-              any device-level backup settings you choose to use.
+              Local App data remains until you clear the App's data or uninstall
+              the App, subject to platform backup settings. Signed PRO
+              entitlements expire no later than seven days after their latest
+              online verification and never later than the paid subscription
+              expiry.
             </p>
             <p>
-              Because the Developer does not receive these locally stored
-              settings from within the App, the Developer cannot independently
-              access or delete them on your device.
+              Server-side purchase and installation hashes, subscription state,
+              and related security records are automatically deleted 180 days
+              after the latest subscription expiry or void event. Notification
+              receipts are deleted 180 days after receipt. You may also request
+              deletion by emailing the Developer; information that must be kept
+              for legal, fraud-prevention, refund, or dispute obligations may be
+              retained only for the required period.
             </p>
           </section>
 
@@ -425,14 +449,18 @@
               <h2 class="section-title">Security</h2>
             </div>
             <p>
-              Because the App is designed to work offline and does not transmit
-              personal data from within the App for its core analyzer
-              experience, the Developer does not maintain server-side personal
-              data for normal App operation.
+              Subscription-verification requests use HTTPS. The App verifies a
+              signed server entitlement before enabling offline PRO and stores
+              it using Android encrypted storage. The server uses Play
+              Integrity, request binding, rate limits, least-privilege service
+              accounts, hashed identifiers, and restricted backend access.
             </p>
             <p>
-              The security of locally stored settings depends in part on the
-              security controls of your device and operating system.
+              No security measure is perfect. The security of locally stored
+              data also depends on the controls of your device and operating
+              system. If the verification service is temporarily unavailable,
+              a previously verified entitlement may continue only until its
+              signed expiry time.
             </p>
           </section>
 
