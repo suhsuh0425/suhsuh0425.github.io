@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="noindex, nofollow" name="robots"/>
+<title>이용약관 | Lucky Sic Bo Analyzer</title>
+<style>
+    :root {
+      color-scheme: light;
+      font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", system-ui, sans-serif;
+      color: #25282d;
+      background: #fff;
+      --ink: #171b22;
+      --muted: #5c6470;
+      --line: #e0e4e9;
+      --surface: #f5f7fa;
+      --accent: #224d80;
+      --sidebar: 13.5rem;
+      --column-gap: clamp(2rem, 4.5vw, 3.75rem);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-size: 1rem; line-height: 1.8; word-break: keep-all; overflow-wrap: anywhere; }
+    .page-width { width: min(66rem, calc(100% - 3rem)); margin-inline: auto; }
+    a { color: var(--accent); text-underline-offset: .18em; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: .2rem; }
+    .skip-link {
+      position: absolute;
+      top: .5rem;
+      left: .5rem;
+      z-index: 1;
+      padding: .5rem .75rem;
+      background: #fff;
+      transform: translateY(-150%);
+    }
+    .skip-link:focus { transform: none; }
+    .document-nav { border-bottom: 1px solid var(--line); }
+    .document-nav .page-width { display: flex; gap: 1.9rem; }
+    .document-nav a {
+      display: flex;
+      align-items: center;
+      min-height: 3.65rem;
+      border-bottom: 2px solid transparent;
+      color: var(--muted);
+      font-size: .9375rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .document-nav a[aria-current="page"] { color: var(--ink); border-color: var(--ink); }
+    .document-nav a:hover { color: var(--accent); }
+    .document-header { padding: 3.1rem 0 2.65rem; border-bottom: 1px solid var(--line); background: var(--surface); }
+    h1 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(2rem, 4.5vw, 3.05rem);
+      font-weight: 750;
+      line-height: 1.2;
+      letter-spacing: -.045em;
+    }
+    .meta { margin: .7rem 0 0; color: var(--muted); font-size: .875rem; }
+    .document-layout { padding-block: 2.6rem 4.5rem; }
+    .contents { min-width: 0; color: var(--ink); }
+    .contents summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 3rem;
+      padding: .55rem 1rem;
+      cursor: pointer;
+      font-size: .9375rem;
+      font-weight: 700;
+      list-style: none;
+    }
+    .contents summary::-webkit-details-marker { display: none; }
+    .contents summary::after {
+      content: "";
+      width: .45rem;
+      height: .45rem;
+      margin-inline-end: .15rem;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: translateY(-.12rem) rotate(45deg);
+    }
+    .contents[open] summary::after { transform: translateY(.12rem) rotate(225deg); }
+    .contents-label { display: none; }
+    .contents ol { margin: 0; padding: 0; list-style: none; }
+    .contents li { margin: 0; }
+    .contents a {
+      display: grid;
+      grid-template-columns: 1.45rem minmax(0, 1fr);
+      gap: .45rem;
+      min-height: 2.35rem;
+      padding: .45rem .55rem;
+      border-radius: .25rem;
+      color: #414b58;
+      font-size: .875rem;
+      line-height: 1.45;
+      text-decoration: none;
+    }
+    .contents a:hover, .contents a[aria-current="location"] { color: var(--accent); background: #edf2f8; }
+    .contents a[aria-current="location"] { font-weight: 650; }
+    .section-number { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .document-body { min-width: 0; }
+    h2 {
+      margin: 2.45rem 0 .9rem;
+      padding-top: 1.55rem;
+      border-top: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 1.32rem;
+      font-weight: 720;
+      line-height: 1.4;
+      letter-spacing: -.025em;
+      scroll-margin-top: 1.4rem;
+    }
+    p, ul, dl { margin: 0 0 1rem; }
+    ul { padding-inline-start: 1.25rem; }
+    .document-body li + li { margin-top: .45rem; }
+    dt { margin-top: 1.25rem; color: var(--ink); font-weight: 700; }
+    dd { margin: .3rem 0 .8rem; }
+    .document-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: .5rem 1.5rem;
+      margin-top: 2.5rem;
+      padding-top: 1.15rem;
+      border-top: 1px solid var(--line);
+      font-size: .875rem;
+    }
+    @media (min-width: 50rem) {
+      .document-header .page-width { padding-inline-start: calc(var(--sidebar) + var(--column-gap)); }
+      .document-layout {
+        display: grid;
+        grid-template-columns: var(--sidebar) minmax(0, 1fr);
+        align-items: start;
+        gap: var(--column-gap);
+      }
+      .contents {
+        position: sticky;
+        top: 1.3rem;
+        max-height: calc(100vh - 2.6rem);
+        padding: .1rem .8rem .2rem 0;
+        border-inline-end: 1px solid var(--line);
+        overflow-y: auto;
+      }
+      .contents summary { display: none; }
+      .contents-label { display: block; margin: 0 0 .5rem .55rem; font-size: .9375rem; font-weight: 700; }
+    }
+    @media (max-width: 49.999rem) {
+      .page-width { width: calc(100% - 2.25rem); }
+      .document-header { padding: 2.1rem 0 1.75rem; }
+      .document-layout { padding-block: 1.3rem 3.25rem; }
+      .contents { margin-bottom: 1.35rem; border: 1px solid var(--line); border-radius: .375rem; }
+      .contents ol { padding: .1rem .45rem .5rem; }
+      .contents a { min-height: 2.6rem; padding: .6rem .55rem; }
+      h2 { margin-top: 1.9rem; padding-top: 1.25rem; font-size: 1.2rem; }
+    }
+    @media print {
+      .document-nav, .skip-link, .contents, .document-footer { display: none; }
+      .page-width { width: 100%; }
+      .document-header { padding: 0 0 1rem; background: #fff; }
+      .document-header .page-width { padding: 0; }
+      .document-layout { display: block; padding: 1rem 0 0; }
+      h2, dt { break-after: avoid; }
+    }
+
+    html[lang]:not([lang="ko"]) body { word-break: normal; }
+    .document-nav > .page-width { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .75rem; }
+    .document-tabs { display: flex; align-items: stretch; gap: clamp(.7rem, 3vw, 1.9rem); }
+    .document-tabs > a { padding-block: .6rem; line-height: 1.35; }
+    .language-picker { position: relative; align-self: center; }
+    .language-picker > summary {
+      display: flex; align-items: center; gap: .5rem; min-height: 2.5rem;
+      padding: .35rem .15rem .35rem .35rem; color: var(--muted);
+      cursor: pointer; font-size: .875rem; font-weight: 600; line-height: 1.35; list-style: none;
+    }
+    .language-picker > summary::-webkit-details-marker { display: none; }
+    .language-picker > summary::after {
+      content: ""; flex: 0 0 .36rem; height: .36rem; margin: -.2rem .18rem 0 0;
+      border: solid currentColor; border-width: 0 1.5px 1.5px 0; transform: rotate(45deg);
+    }
+    .language-picker > ul {
+      position: absolute; z-index: 2; top: calc(100% + .2rem); right: 0;
+      width: max-content; min-width: 10.5rem; max-width: calc(100vw - 2rem);
+      margin: 0; padding: .3rem; border: 1px solid var(--line); border-radius: .35rem;
+      background: #fff; box-shadow: 0 .35rem 1.2rem #18264017; list-style: none;
+    }
+    .language-picker > ul a {
+      display: block; min-height: 0; padding: .42rem .65rem;
+      border: 0; border-radius: .2rem; color: var(--ink); font-size: .9rem; font-weight: 500;
+    }
+    .language-picker > ul a:hover, .language-picker > ul a[aria-current="page"] { background: var(--surface); }
+    .language-picker > ul a[aria-current="page"] { font-weight: 700; }
+    html[lang]:not([lang="ko"]) .contents a { grid-template-columns: 1.75rem minmax(0, 1fr); }
+    @media (max-width: 28rem) {
+      .document-nav > .page-width { gap: .55rem; }
+      .document-tabs > a { font-size: .86rem; }
+      .language-picker > summary { font-size: .8rem; }
+    }
+    @media print { .language-picker { display: none; } }
+
+    .language-picker > ul { max-height: min(60vh, 24rem); overflow: auto; }
+    .resources { display: flex; flex-wrap: wrap; gap: .35rem 1.1rem; padding-inline-start: 0; list-style: none; }
+    .resources li + li { margin-top: 0; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#document-body">본문으로 건너뛰기</a>
+<nav aria-label="Lucky Sic Bo Analyzer" class="document-nav" id="page-top">
+<div class="page-width">
+<div class="document-tabs"><a href="lucky-sicbo-privacy-policy-ko.html">개인정보처리방침</a><a aria-current="page" href="lucky-sicbo-terms-ko.html">이용약관</a></div><details class="language-picker"><summary aria-label="언어: 한국어">한국어</summary><ul><li><a aria-current="page" href="lucky-sicbo-terms-ko.html" hreflang="ko" lang="ko">한국어</a></li>
+<li><a href="lucky-sicbo-terms-en.html" hreflang="en" lang="en">English</a></li>
+<li><a href="lucky-sicbo-terms-de.html" hreflang="de" lang="de">Deutsch</a></li>
+<li><a href="lucky-sicbo-terms-el.html" hreflang="el" lang="el">Ελληνικά</a></li>
+<li><a href="lucky-sicbo-terms-es.html" hreflang="es" lang="es">Español</a></li>
+<li><a href="lucky-sicbo-terms-fil.html" hreflang="fil" lang="fil">Filipino</a></li>
+<li><a href="lucky-sicbo-terms-fr.html" hreflang="fr" lang="fr">Français</a></li>
+<li><a href="lucky-sicbo-terms-id.html" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+<li><a href="lucky-sicbo-terms-it.html" hreflang="it" lang="it">Italiano</a></li>
+<li><a href="lucky-sicbo-terms-ja.html" hreflang="ja" lang="ja">日本語</a></li>
+<li><a href="lucky-sicbo-terms-km.html" hreflang="km" lang="km">ខ្មែរ</a></li>
+<li><a href="lucky-sicbo-terms-ms.html" hreflang="ms" lang="ms">Bahasa Melayu</a></li>
+<li><a href="lucky-sicbo-terms-nl.html" hreflang="nl" lang="nl">Nederlands</a></li>
+<li><a href="lucky-sicbo-terms-pt.html" hreflang="pt" lang="pt">Português</a></li>
+<li><a href="lucky-sicbo-terms-ru.html" hreflang="ru" lang="ru">Русский</a></li>
+<li><a href="lucky-sicbo-terms-th.html" hreflang="th" lang="th">ไทย</a></li>
+<li><a href="lucky-sicbo-terms-vi.html" hreflang="vi" lang="vi">Tiếng Việt</a></li>
+<li><a href="lucky-sicbo-terms-zh-Hans.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+<li><a href="lucky-sicbo-terms-zh-Hant.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></li>
+</ul></details></div>
+</nav>
+<main>
+<header class="document-header">
+<div class="page-width">
+<h1 id="document-title">이용약관</h1>
+<p class="meta">2026년 11월 9일 시행</p>
+</div>
+</header>
+<div class="page-width document-layout">
+<details class="contents" open="">
+<summary>목차</summary>
+<nav aria-label="목차">
+<p aria-hidden="true" class="contents-label">목차</p>
+<ol><li><a href="#scope"><span class="section-number">01</span> <span>적용 범위</span></a></li>
+<li><a href="#analysis"><span class="section-number">02</span> <span>분석과 참고 신호</span></a></li>
+<li><a href="#subscription"><span class="section-number">03</span> <span>PRO 구독</span></a></li>
+<li><a href="#cosmetics"><span class="section-number">04</span> <span>응원 장식</span></a></li>
+<li><a href="#refunds"><span class="section-number">05</span> <span>환불과 서비스 변경</span></a></li>
+<li><a href="#support"><span class="section-number">06</span> <span>문의와 책임</span></a></li>
+</ol>
+</nav>
+</details>
+<article aria-labelledby="document-title" class="document-body" id="document-body" tabindex="-1"><h2 id="scope" tabindex="-1">1. 적용 범위</h2>
+<p>이 약관은 에스에이치소프트웨어(SH Software, 대표 이성훈)가 운영하는 Lucky Sic Bo Analyzer와 유료 기능에 적용됩니다. 스토어 이용과 결제에는 해당 스토어의 약관도 적용됩니다. App Store에 별도 사용권 계약을 지정하지 않은 경우 iOS 앱에는 Apple 표준 사용권 계약이 적용됩니다. 이용자는 자신에게 적용되는 법률과 연령 요건을 준수해야 합니다.</p>
+<ul class="resources"><li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple · EULA</a></li></ul>
+<h2 id="analysis" tabindex="-1">2. 분석과 참고 신호</h2>
+<p>앱은 주사위 3개로 이루어진 독립 표본 9개를 표시하고 앱의 표 집계 규칙에 따라 항목을 강조합니다. 이용자가 입력한 결과는 세션 통계에 사용하며 생성한 표본과 구분합니다. 앱은 베팅을 접수하거나 배당금을 지급하지 않으며 미래 결과나 수익을 보장하지 않습니다. 표시된 정보는 참고용이며 베팅이나 금융 자문에 해당하지 않습니다.</p>
+<h2 id="subscription" tabindex="-1">3. PRO 구독</h2>
+<p>PRO는 추가 분석 화면을 이용할 수 있는 월 자동 갱신 구독입니다. 가격, 결제 주기와 이용 가능한 무료 체험은 구매 화면과 스토어에서 확인할 수 있습니다. 체험이 유료로 전환되는 경우 표시된 갱신 조건이 적용됩니다. 구매에 사용한 스토어와 계정에서 자동 갱신을 관리하거나 취소할 수 있습니다. 복원에는 동일한 스토어 계정과 인터넷 연결이 필요합니다. Google Play와 App Store에서 구매한 권한은 별개입니다.</p>
+<ul class="resources"><li><a href="https://play.google.com/store/account/subscriptions">Google Play</a></li><li><a href="https://support.apple.com/118428">App Store</a></li></ul>
+<h2 id="cosmetics" tabindex="-1">4. 응원 장식</h2>
+<p>구매 화면에서 소모성 응원 장식의 제공 시간과 가격을 확인할 수 있습니다. 구매가 검증돼 장식이 지급되면 시간이 시작되고, 앱을 닫아도 계속 흐릅니다. 추가 구매 시간은 남은 시간에 더해집니다. 장식은 PRO 권한이나 참고 신호에 영향을 주지 않습니다. 지급이 끝난 소모성 구매는 해당 설치에 연결되므로 재설치하거나 기기를 바꾸면 남은 시간을 복구하지 못할 수 있습니다. 지급이 끝나지 않은 거래는 고객지원에 문의할 수 있습니다.</p>
+<h2 id="refunds" tabindex="-1">5. 환불과 서비스 변경</h2>
+<p>환불은 결제한 스토어에 요청할 수 있습니다. 환불, 결제 취소 또는 구독 종료에 따라 해당 이용 권한이 달라질 수 있습니다. 스토어나 네트워크 문제로 구매 확인이 늦어질 수 있습니다. 이미 결제한 기능에 중대한 영향을 주는 변경이나 종료는 관계 법령에 따라 안내합니다. 기능을 받지 못했거나 하자가 있는 경우의 구제 등 이용자의 법정 권리는 적용됩니다.</p>
+<ul class="resources"><li><a href="https://support.google.com/googleplay/workflow/9813244">Google Play</a></li><li><a href="https://reportaproblem.apple.com/">App Store</a></li></ul>
+<h2 id="support" tabindex="-1">6. 문의와 책임</h2>
+<p>구매 확인, 복원 또는 서비스 문제는 에스에이치소프트웨어에 문의할 수 있습니다. 요청은 관계 법령과 해당 스토어 정책에 따라 처리합니다. 게임에 참여하거나 베팅 또는 지출할지는 이용자가 판단합니다. 운영자에게 귀책사유가 없는 외부 베팅 손실이나 기대 수익에 대해서는 법령이 허용하는 범위에서 운영자가 책임을 지지 않습니다. 관계 법령에 따라 제한할 수 없는 소비자 권리와 책임에 관한 규정은 적용됩니다.</p>
+<p>타인의 구매 권한 도용, 구매 증명 위변조, 검증 절차 우회 및 서비스 장애를 일으키는 자동 요청을 금지합니다. 구매 정보가 일치하지 않거나 보안 검증을 마치지 못한 경우에는 확인이 끝날 때까지 해당 유료 권한의 지급을 보류할 수 있습니다. 이용자는 고객지원 담당자에게 재확인을 요청할 수 있습니다. 약관의 주요 변경 사항과 시행일은 알리고, 관계 법령에 따라 별도 통지나 동의가 필요한 경우 그 절차를 따릅니다. 관계 법령에 따른 분쟁 해결 절차를 이용할 수 있습니다.</p>
+<ul class="resources"><li><a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a></li></ul>
+<footer class="document-footer"><a href="lucky-sicbo-privacy-policy-ko.html">개인정보처리방침</a><a href="#page-top">맨 위로</a></footer>
+</article>
+</div>
+</main>
+<script>
+  const contents = document.querySelector('.contents');
+  const desktop = matchMedia('(min-width: 50rem)');
+  const chapterLinks = Array.from(contents.querySelectorAll('a'));
+
+  function setContentsOpen() {
+    contents.open = desktop.matches;
+  }
+
+  function highlightSection() {
+    for (const link of chapterLinks) {
+      if (link.hash === location.hash) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    }
+  }
+
+  contents.addEventListener('click', event => {
+    if (!desktop.matches && event.target.closest('a')) contents.open = false;
+  });
+  desktop.addEventListener('change', setContentsOpen);
+  window.addEventListener('hashchange', highlightSection);
+  setContentsOpen();
+  highlightSection();
+</script>
+</body>
+</html>

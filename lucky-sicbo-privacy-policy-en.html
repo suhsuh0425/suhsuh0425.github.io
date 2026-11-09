@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="noindex, nofollow" name="robots"/>
+<title>Privacy Policy | Lucky Sic Bo Analyzer</title>
+<style>
+    :root {
+      color-scheme: light;
+      font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", system-ui, sans-serif;
+      color: #25282d;
+      background: #fff;
+      --ink: #171b22;
+      --muted: #5c6470;
+      --line: #e0e4e9;
+      --surface: #f5f7fa;
+      --accent: #224d80;
+      --sidebar: 13.5rem;
+      --column-gap: clamp(2rem, 4.5vw, 3.75rem);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-size: 1rem; line-height: 1.8; word-break: keep-all; overflow-wrap: anywhere; }
+    .page-width { width: min(66rem, calc(100% - 3rem)); margin-inline: auto; }
+    a { color: var(--accent); text-underline-offset: .18em; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: .2rem; }
+    .skip-link {
+      position: absolute;
+      top: .5rem;
+      left: .5rem;
+      z-index: 1;
+      padding: .5rem .75rem;
+      background: #fff;
+      transform: translateY(-150%);
+    }
+    .skip-link:focus { transform: none; }
+    .document-nav { border-bottom: 1px solid var(--line); }
+    .document-nav .page-width { display: flex; gap: 1.9rem; }
+    .document-nav a {
+      display: flex;
+      align-items: center;
+      min-height: 3.65rem;
+      border-bottom: 2px solid transparent;
+      color: var(--muted);
+      font-size: .9375rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .document-nav a[aria-current="page"] { color: var(--ink); border-color: var(--ink); }
+    .document-nav a:hover { color: var(--accent); }
+    .document-header { padding: 3.1rem 0 2.65rem; border-bottom: 1px solid var(--line); background: var(--surface); }
+    h1 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(2rem, 4.5vw, 3.05rem);
+      font-weight: 750;
+      line-height: 1.2;
+      letter-spacing: -.045em;
+    }
+    .meta { margin: .7rem 0 0; color: var(--muted); font-size: .875rem; }
+    .document-layout { padding-block: 2.6rem 4.5rem; }
+    .contents { min-width: 0; color: var(--ink); }
+    .contents summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 3rem;
+      padding: .55rem 1rem;
+      cursor: pointer;
+      font-size: .9375rem;
+      font-weight: 700;
+      list-style: none;
+    }
+    .contents summary::-webkit-details-marker { display: none; }
+    .contents summary::after {
+      content: "";
+      width: .45rem;
+      height: .45rem;
+      margin-inline-end: .15rem;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: translateY(-.12rem) rotate(45deg);
+    }
+    .contents[open] summary::after { transform: translateY(.12rem) rotate(225deg); }
+    .contents-label { display: none; }
+    .contents ol { margin: 0; padding: 0; list-style: none; }
+    .contents li { margin: 0; }
+    .contents a {
+      display: grid;
+      grid-template-columns: 1.45rem minmax(0, 1fr);
+      gap: .45rem;
+      min-height: 2.35rem;
+      padding: .45rem .55rem;
+      border-radius: .25rem;
+      color: #414b58;
+      font-size: .875rem;
+      line-height: 1.45;
+      text-decoration: none;
+    }
+    .contents a:hover, .contents a[aria-current="location"] { color: var(--accent); background: #edf2f8; }
+    .contents a[aria-current="location"] { font-weight: 650; }
+    .section-number { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .document-body { min-width: 0; }
+    h2 {
+      margin: 2.45rem 0 .9rem;
+      padding-top: 1.55rem;
+      border-top: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 1.32rem;
+      font-weight: 720;
+      line-height: 1.4;
+      letter-spacing: -.025em;
+      scroll-margin-top: 1.4rem;
+    }
+    p, ul, dl { margin: 0 0 1rem; }
+    ul { padding-inline-start: 1.25rem; }
+    .document-body li + li { margin-top: .45rem; }
+    dt { margin-top: 1.25rem; color: var(--ink); font-weight: 700; }
+    dd { margin: .3rem 0 .8rem; }
+    .document-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: .5rem 1.5rem;
+      margin-top: 2.5rem;
+      padding-top: 1.15rem;
+      border-top: 1px solid var(--line);
+      font-size: .875rem;
+    }
+    @media (min-width: 50rem) {
+      .document-header .page-width { padding-inline-start: calc(var(--sidebar) + var(--column-gap)); }
+      .document-layout {
+        display: grid;
+        grid-template-columns: var(--sidebar) minmax(0, 1fr);
+        align-items: start;
+        gap: var(--column-gap);
+      }
+      .contents {
+        position: sticky;
+        top: 1.3rem;
+        max-height: calc(100vh - 2.6rem);
+        padding: .1rem .8rem .2rem 0;
+        border-inline-end: 1px solid var(--line);
+        overflow-y: auto;
+      }
+      .contents summary { display: none; }
+      .contents-label { display: block; margin: 0 0 .5rem .55rem; font-size: .9375rem; font-weight: 700; }
+    }
+    @media (max-width: 49.999rem) {
+      .page-width { width: calc(100% - 2.25rem); }
+      .document-header { padding: 2.1rem 0 1.75rem; }
+      .document-layout { padding-block: 1.3rem 3.25rem; }
+      .contents { margin-bottom: 1.35rem; border: 1px solid var(--line); border-radius: .375rem; }
+      .contents ol { padding: .1rem .45rem .5rem; }
+      .contents a { min-height: 2.6rem; padding: .6rem .55rem; }
+      h2 { margin-top: 1.9rem; padding-top: 1.25rem; font-size: 1.2rem; }
+    }
+    @media print {
+      .document-nav, .skip-link, .contents, .document-footer { display: none; }
+      .page-width { width: 100%; }
+      .document-header { padding: 0 0 1rem; background: #fff; }
+      .document-header .page-width { padding: 0; }
+      .document-layout { display: block; padding: 1rem 0 0; }
+      h2, dt { break-after: avoid; }
+    }
+
+    html[lang]:not([lang="ko"]) body { word-break: normal; }
+    .document-nav > .page-width { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .75rem; }
+    .document-tabs { display: flex; align-items: stretch; gap: clamp(.7rem, 3vw, 1.9rem); }
+    .document-tabs > a { padding-block: .6rem; line-height: 1.35; }
+    .language-picker { position: relative; align-self: center; }
+    .language-picker > summary {
+      display: flex; align-items: center; gap: .5rem; min-height: 2.5rem;
+      padding: .35rem .15rem .35rem .35rem; color: var(--muted);
+      cursor: pointer; font-size: .875rem; font-weight: 600; line-height: 1.35; list-style: none;
+    }
+    .language-picker > summary::-webkit-details-marker { display: none; }
+    .language-picker > summary::after {
+      content: ""; flex: 0 0 .36rem; height: .36rem; margin: -.2rem .18rem 0 0;
+      border: solid currentColor; border-width: 0 1.5px 1.5px 0; transform: rotate(45deg);
+    }
+    .language-picker > ul {
+      position: absolute; z-index: 2; top: calc(100% + .2rem); right: 0;
+      width: max-content; min-width: 10.5rem; max-width: calc(100vw - 2rem);
+      margin: 0; padding: .3rem; border: 1px solid var(--line); border-radius: .35rem;
+      background: #fff; box-shadow: 0 .35rem 1.2rem #18264017; list-style: none;
+    }
+    .language-picker > ul a {
+      display: block; min-height: 0; padding: .42rem .65rem;
+      border: 0; border-radius: .2rem; color: var(--ink); font-size: .9rem; font-weight: 500;
+    }
+    .language-picker > ul a:hover, .language-picker > ul a[aria-current="page"] { background: var(--surface); }
+    .language-picker > ul a[aria-current="page"] { font-weight: 700; }
+    html[lang]:not([lang="ko"]) .contents a { grid-template-columns: 1.75rem minmax(0, 1fr); }
+    @media (max-width: 28rem) {
+      .document-nav > .page-width { gap: .55rem; }
+      .document-tabs > a { font-size: .86rem; }
+      .language-picker > summary { font-size: .8rem; }
+    }
+    @media print { .language-picker { display: none; } }
+
+    .language-picker > ul { max-height: min(60vh, 24rem); overflow: auto; }
+    .resources { display: flex; flex-wrap: wrap; gap: .35rem 1.1rem; padding-inline-start: 0; list-style: none; }
+    .resources li + li { margin-top: 0; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#document-body">Skip to content</a>
+<nav aria-label="Lucky Sic Bo Analyzer" class="document-nav" id="page-top">
+<div class="page-width">
+<div class="document-tabs"><a aria-current="page" href="lucky-sicbo-privacy-policy-en.html">Privacy Policy</a><a href="lucky-sicbo-terms-en.html">Terms of Use</a></div><details class="language-picker"><summary aria-label="Language: English">English</summary><ul><li><a href="lucky-sicbo-privacy-policy-ko.html" hreflang="ko" lang="ko">한국어</a></li>
+<li><a aria-current="page" href="lucky-sicbo-privacy-policy-en.html" hreflang="en" lang="en">English</a></li>
+<li><a href="lucky-sicbo-privacy-policy-de.html" hreflang="de" lang="de">Deutsch</a></li>
+<li><a href="lucky-sicbo-privacy-policy-el.html" hreflang="el" lang="el">Ελληνικά</a></li>
+<li><a href="lucky-sicbo-privacy-policy-es.html" hreflang="es" lang="es">Español</a></li>
+<li><a href="lucky-sicbo-privacy-policy-fil.html" hreflang="fil" lang="fil">Filipino</a></li>
+<li><a href="lucky-sicbo-privacy-policy-fr.html" hreflang="fr" lang="fr">Français</a></li>
+<li><a href="lucky-sicbo-privacy-policy-id.html" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+<li><a href="lucky-sicbo-privacy-policy-it.html" hreflang="it" lang="it">Italiano</a></li>
+<li><a href="lucky-sicbo-privacy-policy-ja.html" hreflang="ja" lang="ja">日本語</a></li>
+<li><a href="lucky-sicbo-privacy-policy-km.html" hreflang="km" lang="km">ខ្មែរ</a></li>
+<li><a href="lucky-sicbo-privacy-policy-ms.html" hreflang="ms" lang="ms">Bahasa Melayu</a></li>
+<li><a href="lucky-sicbo-privacy-policy-nl.html" hreflang="nl" lang="nl">Nederlands</a></li>
+<li><a href="lucky-sicbo-privacy-policy-pt.html" hreflang="pt" lang="pt">Português</a></li>
+<li><a href="lucky-sicbo-privacy-policy-ru.html" hreflang="ru" lang="ru">Русский</a></li>
+<li><a href="lucky-sicbo-privacy-policy-th.html" hreflang="th" lang="th">ไทย</a></li>
+<li><a href="lucky-sicbo-privacy-policy-vi.html" hreflang="vi" lang="vi">Tiếng Việt</a></li>
+<li><a href="lucky-sicbo-privacy-policy-zh-Hans.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+<li><a href="lucky-sicbo-privacy-policy-zh-Hant.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></li>
+</ul></details></div>
+</nav>
+<main>
+<header class="document-header">
+<div class="page-width">
+<h1 id="document-title">Privacy Policy</h1>
+<p class="meta">Effective November 9, 2026</p>
+</div>
+</header>
+<div class="page-width document-layout">
+<details class="contents" open="">
+<summary>Contents</summary>
+<nav aria-label="Contents">
+<p aria-hidden="true" class="contents-label">Contents</p>
+<ol><li><a href="#on-device"><span class="section-number">01</span> <span>Operator and on-device data</span></a></li>
+<li><a href="#processing"><span class="section-number">02</span> <span>Purchase verification and security</span></a></li>
+<li><a href="#overseas-transfer"><span class="section-number">03</span> <span>Service providers and international transfers</span></a></li>
+<li><a href="#retention"><span class="section-number">04</span> <span>Retention and deletion</span></a></li>
+<li><a href="#data-deletion"><span class="section-number">05</span> <span>Your choices and rights</span></a></li>
+<li><a href="#children"><span class="section-number">06</span> <span>Children and changes</span></a></li>
+</ol>
+</nav>
+</details>
+<article aria-labelledby="document-title" class="document-body" id="document-body" tabindex="-1"><h2 id="on-device" tabindex="-1">1. Operator and on-device data</h2>
+<p>SH Software (Sunghoon Lee) operates Lucky Sic Bo Analyzer for Android and iOS. No app account is required. Dice results entered for analysis and session history stay on the device and are excluded from purchase requests. App settings and protected purchase data may remain on the device or in operating-system backups. iOS Keychain items can survive reinstallation.</p>
+<h2 id="processing" tabindex="-1">2. Purchase verification and security</h2>
+<p>When you buy, restore or verify an entitlement, the app sends a random installation ID, store and product identifiers and request details over HTTPS. Android sends a Google Play purchase token and, when required, a Play Integrity token. iOS sends Apple-signed transaction data. We use store APIs to confirm purchases, subscriptions and refunds. Server records include hashed references to purchases and installations, product and entitlement status, expiry, delivery and notification records. We use these to provide and restore paid features, prevent misuse and duplicate delivery, and handle refunds. We may process IP addresses, user-agent strings and request logs for operations and security. We do not receive payment-card details or use these records for advertising or tracking.</p>
+<h2 id="overseas-transfer" tabindex="-1">3. Service providers and international transfers</h2>
+<p>The verification service and database use Google Cloud in Seoul, South Korea. Google Play and Apple handle payments under their own policies and receive purchase references for verification. Google Play sends purchase notices to Cloud Pub/Sub. Global logging and Pub/Sub can store or process data outside South Korea. We use Gmail (Google LLC, United States) for support. Your email address, message and attachments may be processed on Google servers worldwide. Consult the provider links below for their contacts and policies. Where transfers are needed to perform a contract, we apply the relevant legal basis and obtain separate consent if required. You can object through our support email. Refusing a transfer needed for purchase verification or email support may limit that feature.</p>
+<p>Google LLC (United States) operates Google Play. Apple Services Pte. Ltd. (Singapore) operates the App Store in South Korea. Apple’s policy describes processing by Apple Inc. (United States) and other affiliates. We send purchase identifiers to the stores over encrypted connections when verifying purchases. Each store applies its own retention rules to the data it holds. Unacknowledged Pub/Sub notices can be retained for up to 7 days. The topic has no storage region restriction. Technical and audit logs are sent to global log buckets when generated. On November 9, 2026, the console showed Los Angeles, United States (us-west2), as the storage location of both buckets. Google may change the location of global buckets.</p>
+<ul class="resources"><li><a href="https://policies.google.com/privacy">Google · Privacy</a></li><li><a href="https://support.google.com/policies/contact/general_privacy_form">Google · Contact</a></li><li><a href="https://cloud.google.com/contact">Google Cloud · Contact</a></li><li><a href="https://cloud.google.com/terms/subprocessors">Google Cloud · Subprocessors</a></li><li><a href="https://www.apple.com/legal/privacy/">Apple · Privacy</a></li><li><a href="https://www.apple.com/legal/privacy/contact/">Apple · Contact</a></li></ul>
+<h2 id="retention" tabindex="-1">4. Retention and deletion</h2>
+<p>Subscription verification and store-notification records become eligible for automatic deletion after 90 days from creation or receipt, respectively. Purchase reservations become eligible 90 days after creation. Cosmetic ledgers become eligible 90 days after the later of the record update or benefit expiry. A routine check of an unchanged active cosmetic does not extend that period. Automatic deletion may occur later. Apple duplicate-delivery records contain only a transaction hash and fulfillment flag and are kept while needed to prevent duplicate delivery. General technical logs are configured for 30 days and required audit logs for 400 days. Support email is kept through resolution, and longer only as needed for disputes, security or legal obligations.</p>
+<h2 id="data-deletion" tabindex="-1">5. Your choices and rights</h2>
+<p>Contact us to request access, correction, deletion, suspension of processing or withdrawal of consent as applicable. We may need the store, product, purchase date or order reference to identify the record and verify the request. Do not send passwords, full card numbers, raw purchase tokens or signed transaction proofs. We delete eligible records we can identify and explain applicable retention requirements. A later purchase check can create a new record. Deleting data does not cancel a subscription. You may ask us to review an automated verification result.</p>
+<ul class="resources"><li><a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a></li></ul>
+<h2 id="children" tabindex="-1">6. Children and changes</h2>
+<p>The app is intended for users aged 13 or over, subject to local law and storefront age requirements. We verify a parent’s or legal representative’s consent where applicable law requires it. In South Korea, this applies when consent is needed to process a child’s personal information and the child is under 14. We publish the date and content of changes and provide additional notice or obtain consent where required.</p>
+<footer class="document-footer"><a href="lucky-sicbo-terms-en.html">Terms of Use</a><a href="#page-top">Back to top</a></footer>
+</article>
+</div>
+</main>
+<script>
+  const contents = document.querySelector('.contents');
+  const desktop = matchMedia('(min-width: 50rem)');
+  const chapterLinks = Array.from(contents.querySelectorAll('a'));
+
+  function setContentsOpen() {
+    contents.open = desktop.matches;
+  }
+
+  function highlightSection() {
+    for (const link of chapterLinks) {
+      if (link.hash === location.hash) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    }
+  }
+
+  contents.addEventListener('click', event => {
+    if (!desktop.matches && event.target.closest('a')) contents.open = false;
+  });
+  desktop.addEventListener('change', setContentsOpen);
+  window.addEventListener('hashchange', highlightSection);
+  setContentsOpen();
+  highlightSection();
+</script>
+</body>
+</html>
