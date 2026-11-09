@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html lang="fil">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="noindex, nofollow" name="robots"/>
+<title>Patakaran sa Privacy ng Lucky Baccarat Analyzer</title>
+<style>
+    :root {
+      color-scheme: light;
+      font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", system-ui, sans-serif;
+      color: #25282d;
+      background: #fff;
+      --ink: #171b22;
+      --muted: #5c6470;
+      --line: #e0e4e9;
+      --surface: #f5f7fa;
+      --accent: #224d80;
+      --sidebar: 13.5rem;
+      --column-gap: clamp(2rem, 4.5vw, 3.75rem);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-size: 1rem; line-height: 1.8; word-break: keep-all; overflow-wrap: anywhere; }
+    .page-width { width: min(66rem, calc(100% - 3rem)); margin-inline: auto; }
+    a { color: var(--accent); text-underline-offset: .18em; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: .2rem; }
+    .skip-link {
+      position: absolute;
+      top: .5rem;
+      left: .5rem;
+      z-index: 1;
+      padding: .5rem .75rem;
+      background: #fff;
+      transform: translateY(-150%);
+    }
+    .skip-link:focus { transform: none; }
+    .document-nav { border-bottom: 1px solid var(--line); }
+    .document-nav .page-width { display: flex; gap: 1.9rem; }
+    .document-nav a {
+      display: flex;
+      align-items: center;
+      min-height: 3.65rem;
+      border-bottom: 2px solid transparent;
+      color: var(--muted);
+      font-size: .9375rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .document-nav a[aria-current="page"] { color: var(--ink); border-color: var(--ink); }
+    .document-nav a:hover { color: var(--accent); }
+    .document-header { padding: 3.1rem 0 2.65rem; border-bottom: 1px solid var(--line); background: var(--surface); }
+    h1 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(2rem, 4.5vw, 3.05rem);
+      font-weight: 750;
+      line-height: 1.2;
+      letter-spacing: -.045em;
+    }
+    .meta { margin: .7rem 0 0; color: var(--muted); font-size: .875rem; }
+    .document-layout { padding-block: 2.6rem 4.5rem; }
+    .contents { min-width: 0; color: var(--ink); }
+    .contents summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 3rem;
+      padding: .55rem 1rem;
+      cursor: pointer;
+      font-size: .9375rem;
+      font-weight: 700;
+      list-style: none;
+    }
+    .contents summary::-webkit-details-marker { display: none; }
+    .contents summary::after {
+      content: "";
+      width: .45rem;
+      height: .45rem;
+      margin-inline-end: .15rem;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: translateY(-.12rem) rotate(45deg);
+    }
+    .contents[open] summary::after { transform: translateY(.12rem) rotate(225deg); }
+    .contents-label { display: none; }
+    .contents ol { margin: 0; padding: 0; list-style: none; }
+    .contents li { margin: 0; }
+    .contents a {
+      display: grid;
+      grid-template-columns: 1.45rem minmax(0, 1fr);
+      gap: .45rem;
+      min-height: 2.35rem;
+      padding: .45rem .55rem;
+      border-radius: .25rem;
+      color: #414b58;
+      font-size: .875rem;
+      line-height: 1.45;
+      text-decoration: none;
+    }
+    .contents a:hover, .contents a[aria-current="location"] { color: var(--accent); background: #edf2f8; }
+    .contents a[aria-current="location"] { font-weight: 650; }
+    .section-number { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .document-body { min-width: 0; }
+    h2 {
+      margin: 2.45rem 0 .9rem;
+      padding-top: 1.55rem;
+      border-top: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 1.32rem;
+      font-weight: 720;
+      line-height: 1.4;
+      letter-spacing: -.025em;
+      scroll-margin-top: 1.4rem;
+    }
+    p, ul, dl { margin: 0 0 1rem; }
+    ul { padding-inline-start: 1.25rem; }
+    .document-body li + li { margin-top: .45rem; }
+    dt { margin-top: 1.25rem; color: var(--ink); font-weight: 700; }
+    dd { margin: .3rem 0 .8rem; }
+    .document-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: .5rem 1.5rem;
+      margin-top: 2.5rem;
+      padding-top: 1.15rem;
+      border-top: 1px solid var(--line);
+      font-size: .875rem;
+    }
+    @media (min-width: 50rem) {
+      .document-header .page-width { padding-inline-start: calc(var(--sidebar) + var(--column-gap)); }
+      .document-layout {
+        display: grid;
+        grid-template-columns: var(--sidebar) minmax(0, 1fr);
+        align-items: start;
+        gap: var(--column-gap);
+      }
+      .contents {
+        position: sticky;
+        top: 1.3rem;
+        max-height: calc(100vh - 2.6rem);
+        padding: .1rem .8rem .2rem 0;
+        border-inline-end: 1px solid var(--line);
+        overflow-y: auto;
+      }
+      .contents summary { display: none; }
+      .contents-label { display: block; margin: 0 0 .5rem .55rem; font-size: .9375rem; font-weight: 700; }
+    }
+    @media (max-width: 49.999rem) {
+      .page-width { width: calc(100% - 2.25rem); }
+      .document-header { padding: 2.1rem 0 1.75rem; }
+      .document-layout { padding-block: 1.3rem 3.25rem; }
+      .contents { margin-bottom: 1.35rem; border: 1px solid var(--line); border-radius: .375rem; }
+      .contents ol { padding: .1rem .45rem .5rem; }
+      .contents a { min-height: 2.6rem; padding: .6rem .55rem; }
+      h2 { margin-top: 1.9rem; padding-top: 1.25rem; font-size: 1.2rem; }
+    }
+    @media print {
+      .document-nav, .skip-link, .contents, .document-footer { display: none; }
+      .page-width { width: 100%; }
+      .document-header { padding: 0 0 1rem; background: #fff; }
+      .document-header .page-width { padding: 0; }
+      .document-layout { display: block; padding: 1rem 0 0; }
+      h2, dt { break-after: avoid; }
+    }
+
+    html[lang]:not([lang="ko"]) body { word-break: normal; }
+    .document-nav > .page-width { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .75rem; }
+    .document-tabs { display: flex; align-items: stretch; gap: clamp(.7rem, 3vw, 1.9rem); }
+    .document-tabs > a { padding-block: .6rem; line-height: 1.35; }
+    .language-picker { position: relative; align-self: center; }
+    .language-picker > summary {
+      display: flex; align-items: center; gap: .5rem; min-height: 2.5rem;
+      padding: .35rem .15rem .35rem .35rem; color: var(--muted);
+      cursor: pointer; font-size: .875rem; font-weight: 600; line-height: 1.35; list-style: none;
+    }
+    .language-picker > summary::-webkit-details-marker { display: none; }
+    .language-picker > summary::after {
+      content: ""; flex: 0 0 .36rem; height: .36rem; margin: -.2rem .18rem 0 0;
+      border: solid currentColor; border-width: 0 1.5px 1.5px 0; transform: rotate(45deg);
+    }
+    .language-picker > ul {
+      position: absolute; z-index: 2; top: calc(100% + .2rem); right: 0;
+      width: max-content; min-width: 10.5rem; max-width: calc(100vw - 2rem);
+      margin: 0; padding: .3rem; border: 1px solid var(--line); border-radius: .35rem;
+      background: #fff; box-shadow: 0 .35rem 1.2rem #18264017; list-style: none;
+    }
+    .language-picker > ul a {
+      display: block; min-height: 0; padding: .42rem .65rem;
+      border: 0; border-radius: .2rem; color: var(--ink); font-size: .9rem; font-weight: 500;
+    }
+    .language-picker > ul a:hover, .language-picker > ul a[aria-current="page"] { background: var(--surface); }
+    .language-picker > ul a[aria-current="page"] { font-weight: 700; }
+    html[lang]:not([lang="ko"]) .contents a { grid-template-columns: 1.75rem minmax(0, 1fr); }
+    @media (max-width: 28rem) {
+      .document-nav > .page-width { gap: .55rem; }
+      .document-tabs > a { font-size: .86rem; }
+      .language-picker > summary { font-size: .8rem; }
+    }
+    @media print { .language-picker { display: none; } }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#document-body">Lumaktaw sa Nilalaman</a>
+<nav aria-label="Pumili ng Dokumento" class="document-nav" id="page-top">
+<div class="page-width">
+
+
+<div class="document-tabs"><a aria-current="page" href="lucky-baccarat-privacy-policy-fil.html">Patakaran sa Privacy</a><a href="lucky-baccarat-terms-fil.html">Mga Tuntunin ng Paggamit</a></div><details class="language-picker"><summary aria-label="Pumili ng Wika · Filipino">Filipino</summary><ul><li><a href="lucky-baccarat-privacy-policy-ko.html" hreflang="ko" lang="ko">한국어</a></li><li><a href="lucky-baccarat-privacy-policy-en.html" hreflang="en" lang="en">English</a></li><li><a href="lucky-baccarat-privacy-policy-vi.html" hreflang="vi" lang="vi">Tiếng Việt</a></li><li><a href="lucky-baccarat-privacy-policy-th.html" hreflang="th" lang="th">ไทย</a></li><li><a href="lucky-baccarat-privacy-policy-zh-Hans.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li><li><a href="lucky-baccarat-privacy-policy-zh-Hant-HK.html" hreflang="zh-Hant-HK" lang="zh-Hant-HK">繁體中文（香港）</a></li><li><a aria-current="page" href="lucky-baccarat-privacy-policy-fil.html" hreflang="fil" lang="fil">Filipino</a></li></ul></details></div>
+</nav>
+<main>
+<header class="document-header">
+<div class="page-width">
+<h1 id="document-title">Patakaran sa Privacy</h1>
+<p class="meta">May bisa mula 9 Nobyembre 2026</p>
+</div>
+</header>
+<div class="page-width document-layout">
+<details class="contents" open="">
+<summary>Talaan ng Nilalaman</summary>
+<nav aria-label="Talaan ng Nilalaman">
+<p aria-hidden="true" class="contents-label">Talaan ng Nilalaman</p>
+<ol>
+<li><a href="#on-device"><span class="section-number">01</span> <span>Impormasyong Pinoproseso sa Device</span></a></li>
+<li><a href="#processing"><span class="section-number">02</span> <span>Impormasyong Pinoproseso sa Server at Suporta sa Customer at mga Layunin Nito</span></a></li>
+<li><a href="#transfers"><span class="section-number">03</span> <span>Pagproseso ng Bayad ng Store, Pag-outsource, at Paglilipat sa Labas ng Bansa</span></a></li>
+<li><a href="#retention"><span class="section-number">04</span> <span>Panahon ng Pagpapanatili at Pagsira</span></a></li>
+<li><a href="#privacy-rights"><span class="section-number">05</span> <span>Mga Karapatan ng User at mga Katanungan sa Resulta ng Awtomatikong Beripikasyon</span></a></li>
+<li><a href="#security"><span class="section-number">06</span> <span>Mga Hakbang sa Seguridad at Personal na Impormasyon ng mga Bata</span></a></li>
+<li><a href="#privacy-contact"><span class="section-number">07</span> <span>Mga Katanungan sa Proteksyon ng Personal na Impormasyon at Abiso sa mga Pagbabago</span></a></li>
+</ol>
+</nav>
+</details>
+<article aria-labelledby="document-title" class="document-body" id="document-body" tabindex="-1">
+<p>Inilalapat ng SH Software (kinakatawan ni Sunghoon Lee, tinutukoy rito bilang "Tagapagpatakbo") ang patakarang ito sa Lucky Baccarat Analyzer (tinutukoy rito bilang "App") na ibinibigay sa Google Play at App Store.</p>
+<p>Magagamit ang mga pangunahing tampok sa pagsusuri nang walang pagpaparehistro ng account. Ang mga resulta ng laro na inilagay ng user at ang kasaysayan ng pagsusuri ay pinoproseso sa device. Pinoproseso ng server ng beripikasyon ang impormasyong kinakailangan para sa pagbibigay ng mga bayad na tampok, pagkumpirma ng pagbili, at seguridad. Ang suporta sa customer ay pinoproseso sa pamamagitan ng email.</p>
+<h2 id="on-device" tabindex="-1">1. Impormasyong Pinoproseso sa Device</h2>
+<ul>
+<li><strong>Mga Tala ng Pagsusuri.</strong> Pinoproseso ng Android app sa memory habang tumatakbo ang mga inilagay na resulta ng laro at kasaysayan ng pagsusuri. Sine-save ng iOS app sa device ang mga resulta ng laro, mga resulta ng panel, at kasalukuyang pagsusuri upang maipagpatuloy ang pagtingin sa mga tala kapag muling binuksan ang app. Sa iOS, maaaring may maiwang kopya para sa pag-recover sa device habang binabawi ang mga nasirang tala. Ang mga input at kasaysayan ng pagsusuri ay hindi ipinapadala sa server ng Tagapagpatakbo.</li>
+<li><strong>Mga Setting sa Paggamit.</strong> Sine-save sa device ang wika, mode ng screen, vibration, at status ng pagkumpirma sa panimulang gabay.</li>
+<li><strong>Impormasyong Kaugnay ng Pagbili.</strong> Maaaring itabi sa protektadong storage ng device ang random na identifier sa pag-install ng app, nilagdaang karapatan sa paggamit matapos ang beripikasyon, at mga patunay na kinakailangan para sa pagkumpirma ng pagbili o pagbawi ng mga hindi natapos na transaksyon.</li>
+</ul>
+<h2 id="processing" tabindex="-1">2. Impormasyong Pinoproseso sa Server at Suporta sa Customer at mga Layunin Nito</h2>
+<dl>
+<dt>Pagbibigay ng mga Bayad na Tampok at Pagkumpirma ng Pagbili</dt>
+<dd>Pinoproseso ang mga identifier ng store at produkto, random na identifier sa pag-install ng app, at oras ng kahilingan sa panahon ng pagbili, pag-restore, o muling pagkumpirma ng PRO, o sa pagbili, muling pagkumpirma ng karapatan sa paggamit ng mga dekorasyong may takdang oras, at pagproseso ng mga hindi natapos na transaksyon. Kung ipinadala nang magkakasama, pinoproseso rin ang uri ng kahilingan, bersyon ng app, at build number. Sa Android, pinoproseso ang token ng pagbili sa Google Play at impormasyon sa beripikasyon ng Play Integrity; sa iOS, pinoproseso ang patunay ng transaksyon na nilagdaan ng App Store. Sinusuri ang status ng pagbili, oras ng pag-expire ng subscription, status ng pagbibigay, pag-expire, at refund ng dekorasyon, at impormasyong kaugnay ng abiso ng store upang makumpirma ang mga pagbili, maiwasan ang dobleng pagbibigay, at maipakita ang mga subscription, pagkansela, at refund.</dd>
+<dt>Mga Tala ng Beripikasyon</dt>
+<dd>Itinatala sa ledger ng server ang mga na-hash na reference value ng mga identifier ng pagbili o transaksyon at identifier sa pag-install ng app, status ng pagbili at subscription, resulta ng beripikasyon, at impormasyong kinakailangan para sa pagbibigay ng dekorasyon at refund. Ang mga na-hash na reference value ay maaari pa ring maiugnay sa mga tala ng pagbili o pag-install. Sa hiwalay na tala upang maiwasan ang dobleng pagbibigay ng mga nauubos na dekorasyon sa Apple, tanging ang hash value ng reference ng transaksyon at ang marka na tapos na ang pagbibigay ang itinatala.</dd>
+<dt>Operasyon at Seguridad ng Serbisyo</dt>
+<dd>Maaaring iproseso ang mga teknikal na log gaya ng IP address, user agent, oras at path ng kahilingan, status ng tugon, at uri ng error para sa pagsusuri ng error, paghihigpit sa pag-access, pag-iwas sa mapanlinlang na paggamit, at pagtugon sa seguridad. Hindi humihingi ang App ng pahintulot sa lokasyon ng device at hindi gumagamit ng hiwalay na SDK para sa advertising, pagsusuri ng gawi, o pangongolekta ng crash. Hindi ginagamit ng Tagapagpatakbo ang mga tala ng pagbili at teknikal na tala para sa naka-personalize na advertising o pag-track sa iba't ibang app.</dd>
+<dt>Suporta sa Customer at Paggamit ng mga Karapatan</dt>
+<dd>Kapag tumatanggap ng mga katanungan sa suporta sa customer sa pamamagitan ng email, pinoproseso ang address na sasagutan, nilalaman ng katanungan, impormasyon ng error na isinumite ng user, at ang pinakamababang impormasyong kinakailangan para sa pagkumpirma ng pagbili. Hindi dapat isumite ang mga password ng Google o Apple account, buong numero ng card, orihinal na token ng pagbili, at nilagdaang patunay ng transaksyon.</dd>
+</dl>
+<p>Pinoproseso ng Tagapagpatakbo ang personal na impormasyong kinakailangan para sa pagpasok at pagpapatupad ng kontrata ng serbisyo, gaya ng pagkumpirma ng pagbili at pag-restore ng karapatan sa paggamit, o para sa pagsunod sa mga legal na obligasyon. Para sa pag-iwas sa mapanlinlang na paggamit at seguridad ng serbisyo, pinoproseso ang impormasyong kaugnay ng layuning iyon sa loob ng makatwirang saklaw lamang kapag pinahihintulutan ito ng naaangkop na batas at ang lehitimong interes ng Tagapagpatakbo ay malinaw na nangingibabaw sa mga karapatan ng data subject. Kung kinakailangan ang pahintulot, ipinapaalam muna ang mga kinakailangang detalye at kinukuha ang pahintulot bago ang pagproseso. Kung wala ang impormasyong kinakailangan para sa pagkumpirma ng pagbili, maaaring malimitahan ang pagkumpirma o pag-restore ng mga bayad na karapatan sa paggamit.</p>
+<h2 id="transfers" tabindex="-1">3. Pagproseso ng Bayad ng Store, Pag-outsource, at Paglilipat sa Labas ng Bansa</h2>
+<p>Pinoproseso ng bawat store ang account, paraan ng pagbabayad, pagsingil, at refund ng user alinsunod sa sarili nitong mga tuntunin at patakaran. Hindi natatanggap ng Tagapagpatakbo ang password ng account o numero ng card sa pagbabayad ng user. Ang mga tatanggap at saklaw ng impormasyong ginagamit ng Tagapagpatakbo para sa pagkumpirma ng pagbili, operasyon ng serbisyo, o suporta sa customer ay ang mga sumusunod.</p>
+<dl>
+<dt>Server ng Beripikasyon, Database, mga Log, at mga Abiso sa Pagbili ng Google Cloud</dt>
+<dd>Ang lokal na kinontratang entidad ay ang Google Cloud Korea LLC (Republika ng Korea). Alinsunod sa mga tuntunin ng Google Cloud, ang Google Asia Pacific Pte. Ltd. (Singapore) at mga kaakibat na kumpanya ng Google ay maaaring makilahok sa pagbibigay ng serbisyo. Ang impormasyong kinakailangan para sa beripikasyon ng pagbili at pagbibigay ng karapatan sa paggamit ay pinoproseso sa pamamagitan ng network sa server ng beripikasyon at database sa rehiyon ng Seoul, Republika ng Korea. Ang panahon ng pagpapanatili ng mga tala ng beripikasyon ay itinatakda sa <a href="#retention">Panahon ng Pagpapanatili at Pagsira</a>.</dd>
+<dd>Ang IP sa pag-access, oras at path ng kahilingan, status ng tugon, at impormasyon sa operasyon at audit ay ipinapadala sa pandaigdigang log bucket kapag nabuo ang log. Noong Nobyembre 8, 2026, ang nakasaad na lokasyon ng storage para sa mga pangkalahatang teknikal na log at kinakailangang audit log ay ang rehiyon ng Iowa sa Estados Unidos. Ang lokasyon ng storage ng pandaigdigang bucket ay maaaring magbago depende sa operasyon ng Google. Ang setting ng pagpapanatili ay 30 araw para sa mga pangkalahatang teknikal na log at 400 araw para sa mga kinakailangang audit log.</dd>
+<dd>Kapag may abiso sa pagbili mula sa Google Play, ipinapadala sa Cloud Pub/Sub sa pamamagitan ng network ang token ng pagbili, mga identifier ng app at produkto, at uri at oras ng event. Nakumpirma ng Tagapagpatakbo na may mga abiso sa pagbili na naimbak sa Estados Unidos. Walang nakatakdang limitasyon sa mga rehiyon ng storage para sa topic ng mga abiso, kaya maaaring magbago ang aktuwal na rehiyon ng storage. Pinananatili ang mga mensaheng wala pang kumpirmasyon ng pagtanggap nang hanggang 7 araw. <a href="https://cloud.google.com/contact/">Makipag-ugnayan sa Google Cloud</a> · <a href="https://cloud.google.com/terms/google-entity">Kontraktuwal na entidad</a> · <a href="https://cloud.google.com/terms/data-processing-addendum">Mga tuntunin sa pagproseso ng data</a> · <a href="https://cloud.google.com/terms/subprocessors">Mga subprocessor at lokasyon ng pagproseso</a></dd>
+<dt>Pagkumpirma ng Pagbili sa Google Play at Play Integrity</dt>
+<dd>Ang tatanggap ay ang Google LLC (Estados Unidos), ang operator ng Google Play. Sa panahon ng pagbili, pag-restore, at muling pagkumpirma sa Android, ipinapadala ang identifier ng app at token ng pagbili sa API para sa beripikasyon ng pagbili, at ang identifier ng app at token ng Play Integrity sa API para sa beripikasyon ng integridad. Ang parehong pagpapadala ay isinasagawa sa pamamagitan ng naka-encrypt na komunikasyon upang kumpirmahin ang pagiging tunay ng pagbili at karapatan sa paggamit. Ang mga detalyadong rehiyon ng pagproseso at pagpapanatili sa mga serbisyo ng Google ay sumusunod sa pampublikong patakaran ng Google. <a href="https://support.google.com/policies/contact/general_privacy_form?hl=ko">Mga Katanungan sa Privacy ng Google</a> · <a href="https://policies.google.com/privacy?hl=ko">Patakaran sa Privacy ng Google</a></dd>
+<dt>Pagkumpirma ng Pagbili sa App Store</dt>
+<dd>Ang provider ng serbisyo ng App Store para sa Republika ng Korea ay ang Apple Services Pte. Ltd. (Singapore). Ang mga rehiyon ng pagproseso at tungkulin ng mga kaakibat na kumpanya ng Apple gaya ng Apple Inc. (Estados Unidos) ay sumusunod sa patakaran ng Apple. Sa panahon ng pagbili, pag-restore, muling pagkumpirma, at pagproseso ng mga kaugnay na abiso sa iOS, ipinapadala ng Tagapagpatakbo sa pamamagitan ng naka-encrypt na komunikasyon sa Apple server API ang identifier ng transaksyon o orihinal na identifier ng transaksyon na natukoy mula sa nilagdaang patunay ng transaksyon. Ibinabalik ng Apple ang impormasyon ng transaksyon na kinakailangan upang suriin ang status ng pagbili, subscription, at refund. Pinananatili ng Apple ang impormasyon ng account at transaksyon alinsunod sa mga layunin ng pagbibigay ng serbisyo at mga legal na pangangailangan sa pagpapanatili. <a href="https://www.apple.com/kr/legal/privacy/contact/">Mga Katanungan sa Privacy ng Apple</a> · <a href="https://www.apple.com/kr/legal/privacy/kr/">Patakaran sa Privacy ng Apple</a></dd>
+<dt>Email ng Suporta</dt>
+<dd>Gumagamit ang Tagapagpatakbo ng Gmail, na ibinibigay ng Google LLC na nakabase sa Estados Unidos, upang tumanggap at sumagot sa mga tanong. Kapag nagpadala ng tanong o tugon, iniimbak sa Gmail sa pamamagitan ng network ang mga email address, paksa, nilalaman, attachment, at impormasyon sa pagpapadala at pagtanggap. Ayon sa Google, maaaring iproseso ang impormasyon sa mga server sa iba’t ibang bahagi ng mundo. Nasa seksiyong <a href="#retention">Panahon ng Pagpapanatili at Pagsira</a> ang mga tuntunin ng Tagapagpatakbo sa pagpapanatili at pagbubura ng email. <a href="https://support.google.com/policies/contact/general_privacy_form?hl=ko">Mga Katanungan sa Privacy ng Google</a> · <a href="https://policies.google.com/privacy?hl=ko">Patakaran sa Privacy ng Google</a></dd>
+</dl>
+<p>Ang mga kinakailangan ng Artikulo 28-8, Talata 1, Subtalata 3 ng Batas sa Proteksyon ng Personal na Impormasyon ay inilalapat sa pag-outsource ng pagproseso at pag-iimbak sa labas ng bansa na kinakailangan para sa pagpasok at pagpapatupad ng kontrata ng serbisyo. Ang pagproseso ng account at bayad ng store at ang impormasyong ipinapadala ng Tagapagpatakbo sa store API upang beripikahin ang mga pagbili ay magkahiwalay na nakasaad sa itaas. Kung kinakailangan ang hiwalay na legal na batayan o pahintulot para sa paglilipat sa labas ng bansa, sinusunod ang mga naturang kinakailangan. Ang lokasyon ng tatanggap na korporasyon at ang aktwal na lokasyon ng pagproseso ay maaaring magkaiba.</p>
+<p>Ang mga katanungan tungkol sa paglilipat sa labas ng bansa at mga kahilingan na tanggihan ang paglilipat ay tinatanggap sa <a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a>. Kung tatanggihan ang paglilipat para sa beripikasyon ng pagbili, maaaring malimitahan ang pagkumpirma at pag-restore ng mga bayad na karapatan sa paggamit. Maaaring tanggihan ang pagproseso sa labas ng bansa ng mga email ng suporta sa pamamagitan ng hindi paggamit sa naturang email. Sa ganitong kaso, hindi maibibigay ang pagtanggap at pagsagot sa mga katanungan sa pamamagitan ng email. Magagamit offline ang pangunahing pagsusuri. Hindi nagbebenta ng personal na impormasyon ang Tagapagpatakbo.</p>
+<h2 id="retention" tabindex="-1">4. Panahon ng Pagpapanatili at Pagsira</h2>
+<dl>
+<dt>Mga Tala ng Pagsusuri, mga Setting, at Impormasyon sa Karapatan sa Paggamit sa Device</dt>
+<dd>Ang mga tala ng pagsusuri sa Android ay pinananatili habang tumatakbo ang app. Sa iOS, ang mga naka-save na tala ng pagsusuri ay maaaring burahin gamit ang tampok na pag-reset ng app upang alisin ang kasalukuyang tala. Ang mga setting ng app at mga kopya para sa pag-recover na naka-save sa device ay maaaring mabura sa pamamagitan ng pagbubura ng data ng app o pag-uninstall ng app, at ang ilang data ay maaaring ma-restore mula sa backup ng operating system. Inilalapat ang panuntunan ng app sa pagbubukod sa backup para sa protektadong impormasyon sa pagbili sa Android. Ang mga item sa Keychain sa iOS ay maaaring manatili kahit matapos i-reinstall ang app depende sa paggana ng operating system. Hindi na mabubuksan ng nilagdaang karapatan sa paggamit ang mga bayad na tampok kapag lumipas na ang panahon ng bisa nito.</dd>
+<dt>Mga Tala ng Beripikasyon ng Subscription at mga Tala ng Pagtanggap ng Abiso mula sa Store</dt>
+<dd>Itinatakda bilang oras para sa awtomatikong pagbubura ang 90 araw mula sa petsa ng unang pagkakabuo para sa mga tala ng beripikasyon ng subscription, at mula sa petsa ng pagtanggap para sa mga tala ng pagtanggap ng abiso. Ang simpleng muling pagkumpirma sa parehong tala ng subscription ay hindi nagpapahaba sa umiiral na panahon. Kung susuriin muli ang status ng pagbili matapos ang pagbubura, maaaring makabuo ng bagong kinakailangang tala.</dd>
+<dt>Mga Detalyadong Tala ayon sa Pagbili at Pag-install ng mga Dekorasyong May Takdang Oras</dt>
+<dd>Ang mga tala ng reserbasyon sa pagbili ay napapailalim sa awtomatikong pagbubura pagkalipas ng 90 araw mula sa unang pagkakabuo. Ang mga detalyadong tala sa pagbibigay ng dekorasyon ay napapailalim sa awtomatikong pagbubura pagkalipas ng 90 araw mula sa kung alin ang mas huli sa pagitan ng oras ng pagproseso at ng nakatalang oras ng pag-expire ng dekorasyon. Maaaring magbago ang batayang oras kapag may karagdagang pagbili, refund, o pag-update sa status ng tala. Kung nananatiling hindi nagbabago ang status ng isang may bisang dekorasyon, hindi mapapahaba ng muling pagkumpirma ang umiiral na panahon ng pagpapanatili.</dd>
+<dt>Mga Tala sa Pag-iwas sa Dobleng Pagbibigay ng mga Dekorasyon sa Apple</dt>
+<dd>Itinatago lamang ng Tagapagpatakbo ang hash value ng reference ng transaksyon at ang marka na tapos na ang pagbibigay habang kailangan ang mga ito upang maiwasan ang dobleng pagbibigay. Maaaring itago ang tala kahit nag-expire na ang dekorasyon upang hindi na muling maibigay ang dekorasyon para sa parehong pagbili. Binubura ito ng Tagapagpatakbo kapag hindi na kailangan para sa layuning iyon. Walang orihinal na patunay ng pagbili, identifier sa pag-install ng app, pangalan ng produkto, halagang binayaran, o oras ng transaksyon sa tala. Hindi ito saklaw ng awtomatikong pagbura pagkalipas ng 90 araw na nakalaan para sa mga detalyadong tala.</dd>
+<dt>Mga Teknikal na Log at Cloud Audit Log</dt>
+<dd>Ang setting ng pagpapanatili para sa mga pangkalahatang teknikal na log ay 30 araw. Ang mga kinakailangang audit log, gaya ng para sa mga gawain sa pamamahala ng cloud, ay napapailalim sa setting ng pagpapanatili na 400 araw sa isang hiwalay na bucket.</dd>
+<dt>Suporta sa Customer at mga Talang Pinananatili Ayon sa Batas</dt>
+<dd>Ang mga pangkalahatang katanungan ay pinananatili hanggang sa makumpleto ang tugon at mga kinakailangang susunod na hakbang at makamit ang layunin ng katanungan. Kapag naisara na ang isang katanungan, sinusuri ang pangangailangan sa pagpapanatili sa bawat kaso, at mano-manong binubura ang mga email at attachment na walang dahilan upang panatilihin. Ang mga email sa Trash ng Gmail ay maaaring ma-recover nang hanggang 30 araw, at pagkatapos nito ay awtomatikong buburahin sa Gmail. Ang mga email na kinakailangang sirain bago ang panahong iyon alinsunod sa batas ay binubura rin mula sa Trash. <a href="https://support.google.com/mail/answer/7401?hl=ko">Gabay sa Pagbubura ng Email sa Gmail</a></dd>
+<dd>Ang sariling mga tala ng order at pagbabayad ng store ay pinamamahalaan ng kaukulang store. Sa mga talang hawak ng Tagapagpatakbo na napapailalim sa pagpapanatili sa ilalim ng mga batas sa e-commerce ng Korea, ang mga tala ng kontrata o pagbawi ng pagbili at mga tala ng pagbabayad at suplay ay pinananatili nang 5 taon, at ang mga tala ng reklamo ng mamimili at paglutas ng sigalot ay pinananatili nang 3 taon. Ang personal na impormasyong pinananatili nang hindi sinisira alinsunod sa batas ay iniimbak at pinamamahalaan nang hiwalay sa ibang personal na impormasyon. Kung may batayan upang panatilihin ang mga tala para sa kasalukuyang sigalot sa refund, imbestigasyon sa mapanlinlang na paggamit, o legal na paghahabol, nililimitahan ang pag-access sa mga kinakailangang tala lamang. Sinisira ang mga ito kapag natapos na ang dahilan ng pagpapanatili.</dd>
+</dl>
+<p>Maaaring magkaroon ng pagkakaiba sa pagitan ng nakatakdang oras para sa awtomatikong pagbubura sa server at ng aktwal na oras ng pagkumpleto ng pagbubura. Ang mga elektronikong tala na nakamit na ang layunin ng pagproseso o natapos na ang panahon ng pagpapanatili ay sinisira sa paraang hindi na mare-recover, maliban kung kinakailangan ang pagpapanatili sa ilalim ng batas.</p>
+<h2 id="privacy-rights" tabindex="-1">5. Mga Karapatan ng User at mga Katanungan sa Resulta ng Awtomatikong Beripikasyon</h2>
+<p>Maaari ding suriin ng mga user ng Google Play at App Store ang paraan ng paghiling at mga pamantayan sa pagpapanatili sa <a href="https://suhsuh0425.github.io/lucky_baccarat_analyzer_support.html#data-deletion">Gabay sa Pagbubura ng Data sa Pampublikong Pahina ng Suporta</a>.</p>
+<p>Ang user o ang kanyang legal na kinatawan ay maaaring humiling ng pagtingin, pagwawasto o pagbubura, pagsuspinde ng pagproseso, o pagbawi ng pahintulot para sa personal na impormasyon alinsunod sa mga naaangkop na batas. Ang mga kahilingan sa pagbubura ng tala sa server ay tinatanggap sa <a href="mailto:digitalspaceout.official@gmail.com?subject=%5BBaccarat%5D%20Kahilingang%20burahin%20ang%20mga%20tala%20sa%20server">digitalspaceout.official@gmail.com</a>. Kapag humihiling, pakisaad ang target na buburahin at ang ginamit na store. Kung kinakailangan upang beripikahin ang mga talang kaugnay ng pagbili, maaaring hilingin ang petsa ng pagbili, pangalan ng produkto, numero ng order, at iba pa. Hindi dapat isumite ang mga password, buong numero ng card, orihinal na token ng pagbili, at nilagdaang patunay ng transaksyon.</p>
+<p>Kinukumpirma ng Tagapagpatakbo kung ang humihiling ay ang taong tinutukoy ng impormasyon o isang awtorisadong kinatawan, at inihahambing ang isinumiteng impormasyon sa mga detalye ng transaksyong makukumpirma mula sa store. Binubura ng Tagapagpatakbo ang mga hawak nitong talang matutukoy na nauukol sa humihiling at nakakatugon sa mga kondisyon para sa pagbura. Maaaring hindi sapat ang email address lamang para matukoy ang mga tala ng pagbili o pag-install. Para sa pagbili sa App Store, sinusuri ng Tagapagpatakbo kung sapat ang impormasyong makukumpirma tungkol sa transaksyon para matukoy ang kaukulang tala sa server. Ang tala para maiwasan ang dobleng pagbibigay ng dekorasyon ng Apple ay naglalaman lamang ng hash ng reference ng transaksyon at markang naibigay na ang dekorasyon. Sinusuri ng Tagapagpatakbo kung may impormasyong maihahambing sa reference ng transaksyon.</p>
+<p>Para sa mga kahilingan sa pagwawasto o pagbubura sa ilalim ng Batas sa Proteksyon ng Personal na Impormasyon ng Korea, ipapaalam ang resulta ng pagproseso sa loob ng 10 araw mula sa petsa ng pagtanggap. Kung nililimitahan ang pagbubura alinsunod sa batas o hindi matukoy ang target na tala ng kahilingan, ipapaalam ang saklaw, dahilan, at paraan ng paghahain ng pagtutol. Sinusuri ang mga teknikal na log at audit log upang malaman kung maaaring ihiwalay at tukuyin ang mga tala ng humihiling. Ang mga log na lumampas na sa panahon ng pagpapanatili ay binubura alinsunod sa mga setting sa <a href="#retention">Panahon ng Pagpapanatili at Pagsira</a>. <a href="https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&amp;joBrNo=00&amp;joNo=0043&amp;lsiSeq=289537&amp;urlMode=lsScJoRltInfoR">Artikulo 43 ng Dekreto sa Pagpapatupad ng Batas sa Proteksyon ng Personal na Impormasyon</a></p>
+<p>Awtomatikong tinutukoy kung ibibigay ang mga bayad na tampok batay sa status ng pagbili na kinumpirma ng store, panahon ng bisa, lagda, at mga resulta ng beripikasyon sa seguridad. Kung mali ang naipakitang karapatan sa paggamit, maaaring humiling sa suporta sa customer ng paliwanag sa dahilan at muling pagsusuri. Kung natutugunan ang mga kinakailangan tungkol sa mga awtomatikong desisyon sa ilalim ng mga naaangkop na batas, maaaring gamitin ang mga karapatang itinatakda ng batas.</p>
+<p>Ang proseso ng pagbubura ng data ng app sa device o paghiling sa Tagapagpatakbo na burahin ang personal na impormasyon at ang proseso ng pagkansela ng subscription sa store ay magkahiwalay. Kung muling susuriin ang mga bayad na karapatan sa paggamit pagkatapos nito o magpapadala ang store ng bagong event ng transaksyon, maaaring makabuo ng bagong tala ng beripikasyon sa saklaw na may legal na batayan para sa pagproseso. Ang mga kahilingan tungkol sa impormasyon ng account at order na pinamamahalaan ng store ay maaaring iproseso sa pamamagitan ng kaukulang store. <a href="https://myaccount.google.com/data-and-privacy?hl=ko">Data ng Google Account at Privacy</a> · <a href="https://privacy.apple.com/">Data at Privacy ng Apple</a></p>
+<h2 id="security" tabindex="-1">6. Mga Hakbang sa Seguridad at Personal na Impormasyon ng mga Bata</h2>
+<p>Inilalapat ang komunikasyong HTTPS, pag-hash ng mga identifier sa mga tala ng server, beripikasyon ng mga nilagdaang karapatan sa paggamit, protektadong storage sa device, at mga paghihigpit sa karapatan sa pag-access sa server at dalas ng kahilingan. Kung magkaroon ng insidente ng paglabag sa seguridad, isasagawa ang mga hakbang, pag-abiso, at pag-uulat alinsunod sa mga naaangkop na batas.</p>
+<p>Ang App ay hindi pinapatakbo para sa mga bata. Kinukumpirma ng Tagapagpatakbo ang pahintulot ng legal na kinatawan ng bata kung hinihingi ito ng naaangkop na batas. Sa Republika ng Korea, ito ang proseso kapag kailangan ng pahintulot sa pagproseso ng personal na impormasyon ng batang wala pang 14 na taong gulang. Maaaring makipag-ugnayan ang legal na kinatawan sa suporta sa customer kaugnay ng paggamit ng mga karapatan.</p>
+<h2 id="privacy-contact" tabindex="-1">7. Mga Katanungan sa Proteksyon ng Personal na Impormasyon at Abiso sa mga Pagbabago</h2>
+<p>Ang controller ng personal na impormasyon at opisyal sa proteksyon ng personal na impormasyon ay si Sunghoon Lee, kinatawan ng SH Software. Ang mga katanungan ay tinatanggap sa <a href="mailto:digitalspaceout.official@gmail.com">digitalspaceout.official@gmail.com</a>. Sa Republika ng Korea, maaaring magtanong tungkol sa remedyo sa pinsala sa <a href="https://privacy.kisa.or.kr/">Sentro sa Pag-uulat ng Paglabag sa Personal na Impormasyon (118)</a> o sa <a href="https://www.kopico.go.kr/">Komite sa Pamamagitan sa Sigalot sa Personal na Impormasyon (1833-6972)</a>.</p>
+<p>Kung babaguhin ang patakarang ito, ihahayag ang petsa ng pagkakabisa at ang mga detalye ng pagbabago, at kung kinakailangan ang hiwalay na abiso o pahintulot sa ilalim ng batas, susundin ang kaukulang proseso.</p>
+<footer class="document-footer">
+<a href="lucky-baccarat-terms-fil.html">Mga Tuntunin ng Paggamit</a>
+<a href="#page-top">Bumalik sa Itaas</a>
+</footer>
+</article>
+</div>
+</main>
+<script>
+  const contents = document.querySelector('.contents');
+  const desktop = matchMedia('(min-width: 50rem)');
+  const chapterLinks = Array.from(contents.querySelectorAll('a'));
+
+  function setContentsOpen() {
+    contents.open = desktop.matches;
+  }
+
+  function highlightSection() {
+    for (const link of chapterLinks) {
+      if (link.hash === location.hash) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    }
+  }
+
+  contents.addEventListener('click', event => {
+    if (!desktop.matches && event.target.closest('a')) contents.open = false;
+  });
+  desktop.addEventListener('change', setContentsOpen);
+  window.addEventListener('hashchange', highlightSection);
+  setContentsOpen();
+  highlightSection();
+</script>
+</body>
+</html>
