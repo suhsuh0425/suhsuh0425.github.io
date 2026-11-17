@@ -117,25 +117,25 @@
   <main class="page-width">
     <section aria-labelledby="on-device">
       <h2 id="on-device">1. 运营商与设备端数据</h2>
-      <p>SH Software（Sunghoon Lee，韩国）负责处理 Google Play 和 Apple App Store 上 Lucky Roulette Analyzer 的个人信息。使用应用无需注册账户。您输入的轮盘结果和分析记录仅在设备上处理。设置和购买权益可以保存在设备上。</p>
+      <p>SH Software（Sunghoon Lee，韩国）负责处理 Google Play 和 Apple App Store 上 Lucky Roulette Analyzer 的个人信息。使用应用无需注册账户。您输入的轮盘结果和分析记录仅在设备上处理。设置、安装标识符和购买权益可以保存在设备上。</p>
     </section>
 
     <section aria-labelledby="processing">
       <h2 id="processing">2. 购买验证与安全性</h2>
-      <p>当您购买、恢复或验证权益时，应用会通过 HTTPS 发送随机安装 ID、商店和产品标识符以及请求详情。Android 会发送 Google Play 购买令牌（Token），并在需要时发送 Play Integrity 令牌。iOS 会发送经 Apple 签名的交易数据。我们使用商店 API 来确认购买、订阅和退款。服务器记录包括对购买和安装的哈希引用、产品和权益状态、到期时间、交付和通知记录。我们使用这些数据来提供和恢复付费功能、防止滥用和重复交付并处理退款。为了运营和安全目的，我们可能会处理 IP 地址、用户代理（user-agent）字符串和请求日志。我们不会接收支付卡详细信息，也不会将这些记录用于广告或追踪。</p>
+      <p>当您购买、恢复或验证权益时，应用会通过 HTTPS 发送随机安装 ID、商店和产品标识符以及请求详情。Android 会发送 Google Play 购买令牌（Token），并在需要时发送 Play Integrity 令牌。启用 App Store 内购买时，iOS 会发送经 Apple 签名的交易数据。我们使用商店 API 来确认购买、订阅和退款。服务器记录包括对购买和安装的哈希引用、产品和权益状态、到期时间、交付和通知记录。我们使用这些数据来提供和恢复付费功能、防止滥用和重复交付并处理退款。为了运营和安全目的，我们可能会处理 IP 地址、用户代理（user-agent）字符串和请求日志。我们不会接收支付卡详细信息，也不会将这些记录用于广告或追踪。</p>
       <p>为回复支持请求，我们处理您的电子邮件地址、邮件内容和附件。</p>
     </section>
 
     <section aria-labelledby="overseas-transfer">
       <h2 id="overseas-transfer">3. 服务提供商与国际传输</h2>
-      <p>购买验证服务和 Firestore 数据库使用韩国首尔区域（asia-northeast3）。一般运行日志在首尔保留 30 天。必需的云审计日志在 Google Cloud 的全球日志存储桶中保留 400 天，实际存储位置由 Google 管理。Google Play 购买通知通过 Cloud Pub/Sub 存储在首尔，未确认接收的消息最多保留 7 天。</p>
-      <p>我们使用 Google Cloud 验证购买、处理日志并接收 Google Play 购买通知。Google Play 和 Apple 接收用于验证的购买信息。我们使用 Gmail（Google LLC，美国）提供支持。数据可能在您所在国家或地区之外处理。法律要求时，我们使用合法的跨境传输机制。您可以通过电子邮件咨询保护措施或提出异议。拒绝必要的传输可能限制相应功能。</p>
+      <p>购买验证服务和 Firestore 数据库使用韩国首尔区域（asia-northeast3）。一般运行日志在首尔保留 30 天。必需的云审计日志在 Google Cloud 的全球日志存储桶中保留 400 天，实际存储位置由 Google 管理。Google Play 购买通知通过 Cloud Pub/Sub 存储在首尔，未确认接收的消息最多保留 7 天。2026 年 11 月 17 日，控制台显示必需的审计日志存储在美国北弗吉尼亚州（us-east4）。Google 可能调整全球存储桶的实际存储位置。</p>
+      <p>我们使用 Google Cloud 验证购买、处理日志并接收 Google Play 购买通知。Google Play 接收验证所需的购买信息。提供 App Store 内购买时，Apple 接收验证所需的交易参考信息。我们使用 Gmail（Google LLC，美国）提供支持。数据可能在您所在国家或地区之外处理。法律要求时，我们使用合法的跨境传输机制。您可以通过电子邮件咨询保护措施或提出异议。拒绝必要的传输可能限制相应功能。</p>
       <ul class="resources"><li><a href="https://policies.google.com/privacy">Google · Privacy</a></li><li><a href="https://support.google.com/policies/contact/general_privacy_form">Google · Contact</a></li><li><a href="https://cloud.google.com/contact">Google Cloud · Contact</a></li><li><a href="https://cloud.google.com/terms/subprocessors">Google Cloud · Subprocessors</a></li><li><a href="https://www.apple.com/legal/privacy/">Apple · Privacy</a></li><li><a href="https://www.apple.com/legal/privacy/contact/">Apple · Contact</a></li></ul>
     </section>
 
     <section aria-labelledby="retention">
       <h2 id="retention">4. 保留与删除</h2>
-      <p>订阅验证和商店通知记录分别在创建或接收 90 天后符合自动删除条件。购买预留记录在创建 90 天后符合自动删除条件。外观道具台账在记录更新或权益到期（以较晚者为准）后 90 天符合自动删除条件。对未更改的有效外观道具进行例行检查不会延长该期限。自动删除可能会稍后发生。Apple 购买防重复交付记录仅包含交易哈希和履行标志，并在防止重复交付所需的期间内保留。客服电子邮件将保留至问题解决，仅在处理纠纷、安全或法律义务需要时才会延长保留时间。</p>
+      <p>订阅验证和商店通知记录分别在创建或接收 90 天后符合自动删除条件，重新核查订阅不会延长其原始期限。在提供付费外观道具时，购买预留记录在创建 90 天后符合自动删除条件。外观道具台账在记录更新或权益到期（以较晚者为准）后 90 天符合自动删除条件。对未更改的有效外观道具进行例行检查不会延长该期限。自动删除可能会稍后发生。启用 App Store 外观道具时，其防重复交付记录仅包含交易哈希和履行标志，并在防止重复交付所需的期间内保留。客服电子邮件将保留至问题解决，仅在处理纠纷、安全或法律义务需要时才会延长保留时间。</p>
     </section>
 
     <section aria-labelledby="data-deletion">

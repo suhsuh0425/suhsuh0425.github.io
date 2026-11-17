@@ -117,25 +117,25 @@
   <main class="page-width">
     <section aria-labelledby="on-device">
       <h2 id="on-device">1. 營運者與裝置端資料</h2>
-      <p>SH Software（Sunghoon Lee，韓國）負責處理 Google Play 和 Apple App Store 上 Lucky Roulette Analyzer 的個人資料。使用應用程式無須註冊帳戶。您輸入的輪盤結果與分析紀錄僅在裝置上處理。設定及購買權益可儲存於裝置。</p>
+      <p>SH Software（Sunghoon Lee，韓國）負責處理 Google Play 和 Apple App Store 上 Lucky Roulette Analyzer 的個人資料。使用應用程式無須註冊帳戶。您輸入的輪盤結果與分析紀錄僅在裝置上處理。設定、安裝識別碼及購買權益可儲存於裝置。</p>
     </section>
 
     <section aria-labelledby="processing">
       <h2 id="processing">2. 購買驗證與安全性</h2>
-      <p>當您購買、恢復或驗證權益時，應用程式會透過 HTTPS 發送隨機安裝 ID、商店和產品識別碼以及請求詳細資料。Android 會發送 Google Play 購買權杖（Token），並在需要時發送 Play Integrity 權杖。iOS 會發送經 Apple 簽署的交易資料。我們使用商店 API 來確認購買、訂閱和退款。伺服器記錄包括對購買和安裝的雜湊參照、產品和權益狀態、到期時間、交付和通知記錄。我們使用這些資料來提供和恢復付費功能、防止濫用和重複交付並處理退款。為了營運和安全目的，我們可能會處理 IP 位址、使用者代理（user-agent）字串和請求記錄。我們不會接收付款卡詳細資料，也不會將這些記錄用於廣告或追蹤。</p>
+      <p>當您購買、恢復或驗證權益時，應用程式會透過 HTTPS 發送隨機安裝 ID、商店和產品識別碼以及請求詳細資料。Android 會發送 Google Play 購買權杖（Token），並在需要時發送 Play Integrity 權杖。啟用 App Store 內購買時，iOS 會發送經 Apple 簽署的交易資料。我們使用商店 API 來確認購買、訂閱和退款。伺服器記錄包括對購買和安裝的雜湊參照、產品和權益狀態、到期時間、交付和通知記錄。我們使用這些資料來提供和恢復付費功能、防止濫用和重複交付並處理退款。為了營運和安全目的，我們可能會處理 IP 位址、使用者代理（user-agent）字串和請求記錄。我們不會接收付款卡詳細資料，也不會將這些記錄用於廣告或追蹤。</p>
       <p>為回覆支援請求，我們處理您的電子郵件地址、郵件內容及附件。</p>
     </section>
 
     <section aria-labelledby="overseas-transfer">
       <h2 id="overseas-transfer">3. 服務供應商與國際傳輸</h2>
-      <p>購買驗證服務與 Firestore 資料庫使用韓國首爾區域（asia-northeast3）。一般營運記錄在首爾保存 30 天。必要的雲端稽核記錄在 Google Cloud 的全球記錄儲存桶中保存 400 天，實際儲存位置由 Google 管理。Google Play 購買通知透過 Cloud Pub/Sub 儲存在首爾，未確認接收的訊息最多保存 7 天。</p>
-      <p>我們使用 Google Cloud 驗證購買、處理記錄並接收 Google Play 購買通知。Google Play 和 Apple 會收到驗證所需的購買資料。我們使用 Gmail（Google LLC，美國）提供支援。資料可能在您的國家或地區以外處理。依法有需要時，我們會採用合法的跨境傳輸機制。您可透過電子郵件詢問保障措施或提出異議。拒絕必要的傳輸可能限制相關功能。</p>
+      <p>購買驗證服務與 Firestore 資料庫使用韓國首爾區域（asia-northeast3）。一般營運記錄在首爾保存 30 天。必要的雲端稽核記錄在 Google Cloud 的全球記錄儲存桶中保存 400 天，實際儲存位置由 Google 管理。Google Play 購買通知透過 Cloud Pub/Sub 儲存在首爾，未確認接收的訊息最多保存 7 天。2026 年 11 月 17 日，主控台顯示必要的稽核記錄儲存在美國北維吉尼亞州（us-east4）。Google 可能調整全球儲存桶的實際儲存位置。</p>
+      <p>我們使用 Google Cloud 驗證購買、處理記錄並接收 Google Play 購買通知。Google Play 會收到驗證所需的購買資料。提供 App Store 內購買時，Apple 會收到驗證所需的交易參考資料。我們使用 Gmail（Google LLC，美國）提供支援。資料可能在您的國家或地區以外處理。依法有需要時，我們會採用合法的跨境傳輸機制。您可透過電子郵件詢問保障措施或提出異議。拒絕必要的傳輸可能限制相關功能。</p>
       <ul class="resources"><li><a href="https://policies.google.com/privacy">Google · Privacy</a></li><li><a href="https://support.google.com/policies/contact/general_privacy_form">Google · Contact</a></li><li><a href="https://cloud.google.com/contact">Google Cloud · Contact</a></li><li><a href="https://cloud.google.com/terms/subprocessors">Google Cloud · Subprocessors</a></li><li><a href="https://www.apple.com/legal/privacy/">Apple · Privacy</a></li><li><a href="https://www.apple.com/legal/privacy/contact/">Apple · Contact</a></li></ul>
     </section>
 
     <section aria-labelledby="retention">
       <h2 id="retention">4. 保留與刪除</h2>
-      <p>訂閱驗證和商店通知記錄分別在建立或接收 90 天後符合自動刪除資格。購買預留記錄在建立 90 天後符合自動刪除資格。外觀道具帳目在記錄更新或福利到期（以較晚者為準）後 90 天符合自動刪除資格。對未變更的有效外觀道具進行例行檢查不會延長該期限。自動刪除可能會稍後發生。Apple 購買防重複交付記錄僅包含交易雜湊值和履行旗標，並在防止重複交付所需的期間內保留。客服電子郵件將保留至問題解決，僅在處理爭議、安全或法律義務需要時才會延長保留時間。</p>
+      <p>訂閱驗證和商店通知記錄分別在建立或接收 90 天後符合自動刪除資格，重新核查訂閱不會延長其原始期限。在提供付費外觀道具時，購買預留記錄在建立 90 天後符合自動刪除資格。外觀道具帳目在記錄更新或福利到期（以較晚者為準）後 90 天符合自動刪除資格。對未變更的有效外觀道具進行例行檢查不會延長該期限。自動刪除可能會稍後發生。啟用 App Store 外觀道具時，其防重複交付記錄僅包含交易雜湊值和履行旗標，並在防止重複交付所需的期間內保留。客服電子郵件將保留至問題解決，僅在處理爭議、安全或法律義務需要時才會延長保留時間。</p>
     </section>
 
     <section aria-labelledby="data-deletion">
